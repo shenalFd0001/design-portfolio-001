@@ -182,3 +182,29 @@
     border-right-color: var(--border);
   }
 }
+/* Styling the image container block */
+.project-card {
+  margin-bottom: 80px; /* Generous gap between projects */
+  width: 100%;
+}
+
+.project-card img {
+  width: 100%;
+  
+  /* THE MAGIC LINES FOR HEIGHT: */
+  height: 80vh;              /* Takes up exactly 80% of the screen's height */
+  object-fit: cover;         /* Crops beautifully without stretching your design mockups */
+  object-position: center;   /* Centers the image frame */
+  
+  border-radius: 12px;       /* Smooth rounded corners like the mockup */
+  display: block;
+}
+
+.project-info {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: -0.2px;
+  font-weight: 500;
+  color: #000000;
+}
