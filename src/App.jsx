@@ -7,7 +7,7 @@ function App() {
       {/* LEFT SIDEBAR - FIXED */}
       <aside className="sidebar">
         <div className="profile-image">
-          <img src="https://via.placeholder.com/80" alt="Profile" />
+          <img src="profilepic.JPG" alt="Profile" />
         </div>
         <h1>Shenal Fernando</h1>
         <p className="bio">
@@ -39,9 +39,9 @@ function App() {
         </section>
 
         <section className="project-card">
-          <img src="https://via.placeholder.com/800x500" alt="Project 3" />
+          <img src="/Saveup.jpg" alt="Project 3" />
           <div className="project-info">
-            <h3>Clarity Craft · App</h3>
+            <h3>Save Up · App</h3>
           </div>
         </section>
       </main>
