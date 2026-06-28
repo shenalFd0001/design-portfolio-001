@@ -229,3 +229,118 @@
   transform: scale(1.7);
   object-position: center 60%;
 }
+
+/* Sidebar Typography & Spacing */
+.name-title {
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin: 0 0 20px 0;
+  color: #000000;
+}
+
+.bio-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666666; /* Soft gray text matching the mockup */
+  margin-bottom: 32px;
+}
+
+/* Circular Social Links */
+.social-links-container {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.social-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #e0e0e0; /* Clean thin border */
+  text-decoration: none;
+  font-size: 14px;
+  color: #666666;
+  transition: all 0.2s ease;
+}
+
+.social-circle:hover {
+  background-color: #f5f5f5;
+  border-color: #b5b5b5;
+}
+
+/* Clean Separator Line */
+.section-divider {
+  border: none;
+  border-top: 1px solid #f0f0f0;
+  margin: 0 0 32px 0;
+  width: 100%;
+}
+
+/* Contact Area */
+.contact-heading {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+  margin: 0 0 8px 0;
+}
+
+.contact-subtext {
+  font-size: 16px;
+  color: #666666;
+  margin: 0 0 24px 0;
+}
+
+/* Pill Button Layouts */
+.button-group {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-pill {
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 25px; /* Creates the perfect pill look */
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+/* About Me Button - Light Gray Background */
+.btn-about {
+  background-color: #f0f0f0;
+  border: none;
+  color: #000000;
+}
+
+.btn-about:hover {
+  background-color: #e5e5e5;
+}
+
+/* Email Button - Solid Black Background */
+.btn-email {
+  background-color: #000000;
+  border: none;
+  color: #ffffff;
+}
+
+.btn-email:hover {
+  background-color: #222222;
+}
+
+/* Keeps the social image properly bounded inside the 40px circle */
+.social-icon-img {
+  width: 18px;         /* Adjust this size up or down depending on how large you want the logos inside the circles */
+  height: 18px;
+  object-fit: contain; /* Ensures the logo isn't squished */
+  display: block;
+}
+
+/* Optional adjustment: if your images have borders already, we can remove the gray circle border by clearing the property on .social-circle */
+.social-circle {
+  border: 1px solid #e0e0e0; /* Leave this if you want the gray outline rings, or remove it if you prefer them borderless! */
+}

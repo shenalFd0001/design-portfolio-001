@@ -6,21 +6,49 @@ function App() {
     <div className="portfolio-container">
       {/* LEFT SIDEBAR - FIXED */}
       <aside className="sidebar">
-        <div className="profile-image">
-          <img src="profilepic.JPG" alt="Profile" />
-        </div>
-        <h1>Shenal Fernando</h1>
-        <p className="bio">
-          I'm a product designer specialized in web app experiences across consumer tech, healthcare, and fintech.
-        </p>
-        <div className="social-links">
-          <span>🌐</span> <span>📸</span> <span>💼</span>
-        </div>
-        <div className="contact-section">
-          <p>Interested in working together?</p>
-          <button className="btn-email">Email</button>
-        </div>
-      </aside>
+  {/* Circular Profile Container */}
+  <div className="profile-image">
+    <img src="/profilepic.JPG" alt="Shenal Fernando" />
+  </div>
+
+  {/* Typography */}
+  <h1 className="name-title">Shenal Fernando</h1>
+  <p className="bio-text">
+    I'm a product designer specialized in web app experiences across consumer tech, healthcare, and fintech. 
+    I've helped numerous companies bring innovative products to market and secure over $20M in investment funding.
+  </p>
+
+  {/* Circular Social Icons */}
+  <div className="social-links-container">
+    <div className="social-links-container">
+  <a href="#" className="social-circle" target="_blank" rel="noreferrer">
+    <img src="/instagram.png" alt="Instagram" className="social-icon-img" />
+  </a>
+  <a href="#" className="social-circle" target="_blank" rel="noreferrer">
+    <img src="/behance.png" alt="Behance" className="social-icon-img" />
+  </a>
+  <a href="#" className="social-circle" target="_blank" rel="noreferrer">
+    <img src="/linkedin.png" alt="LinkedIn" className="social-icon-img" />
+  </a>
+  <a href="#" className="social-circle" target="_blank" rel="noreferrer">
+    <img src="/CV.png" alt="Resume / CV" className="social-icon-img" />
+  </a>
+</div>
+  </div>
+
+  <hr className="section-divider" />
+
+  {/* Contact Section */}
+  <div className="contact-section">
+    <h3 className="contact-heading">Interested in working together?</h3>
+    <p className="contact-subtext">Shoot me an email if you'd like to chat.</p>
+    
+    <div className="button-group">
+      <button className="btn-pill btn-about">About Me</button>
+      <button className="btn-pill btn-email">Email</button>
+    </div>
+  </div>
+</aside>
 
       {/* RIGHT CONTENT - SCROLLABLE */}
       <main className="main-content">
