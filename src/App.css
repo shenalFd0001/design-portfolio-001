@@ -1,3 +1,8 @@
+.main-content {
+  /* your existing styles... */
+  overflow-y: auto;
+}
+
 .counter {
   font-size: 16px;
   padding: 5px 10px;
@@ -186,10 +191,14 @@
 .project-card {
   margin-bottom: 80px; /* Generous gap between projects */
   width: 100%;
+  overflow: hidden; /* important — clips the zoom to the card */
+  border-radius: 0px; /* keep your existing border radius */
+  cursor: pointer;
 }
 
 .project-card img {
   width: 100%;
+  transition: transform 0.4s ease;
   
   /* THE MAGIC LINES FOR HEIGHT: */
   height: 80vh;              /* Takes up exactly 80% of the screen's height */
@@ -198,6 +207,10 @@
   
   border-radius: 0;
   display: block;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
 }
 
 .project-info {

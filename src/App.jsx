@@ -1,8 +1,25 @@
 import React from 'react';
 import './App.css';
 import { useNavigate } from 'react-router-dom';
+import { useEffect, useRef } from 'react';
+
 
 function App() {
+  const mainRef = useRef(null);
+  useEffect(() => {
+  const handleWheel = (e) => {
+    if (mainRef.current) {
+      e.preventDefault();
+      mainRef.current.scrollTop += e.deltaY;
+    }
+  };
+
+  window.addEventListener('wheel', handleWheel, { passive: false });
+  return () => window.removeEventListener('wheel', handleWheel);
+}, []);
+
+// add the ref to your main element:
+<main className="main-content" ref={mainRef}></main>
   const navigate = useNavigate();
   return (
     <div className="portfolio-container">
