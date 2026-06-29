@@ -1,7 +1,9 @@
 import React from 'react';
 import './App.css';
+import { useNavigate } from 'react-router-dom';
 
 function App() {
+  const navigate = useNavigate();
   return (
     <div className="portfolio-container">
       {/* LEFT SIDEBAR - FIXED */}
@@ -44,7 +46,7 @@ function App() {
     <p className="contact-subtext">Shoot me an email if you'd like to chat.</p>
     
     <div className="button-group">
-      <button className="btn-pill btn-about">About Me</button>
+      <button className="btn-pill btn-about" onClick={() => navigate('/about')}>About Me</button>
       <button className="btn-pill btn-email">Email</button>
     </div>
   </div>
