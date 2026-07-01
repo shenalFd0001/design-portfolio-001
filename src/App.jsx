@@ -43,7 +43,7 @@ function App() {
         <div className="social-links-container">
           <div className="social-links-container">
             <a
-              href="#"
+              href="https://www.instagram.com/_shena_fd_/"
               className="social-circle"
               target="_blank"
               rel="noreferrer"
