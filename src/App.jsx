@@ -97,7 +97,7 @@ function App() {
 
         {/* Contact Section */}
         <div className="contact-section">
-          <h3 className="contact-heading">Interested in working together?</h3>
+          <h3 className="contact-heading">We can work together?</h3>
           <p className="contact-subtext">
             Shoot me an email if you'd like to chat.
           </p>
