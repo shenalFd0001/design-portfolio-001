@@ -115,10 +115,13 @@ function App() {
       </aside>
 
       {/* RIGHT CONTENT - SCROLLABLE */}
-      <main className="main-content" ref={mainRef}>
+      {/* RIGHT CONTENT - SCROLLABLE */}
+<main className="main-content" ref={mainRef}>
   <div className="projects-grid">
     <section className="project-card" onClick={() => navigate('/packit')}>
-      <img src="/Packit.jpg" alt="Packit" />
+      <div className="card-image-wrapper">
+        <img src="/Packit.jpg" alt="Packit" />
+      </div>
       <div className="project-info">
         <h3>Packit</h3>
         <div className="project-tags">
@@ -129,7 +132,9 @@ function App() {
     </section>
 
     <section className="project-card">
-      <img src="/luminaura.jpg" alt="Luminaura" />
+      <div className="card-image-wrapper">
+        <img src="/luminaura.jpg" alt="Luminaura" />
+      </div>
       <div className="project-info">
         <h3>Luminaura</h3>
         <div className="project-tags">
@@ -139,11 +144,74 @@ function App() {
     </section>
 
     <section className="project-card">
-      <img src="/Saveup.jpg" alt="Save Up" />
+      <div className="card-image-wrapper">
+        <img src="/Saveup.jpg" alt="Save Up" />
+      </div>
       <div className="project-info">
         <h3>Save Up</h3>
         <div className="project-tags">
           <span className="tag">App</span>
+        </div>
+      </div>
+    </section>
+
+    <section className="project-card">
+      <div className="card-image-wrapper">
+        <img src="/Packit.jpg" alt="Project 4" />
+      </div>
+      <div className="project-info">
+        <h3>Project 4</h3>
+        <div className="project-tags">
+          <span className="tag">Product</span>
+          <span className="tag">Web</span>
+        </div>
+      </div>
+    </section>
+
+    <section className="project-card">
+      <div className="card-image-wrapper">
+        <img src="/luminaura.jpg" alt="Project 5" />
+      </div>
+      <div className="project-info">
+        <h3>Project 5</h3>
+        <div className="project-tags">
+          <span className="tag">Brand</span>
+        </div>
+      </div>
+    </section>
+
+    <section className="project-card">
+      <div className="card-image-wrapper">
+        <img src="/Saveup.jpg" alt="Project 6" />
+      </div>
+      <div className="project-info">
+        <h3>Project 6</h3>
+        <div className="project-tags">
+          <span className="tag">App</span>
+        </div>
+      </div>
+    </section>
+
+    <section className="project-card">
+      <div className="card-image-wrapper">
+        <img src="/Packit.jpg" alt="Project 7" />
+      </div>
+      <div className="project-info">
+        <h3>Project 7</h3>
+        <div className="project-tags">
+          <span className="tag">Product</span>
+        </div>
+      </div>
+    </section>
+
+    <section className="project-card">
+      <div className="card-image-wrapper">
+        <img src="/luminaura.jpg" alt="Project 8" />
+      </div>
+      <div className="project-info">
+        <h3>Project 8</h3>
+        <div className="project-tags">
+          <span className="tag">Brand</span>
         </div>
       </div>
     </section>

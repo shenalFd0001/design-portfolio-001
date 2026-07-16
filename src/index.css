@@ -34,7 +34,7 @@ body, html {
 .main-content {
   width: 70%;
   height: 100vh;
-  padding: 40px;
+  padding: 20px;
   box-sizing: border-box;
   
   /* THE MAGIC LINES: Enables scrolling only on this side */
@@ -42,21 +42,3 @@ body, html {
   scroll-behavior: smooth;
 }
 
-/* Styling the image blocks to look nice and fill space */
-.project-card {
-  margin-bottom: 60px;
-}
-
-.project-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 0px;
-  display: block;
-}
-
-.project-info {
-  margin-top: 15px;
-  text-align: center;
-  font-weight: 500;
-  color: #333;
-}
