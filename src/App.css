@@ -1,212 +1,34 @@
+/* ─── LAYOUT ─────────────────────────────────────────────── */
+
 .main-content {
-  /* your existing styles... */
   overflow-y: auto;
 }
 
-.counter {
-  font-size: 16px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: var(--accent);
-  background: var(--accent-bg);
-  border: 2px solid transparent;
-  transition: border-color 0.3s;
-  margin-bottom: 24px;
-
-  &:hover {
-    border-color: var(--accent-border);
-  }
-  &:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-  }
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding: 40px;
 }
 
-.hero {
-  position: relative;
+/* ─── PROJECT CARDS ──────────────────────────────────────── */
 
-  .base,
-  .framework,
-  .vite {
-    inset-inline: 0;
-    margin: 0 auto;
-  }
-
-  .base {
-    width: 170px;
-    position: relative;
-    z-index: 0;
-  }
-
-  .framework,
-  .vite {
-    position: absolute;
-  }
-
-  .framework {
-    z-index: 1;
-    top: 34px;
-    height: 28px;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
-      scale(1.4);
-  }
-
-  .vite {
-    z-index: 0;
-    top: 107px;
-    height: 26px;
-    width: auto;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
-      scale(0.8);
-  }
-}
-
-#center {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  place-content: center;
-  place-items: center;
-  flex-grow: 1;
-
-  @media (max-width: 1024px) {
-    padding: 32px 20px 24px;
-    gap: 18px;
-  }
-}
-
-#next-steps {
-  display: flex;
-  border-top: 1px solid var(--border);
-  text-align: left;
-
-  & > div {
-    flex: 1 1 0;
-    padding: 32px;
-    @media (max-width: 1024px) {
-      padding: 24px 20px;
-    }
-  }
-
-  .icon {
-    margin-bottom: 16px;
-    width: 22px;
-    height: 22px;
-  }
-
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-#docs {
-  border-right: 1px solid var(--border);
-
-  @media (max-width: 1024px) {
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-  }
-}
-
-#next-steps ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 8px;
-  margin: 32px 0 0;
-
-  .logo {
-    height: 18px;
-  }
-
-  a {
-    color: var(--text-h);
-    font-size: 16px;
-    border-radius: 6px;
-    background: var(--social-bg);
-    display: flex;
-    padding: 6px 12px;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    transition: box-shadow 0.3s;
-
-    &:hover {
-      box-shadow: var(--shadow);
-    }
-    .button-icon {
-      height: 18px;
-      width: 18px;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    margin-top: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    li {
-      flex: 1 1 calc(50% - 8px);
-    }
-
-    a {
-      width: 100%;
-      justify-content: center;
-      box-sizing: border-box;
-    }
-  }
-}
-
-#spacer {
-  height: 88px;
-  border-top: 1px solid var(--border);
-  @media (max-width: 1024px) {
-    height: 48px;
-  }
-}
-
-.ticks {
-  position: relative;
-  width: 100%;
-
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    top: -4.5px;
-    border: 5px solid transparent;
-  }
-
-  &::before {
-    left: 0;
-    border-left-color: var(--border);
-  }
-  &::after {
-    right: 0;
-    border-right-color: var(--border);
-  }
-}
-/* Styling the image container block */
 .project-card {
-  margin-bottom: 80px; /* Generous gap between projects */
   width: 100%;
-  overflow: hidden; /* important — clips the zoom to the card */
-  border-radius: 0px; /* keep your existing border radius */
+  overflow: hidden;
+  border-radius: 12px;
   cursor: pointer;
+  border: 1px solid #f0f0f0;
 }
 
 .project-card img {
   width: 100%;
-  transition: transform 0.4s ease;
-  
-  /* THE MAGIC LINES FOR HEIGHT: */
-  height: 80vh;              /* Takes up exactly 80% of the screen's height */
-  object-fit: cover;         /* Crops beautifully without stretching your design mockups */
-  object-position: center;   /* Centers the image frame */
-  
+  height: 280px;
+  object-fit: cover;
+  object-position: center;
   border-radius: 0;
   display: block;
+  transition: transform 0.4s ease;
 }
 
 .project-card:hover img {
@@ -214,36 +36,54 @@
 }
 
 .project-info {
-  margin-top: 20px;
-  text-align: center;
+  padding: 16px;
+  text-align: left;
+}
+
+.project-info h3 {
   font-size: 16px;
-  letter-spacing: -0.2px;
   font-weight: 500;
-  color: #000000;
+  color: #000;
+  margin: 0 0 10px 0;
 }
 
-/* Container sizing and circular shape */
+.project-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-size: 13px;
+  color: #555;
+  background: #f5f5f5;
+  border: 1px solid #e8e8e8;
+  border-radius: 20px;
+  padding: 4px 12px;
+}
+
+/* ─── SIDEBAR PROFILE ────────────────────────────────────── */
+
 .profile-image {
-  width: 160px;            /* Size of the circle container */
-  height: 160px;           /* Height must match width for a perfect circle */
-  border-radius: 50%;     /* Makes the container a circle */
-  overflow: hidden;       /* Hides any image corners sticking out */
-  margin-bottom: 24px;    /* Adds space between image and your name */
-  background-color: #f0f0f0; /* Soft placeholder background if image fails to load */
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 24px;
+  background-color: #f0f0f0;
 }
 
-/* Image behavior inside the circle */
 .profile-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;      /* Crops your portrait beautifully into the circle */
-  object-position: center;/* Keeps your face centered */
+  object-fit: cover;
   display: block;
   transform: scale(1.7);
   object-position: center 60%;
 }
 
-/* Sidebar Typography & Spacing */
+/* ─── SIDEBAR TYPOGRAPHY ─────────────────────────────────── */
+
 .name-title {
   font-size: 42px;
   font-weight: 700;
@@ -255,11 +95,12 @@
 .bio-text {
   font-size: 16px;
   line-height: 1.6;
-  color: #666666; /* Soft gray text matching the mockup */
+  color: #666666;
   margin-bottom: 32px;
 }
 
-/* Circular Social Links */
+/* ─── SOCIAL ICONS ───────────────────────────────────────── */
+
 .social-links-container {
   display: flex;
   gap: 12px;
@@ -273,7 +114,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid #e0e0e0; /* Clean thin border */
+  border: 1px solid #e0e0e0;
   text-decoration: none;
   font-size: 14px;
   color: #666666;
@@ -285,7 +126,15 @@
   border-color: #b5b5b5;
 }
 
-/* Clean Separator Line */
+.social-icon-img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  display: block;
+}
+
+/* ─── DIVIDER ────────────────────────────────────────────── */
+
 .section-divider {
   border: none;
   border-top: 1px solid #f0f0f0;
@@ -293,7 +142,8 @@
   width: 100%;
 }
 
-/* Contact Area */
+/* ─── CONTACT SECTION ────────────────────────────────────── */
+
 .contact-heading {
   font-size: 16px;
   font-weight: 500;
@@ -307,7 +157,8 @@
   margin: 0 0 24px 0;
 }
 
-/* Pill Button Layouts */
+/* ─── BUTTONS ────────────────────────────────────────────── */
+
 .button-group {
   display: flex;
   gap: 12px;
@@ -317,13 +168,12 @@
   padding: 12px 24px;
   font-size: 15px;
   font-weight: 500;
-  border-radius: 25px; /* Creates the perfect pill look */
+  border-radius: 25px;
   cursor: pointer;
   transition: all 0.2s ease;
   box-sizing: border-box;
 }
 
-/* About Me Button - Light Gray Background */
 .btn-about {
   background-color: #f0f0f0;
   border: none;
@@ -334,7 +184,6 @@
   background-color: #e5e5e5;
 }
 
-/* Email Button - Solid Black Background */
 .btn-email {
   background-color: #000000;
   border: none;
@@ -343,17 +192,4 @@
 
 .btn-email:hover {
   background-color: #222222;
-}
-
-/* Keeps the social image properly bounded inside the 40px circle */
-.social-icon-img {
-  width: 18px;         /* Adjust this size up or down depending on how large you want the logos inside the circles */
-  height: 18px;
-  object-fit: contain; /* Ensures the logo isn't squished */
-  display: block;
-}
-
-/* Optional adjustment: if your images have borders already, we can remove the gray circle border by clearing the property on .social-circle */
-.social-circle {
-  border: 1px solid #e0e0e0; /* Leave this if you want the gray outline rings, or remove it if you prefer them borderless! */
 }

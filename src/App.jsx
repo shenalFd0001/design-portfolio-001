@@ -115,32 +115,40 @@ function App() {
       </aside>
 
       {/* RIGHT CONTENT - SCROLLABLE */}
-      <main className="main-content">
-        <section
-          className="project-card"
-          onClick={() => navigate("/packit")}
-          style={{ cursor: "pointer" }}
-        >
-          <img src="/Packit.jpg" alt="Project 1" />
-          <div className="project-info">
-            <h3>Packit · Product · Web</h3>
-          </div>
-        </section>
+      <main className="main-content" ref={mainRef}>
+  <div className="projects-grid">
+    <section className="project-card" onClick={() => navigate('/packit')}>
+      <img src="/Packit.jpg" alt="Packit" />
+      <div className="project-info">
+        <h3>Packit</h3>
+        <div className="project-tags">
+          <span className="tag">Product</span>
+          <span className="tag">Web</span>
+        </div>
+      </div>
+    </section>
 
-        <section className="project-card">
-          <img src="/luminaura.jpg" alt="Project 2" />
-          <div className="project-info">
-            <h3>Luminaura · Brand</h3>
-          </div>
-        </section>
+    <section className="project-card">
+      <img src="/luminaura.jpg" alt="Luminaura" />
+      <div className="project-info">
+        <h3>Luminaura</h3>
+        <div className="project-tags">
+          <span className="tag">Brand</span>
+        </div>
+      </div>
+    </section>
 
-        <section className="project-card">
-          <img src="/Saveup.jpg" alt="Project 3" />
-          <div className="project-info">
-            <h3>Save Up · App</h3>
-          </div>
-        </section>
-      </main>
+    <section className="project-card">
+      <img src="/Saveup.jpg" alt="Save Up" />
+      <div className="project-info">
+        <h3>Save Up</h3>
+        <div className="project-tags">
+          <span className="tag">App</span>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
     </div>
   );
 }
