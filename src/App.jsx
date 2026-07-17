@@ -195,10 +195,10 @@ function App() {
 
     <section className="project-card">
       <div className="card-image-wrapper">
-        <img src="/Packit.jpg" alt="Project 7" />
+        <img src="/Taxilk.png" alt="Project 7" />
       </div>
       <div className="project-info">
-        <h3>Project 7</h3>
+        <h3>Taxi.lk - Order Anytime Anywhere</h3>
         <div className="project-tags">
           <span className="tag">Product</span>
         </div>
@@ -207,10 +207,10 @@ function App() {
 
     <section className="project-card">
       <div className="card-image-wrapper">
-        <img src="/luminaura.jpg" alt="Project 8" />
+        <img src="/JustlogThumbnail.png" alt="Justlog" />
       </div>
       <div className="project-info">
-        <h3>Project 8</h3>
+        <h3>Justlog - Ideas, Igniting Conversations</h3>
         <div className="project-tags">
           <span className="tag">Brand</span>
         </div>
