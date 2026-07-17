@@ -171,7 +171,7 @@ function App() {
 
     <section className="project-card">
       <div className="card-image-wrapper">
-        <img src="/luminaura.jpg" alt="Project 5" />
+        <img src="/FitmaldivesThumbnail.png" alt="Project 5" />
       </div>
       <div className="project-info">
         <h3>Project 5</h3>
@@ -183,10 +183,10 @@ function App() {
 
     <section className="project-card">
       <div className="card-image-wrapper">
-        <img src="/Saveup.jpg" alt="Project 6" />
+        <img src="/GreenifyThumbnail.png" alt="Project 6" />
       </div>
       <div className="project-info">
-        <h3>Project 6</h3>
+        <h3>Greenify - Let's go green</h3>
         <div className="project-tags">
           <span className="tag">App</span>
         </div>
