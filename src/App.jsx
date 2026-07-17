@@ -7,6 +7,8 @@ import { useEffect, useRef } from 'react';
 function App() {
   const mainRef = useRef(null);
   useEffect(() => {
+  const sidebar = document.querySelector('.sidebar');
+
   const handleWheel = (e) => {
     if (mainRef.current) {
       e.preventDefault();
@@ -14,8 +16,8 @@ function App() {
     }
   };
 
-  window.addEventListener('wheel', handleWheel, { passive: false });
-  return () => window.removeEventListener('wheel', handleWheel);
+  sidebar.addEventListener('wheel', handleWheel, { passive: false });
+  return () => sidebar.removeEventListener('wheel', handleWheel);
 }, []);
 
 // add the ref to your main element:
@@ -114,7 +116,6 @@ function App() {
         </div>
       </aside>
 
-      {/* RIGHT CONTENT - SCROLLABLE */}
       {/* RIGHT CONTENT - SCROLLABLE */}
 <main className="main-content" ref={mainRef}>
   <div className="projects-grid">
