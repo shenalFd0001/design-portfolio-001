@@ -1,4 +1,3 @@
-/* Reset body defaults so it takes up the full screen */
 body, html {
   margin: 0;
   padding: 0;
@@ -11,19 +10,16 @@ body, html {
 #root {
   max-width: 1440px;
   margin: 0 auto;
-  height: 100%;
 }
 
 .portfolio-container {
   display: flex;
-  height: 100vh;
-  overflow: hidden;
-  /* remove max-width from here */
+  align-items: flex-start;
 }
 
-/* Left Sidebar Layout */
+/* Left Sidebar - sticky so it stays while page scrolls */
 .sidebar {
-  width: 30%; /* Adjust width as you like */
+  width: 30%;
   min-width: 300px;
   padding: 60px 40px;
   display: flex;
@@ -31,20 +27,13 @@ body, html {
   justify-content: flex-start;
   box-sizing: border-box;
   background-color: #ffffff;
-  
-  /* This ensures it locks to the viewport height */
-  height: 100vh; 
+  position: sticky;
+  top: 0;
+  height: 100vh;
 }
 
-/* Right Content Column Layout */
+/* Right Content - natural height, page scroll handles it */
 .main-content {
   width: 70%;
-  height: 100vh;
   box-sizing: border-box;
-  
-  /* THE MAGIC LINES: Enables scrolling only on this side */
-  overflow-y: auto; 
-  scroll-behavior: smooth;
 }
-
-
