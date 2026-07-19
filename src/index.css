@@ -8,11 +8,17 @@ body, html {
   color: #000000;
 }
 
-/* Main wrapper split into two columns */
+#root {
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 100%;
+}
+
 .portfolio-container {
   display: flex;
-  height: 100vh; /* Keeps the whole app constrained to the screen height */
-  overflow: hidden; /* Prevents the main page wrapper itself from bouncing */
+  height: 100vh;
+  overflow: hidden;
+  /* remove max-width from here */
 }
 
 /* Left Sidebar Layout */
@@ -34,11 +40,11 @@ body, html {
 .main-content {
   width: 70%;
   height: 100vh;
-  padding: 20px;
   box-sizing: border-box;
   
   /* THE MAGIC LINES: Enables scrolling only on this side */
   overflow-y: auto; 
   scroll-behavior: smooth;
 }
+
 
