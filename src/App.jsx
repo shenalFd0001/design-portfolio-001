@@ -55,12 +55,37 @@ function App() {
       {/* RIGHT CONTENT - PAGE SCROLLS */}
       <main className="main-content">
         <div className="projects-grid">
-          <section className="project-card" onClick={() => navigate('/packit')}>
+          
+        <section className="project-card">
             <div className="card-image-wrapper">
-              <img src="/Packit.jpg" alt="Packit" />
+              <img src="/PackitThumbnail.png" alt="Saveup" />
             </div>
             <div className="project-info">
-              <h3>Packit</h3>
+              <h3>Saveup - Personal Finance Tracker</h3>
+              <div className="project-tags">
+                <span className="tag">Brand</span>
+              </div>
+            </div>
+          </section>
+
+          <section className="project-card">
+            <div className="card-image-wrapper">
+              <img src="/SheperdThumbnail.png" alt="Saveup" />
+            </div>
+            <div className="project-info">
+              <h3>Saveup - Personal Finance Tracker</h3>
+              <div className="project-tags">
+                <span className="tag">Brand</span>
+              </div>
+            </div>
+          </section>
+
+        <section className="project-card" onClick={() => navigate('/packit')}>
+            <div className="card-image-wrapper">
+              <img src="/LivelotteryThumbnail.png" alt="Packit" />
+            </div>
+            <div className="project-info">
+              <h3>Live Lottery - Gamble Win & Win</h3>
               <div className="project-tags">
                 <span className="tag">Product</span>
                 <span className="tag">Web</span>
@@ -68,12 +93,13 @@ function App() {
             </div>
           </section>
 
+
           <section className="project-card">
             <div className="card-image-wrapper">
-              <img src="/luminaura.jpg" alt="Luminaura" />
+              <img src="/SaveupThumbnail.png" alt="Saveup" />
             </div>
             <div className="project-info">
-              <h3>Luminaura</h3>
+              <h3>Saveup - Personal Finance Tracker</h3>
               <div className="project-tags">
                 <span className="tag">Brand</span>
               </div>
