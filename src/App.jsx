@@ -1,6 +1,6 @@
-import React from 'react';
-import './App.css';
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import "./App.css";
+import { useNavigate } from "react-router-dom";
 
 function App() {
   const navigate = useNavigate();
@@ -25,16 +25,44 @@ function App() {
 
         {/* Circular Social Icons */}
         <div className="social-links-container">
-          <a href="https://www.instagram.com/_shena_fd_/" className="social-circle" target="_blank" rel="noreferrer">
-            <img src="/instagram.png" alt="Instagram" className="social-icon-img" />
+          <a
+            href="https://www.instagram.com/_shena_fd_/"
+            className="social-circle"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src="/instagram.png"
+              alt="Instagram"
+              className="social-icon-img"
+            />
           </a>
-          <a href="#" className="social-circle" target="_blank" rel="noreferrer">
+          <a
+            href="#"
+            className="social-circle"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src="/behance.png" alt="Behance" className="social-icon-img" />
           </a>
-          <a href="#" className="social-circle" target="_blank" rel="noreferrer">
-            <img src="/linkedin.png" alt="LinkedIn" className="social-icon-img" />
+          <a
+            href="#"
+            className="social-circle"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src="/linkedin.png"
+              alt="LinkedIn"
+              className="social-icon-img"
+            />
           </a>
-          <a href="#" className="social-circle" target="_blank" rel="noreferrer">
+          <a
+            href="#"
+            className="social-circle"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src="/CV.png" alt="Resume / CV" className="social-icon-img" />
           </a>
         </div>
@@ -44,9 +72,16 @@ function App() {
         {/* Contact Section */}
         <div className="contact-section">
           <h3 className="contact-heading">We can work together?</h3>
-          <p className="contact-subtext">Shoot me an email if you'd like to chat.</p>
+          <p className="contact-subtext">
+            Shoot me an email if you'd like to chat.
+          </p>
           <div className="button-group">
-            <button className="btn-pill btn-about" onClick={() => navigate('/about')}>About Me</button>
+            <button
+              className="btn-pill btn-about"
+              onClick={() => navigate("/about")}
+            >
+              About Me
+            </button>
             <button className="btn-pill btn-email">Email</button>
           </div>
         </div>
@@ -55,8 +90,32 @@ function App() {
       {/* RIGHT CONTENT - PAGE SCROLLS */}
       <main className="main-content">
         <div className="projects-grid">
-          
         <section className="project-card">
+            <div className="card-image-wrapper">
+              <img src="/BuildingboxThumbnail.png" alt="Saveup" />
+            </div>
+            <div className="project-info">
+              <h3>Saveup - Personal Finance Tracker</h3>
+              <div className="project-tags">
+                <span className="tag">Brand</span>
+              </div>
+            </div>
+          </section>
+
+        
+          <section className="project-card">
+            <div className="card-image-wrapper">
+              <img src="/ZenmartThumbnail.png" alt="Saveup" />
+            </div>
+            <div className="project-info">
+              <h3>Saveup - Personal Finance Tracker</h3>
+              <div className="project-tags">
+                <span className="tag">Brand</span>
+              </div>
+            </div>
+          </section>
+
+          <section className="project-card">
             <div className="card-image-wrapper">
               <img src="/PackitThumbnail.png" alt="Saveup" />
             </div>
@@ -80,7 +139,7 @@ function App() {
             </div>
           </section>
 
-        <section className="project-card" onClick={() => navigate('/packit')}>
+          <section className="project-card" onClick={() => navigate("/packit")}>
             <div className="card-image-wrapper">
               <img src="/LivelotteryThumbnail.png" alt="Packit" />
             </div>
@@ -92,7 +151,6 @@ function App() {
               </div>
             </div>
           </section>
-
 
           <section className="project-card">
             <div className="card-image-wrapper">
