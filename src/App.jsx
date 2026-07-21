@@ -225,7 +225,7 @@ function App() {
             </div>
           </section>
 
-          <section className="project-card">
+          <section className="project-card" onClick={() => navigate("/justlog")}>
             <div className="card-image-wrapper">
               <img src="/JustlogThumbnail.png" alt="Justlog" />
             </div>

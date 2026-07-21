@@ -1,14 +1,33 @@
-/* ─── LAYOUT ─────────────────────────────────────────────── */
+/* ─── BASE CONTAINER & LAYOUT ───────────────────────────── */
+
+.portfolio-container {
+  display: flex;
+  width: 100%;             /* Let it span the full screen width */
+  max-width: 1600px;       /* Increased max width for wider screens */
+  margin: 0 auto;
+  padding: 20px 28px;      
+  gap: 40px;
+  box-sizing: border-box;  /* Prevents horizontal scrollbars */
+}
+
+.sidebar {
+  width: 380px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 32px;
+  height: fit-content;
+}
 
 .main-content {
+  flex: 1;
   overflow-y: auto;
 }
 
 .projects-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 16px;  /* space between the 2 columns */
-  row-gap: 16px;     /* space between rows */
+  column-gap: 16px;
+  row-gap: 16px;
   padding: 10px;
   align-items: start;
 }
@@ -16,14 +35,13 @@
 /* ─── PROJECT CARDS ──────────────────────────────────────── */
 
 .project-card {
- width: 100%;
+  width: 100%;
   overflow: hidden;
   border-radius: 8px;
   cursor: pointer;
   border: 1px solid #ebebeb;
   background: #ffffff;
-  margin: 0;    /* add this */
-   
+  margin: 0;
 }
 
 .project-card img {
@@ -41,7 +59,7 @@
 }
 
 .project-info {
-  padding: 20px;         /* a bit more padding inside the card */
+  padding: 20px;
   text-align: left;
 }
 
@@ -215,4 +233,76 @@
 
 .btn-email:hover {
   background-color: #222222;
+}
+
+
+/* ─── RESPONSIVE BREAKPOINTS ─────────────────────────────── */
+
+/* Tablets & Smaller Desktops */
+@media (max-width: 1024px) {
+  .portfolio-container {
+    flex-direction: column;
+    gap: 32px;
+    padding: 30px 20px;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: static; /* Removes sticky behavior when stacked */
+  }
+
+  .projects-grid {
+    padding: 0;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 640px) {
+  .portfolio-container {
+    padding: 24px 16px;
+  }
+
+  /* Compact Profile Info on Mobile */
+  .profile-image {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 16px;
+  }
+
+  .name-title {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  .bio-text {
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
+
+  /* Single Column Projects Grid */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+
+  /* Adjust Card Image Heights for phone screens */
+  .project-card img,
+  .card-image-wrapper img {
+    height: 210px;
+  }
+
+  .project-info {
+    padding: 16px;
+  }
+
+  /* Full-width buttons on Mobile */
+  .button-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-pill {
+    width: 100%;
+    text-align: center;
+  }
 }
