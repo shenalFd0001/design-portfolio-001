@@ -5,13 +5,13 @@
   width: 100%;             /* Let it span the full screen width */
   max-width: 1600px;       /* Increased max width for wider screens */
   margin: 0 0;
-  padding: 20px 28px;      
+  padding: 20px 20px;      
   gap: 40px;
   box-sizing: border-box;  /* Prevents horizontal scrollbars */
 }
 
 .sidebar {
-  width: 380px;
+  width: 400px;
   flex-shrink: 0;
   position: sticky;
   top: 32px;
@@ -30,6 +30,7 @@
   row-gap: 16px;
   padding: 10px;
   align-items: start;
+  margin-top: 40px;
 }
 
 /* ─── PROJECT CARDS ──────────────────────────────────────── */

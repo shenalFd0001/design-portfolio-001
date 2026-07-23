@@ -15,7 +15,7 @@ function App() {
         </div>
 
         {/* Typography */}
-        <h1 className="name-title">Shenal Fernando</h1>
+        <h1 className="name-title">Hi, I'm <span className="name-highlight">Shenal</span></h1>
         <p className="bio-text">
           I'm a product designer specialized in web app experiences across
           consumer tech, healthcare, and fintech. I've helped numerous companies
@@ -213,7 +213,7 @@ function App() {
             </div>
           </section>
 
-          <section className="project-card">
+          <section className="project-card" onClick={() => navigate('/taxilk')}>
             <div className="card-image-wrapper">
               <img src="/Taxilk.png" alt="Taxi.lk" />
             </div>

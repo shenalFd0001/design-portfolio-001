@@ -12,7 +12,7 @@ function Footer() {
           <a href="#" target="_blank" rel="noreferrer">Behance</a>
         </div>
       </div>
-      <p className="footer-copy">Made with ♥ in Sri Lanka · Copyright © 2026</p>
+      <p className="footer-copy">Made with ❤️ in Sri Lanka · Copyright © 2026</p>
     </footer>
   );
 }
