@@ -108,11 +108,21 @@
 
 /* ─── PLACEHOLDER ───────────────────────────────────────── */
 
-.justlog-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 40vh;
-  color: #aaa;
-  font-size: 1.1rem;
+
+.project-images img {
+  width: 100%;
+  height: auto;
+  border-radius: 0px;
+  display: block;
+  max-width: 100%;
+  margin-bottom: 20px;
 }
+
+.justlog-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 40px 80px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  overflow-x: hidden;  /* add this */
+}
+
