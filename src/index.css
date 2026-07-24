@@ -17,20 +17,7 @@ body, html {
   align-items: flex-start;
 }
 
-/* Left Sidebar - sticky so it stays while page scrolls */
-.sidebar {
-  width: 30%;
-  min-width: 300px;
-  padding: 60px 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  box-sizing: border-box;
-  background-color: #ffffff;
-  position: sticky;
-  top: 0;
-  height: 100vh;
-}
+
 
 /* Right Content - natural height, page scroll handles it */
 .main-content {
