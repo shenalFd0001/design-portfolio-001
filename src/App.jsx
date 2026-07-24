@@ -18,9 +18,7 @@ function App() {
         <h1 className="name-title">Hi, I'm <span className="name-highlight">Shenal</span></h1>
         <p className="bio-text">
           I'm a product designer specialized in web app experiences across
-          consumer tech, healthcare, and fintech. I've helped numerous companies
-          bring innovative products to market and secure over $20M in investment
-          funding.
+          consumer tech, healthcare, and fintech. 
         </p>
 
         {/* Circular Social Icons */}
@@ -67,22 +65,19 @@ function App() {
           </a>
         </div>
 
-        <hr className="section-divider" />
+        
 
         {/* Contact Section */}
         <div className="contact-section">
-          <h3 className="contact-heading">We can work together?</h3>
-          <p className="contact-subtext">
-            Shoot me an email if you'd like to chat.
-          </p>
+          
           <div className="button-group">
             <button
               className="btn-pill btn-about"
               onClick={() => navigate("/about")}
             >
-              About Me
+              Email
             </button>
-            <button className="btn-pill btn-email">Email</button>
+            <button className="btn-pill btn-email">View my CV</button>
           </div>
         </div>
       </aside>
