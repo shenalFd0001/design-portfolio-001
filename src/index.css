@@ -21,6 +21,5 @@ body, html {
 
 /* Right Content - natural height, page scroll handles it */
 .main-content {
-  width: 70%;
   box-sizing: border-box;
 }

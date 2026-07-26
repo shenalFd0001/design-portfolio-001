@@ -15,9 +15,10 @@
   width: 340px;            /* fixed width on desktop */
   flex-shrink: 0;
   position: sticky;
+  padding: 60px 20px !important;
   top: 0;
   height: fit-content;
-  padding: 60px 20px;
+  padding: 40px 0;
 }
 
 .main-content {
@@ -245,8 +246,8 @@
 
 /* ─── RESPONSIVE BREAKPOINTS ─────────────────────────────── */
 
-/* TABLET (641px to 1360px) */
-@media (min-width: 641px) and (max-width: 1360px) {
+/* TABLET (641px to 1280px) */
+@media (min-width: 641px) and (max-width: 1280px) {
   .portfolio-container {
     flex-direction: column;
     padding: 30px 24px;
@@ -259,14 +260,40 @@
     top: auto;
     height: fit-content;
     padding: 0;
-    display: block;      /* back to normal flow */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
   }
 
   .profile-image {
-    width: 160px;
-    height: 160px;
-    aspect-ratio: unset;
-    margin-bottom: 16px;
+    display: none;   /* image removed for tablet header layout */
+  }
+
+  .sidebar-left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .name-title {
+    font-size: 26px;
+    margin-bottom: 6px;
+  }
+
+  .bio-text {
+    margin-bottom: 20px;
+    max-width: 560px;
+  }
+
+  .social-links-container {
+    display: none;   /* social icons removed entirely on tablet */
+  }
+
+  .sidebar {
+    justify-content: flex-start;
   }
 
   .main-content {
@@ -284,5 +311,17 @@
   .project-card img,
   .card-image-wrapper img {
     height: 280px;
+  }
+}
+
+/* MOBILE (up to 640px): stack everything, socials wrap under bio */
+@media (max-width: 640px) {
+  .sidebar {
+    flex-direction: column;
+  }
+
+  .social-links-container {
+    order: 2;
+    margin-top: 4px;
   }
 }

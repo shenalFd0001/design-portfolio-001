@@ -14,12 +14,27 @@ function App() {
           <img src="/profilepic.JPG" alt="Shenal Fernando" />
         </div>
 
-        {/* Typography */}
-        <h1 className="name-title">Hi, I'm <span className="name-highlight">Shenal</span></h1>
-        <p className="bio-text">
-          I'm a product designer specialized in web app experiences across
-          consumer tech, healthcare, and fintech. 
-        </p>
+        <div className="sidebar-left">
+          {/* Typography */}
+          <h1 className="name-title">Hi, I'm <span className="name-highlight">Shenal</span></h1>
+          <p className="bio-text">
+            I'm a product designer specialized in web app experiences across
+            consumer tech, healthcare, and fintech. 
+          </p>
+
+          {/* Contact Section */}
+          <div className="contact-section">
+            <div className="button-group">
+              <button
+                className="btn-pill btn-about"
+                onClick={() => navigate("/about")}
+              >
+                Email
+              </button>
+              <button className="btn-pill btn-email">View my CV</button>
+            </div>
+          </div>
+        </div>
 
         {/* Circular Social Icons */}
         <div className="social-links-container">
@@ -63,22 +78,6 @@ function App() {
           >
             <img src="/CV.png" alt="Resume / CV" className="social-icon-img" />
           </a>
-        </div>
-
-        
-
-        {/* Contact Section */}
-        <div className="contact-section">
-          
-          <div className="button-group">
-            <button
-              className="btn-pill btn-about"
-              onClick={() => navigate("/about")}
-            >
-              Email
-            </button>
-            <button className="btn-pill btn-email">View my CV</button>
-          </div>
         </div>
       </aside>
 
