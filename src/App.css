@@ -311,7 +311,7 @@
 
   .project-card img,
   .card-image-wrapper img {
-    height: 50%;
+    height: 280px;
   }
 }
 
@@ -331,6 +331,11 @@
   .bio-text {
     font-size: 15px;
     margin-bottom: 16px;
+  }
+
+  .project-card img,
+  .card-image-wrapper img {
+    height: 240px;
   }
 
   .btn-pill {
