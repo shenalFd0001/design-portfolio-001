@@ -1,7 +1,12 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body, html {
   margin: 0;
   padding: 0;
   height: 100%;
+  overflow-x: hidden;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   background-color: #ffffff;
   color: #000000;
@@ -17,9 +22,11 @@ body, html {
   align-items: flex-start;
 }
 
-
-
-/* Right Content - natural height, page scroll handles it */
+/* Right Content - natural height, page scroll handles it.
+   Width is intentionally NOT set here — App.css's `.main-content { flex: 1 }`
+   already sizes it correctly on desktop, and setting a fixed % here was
+   overriding App.css's tablet-view `width: 100%` rule (since this file
+   loads after App.css in the bundle), leaving a gap on the right. */
 .main-content {
   box-sizing: border-box;
 }
