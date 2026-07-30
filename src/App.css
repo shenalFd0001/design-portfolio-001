@@ -1,3 +1,17 @@
+/* ─── TYPE SCALE (fluid, consistent across all breakpoints) ──
+   clamp(min, preferred, max) scales smoothly with viewport width
+   instead of jumping at each breakpoint — min = mobile floor,
+   max = desktop ceiling. No per-breakpoint font-size overrides
+   needed anywhere else in this file.                         */
+
+:root {
+  --font-h1: clamp(1.375rem, 1.05rem + 1.4vw, 2rem);        /* 22px → 32px */
+  --font-body: clamp(0.9375rem, 0.9rem + 0.2vw, 1rem);       /* 15px → 16px */
+  --font-card-title: clamp(0.9375rem, 0.9rem + 0.15vw, 1rem);/* 15px → 16px */
+  --font-tag: clamp(0.75rem, 0.73rem + 0.08vw, 0.8125rem);   /* 12px → 13px */
+  --font-button: clamp(0.875rem, 0.85rem + 0.1vw, 0.9375rem);/* 14px → 15px */
+}
+
 /* ─── BASE CONTAINER & LAYOUT ───────────────────────────── */
 
 .portfolio-container {
@@ -15,7 +29,6 @@
   width: 340px;            /* fixed width on desktop */
   flex-shrink: 0;
   position: sticky;
-  padding: 60px 20px !important;
   top: 0;
   height: fit-content;
   padding: 40px 0;
@@ -69,7 +82,7 @@
 }
 
 .project-info h3 {
-  font-size: 16px;
+  font-size: var(--font-card-title);
   font-weight: 500;
   color: #000;
   margin: 0 0 10px 0;
@@ -82,7 +95,7 @@
 }
 
 .tag {
-  font-size: 13px;
+  font-size: var(--font-tag);
   color: #555;
   background: #f5f5f5;
   border: 1px solid #e8e8e8;
@@ -132,7 +145,7 @@
 /* ─── SIDEBAR TYPOGRAPHY ─────────────────────────────────── */
 
 .name-title {
-  font-size: 32px;
+  font-size: var(--font-h1);
   font-weight: 700;
   letter-spacing: -1px;
   margin: 0 0 8px 0;
@@ -143,9 +156,8 @@
   animation: colorCycle 8s infinite;
 }
 
-
 .bio-text {
-  font-size: 16px;
+  font-size: var(--font-body);
   line-height: 1.6;
   color: #666666;
   margin-bottom: 32px;
@@ -168,7 +180,6 @@
   border-radius: 50%;
   border: 1px solid #e0e0e0;
   text-decoration: none;
-  font-size: 14px;
   color: #666666;
   transition: all 0.2s ease;
 }
@@ -197,14 +208,14 @@
 /* ─── CONTACT SECTION ────────────────────────────────────── */
 
 .contact-heading {
-  font-size: 16px;
+  font-size: var(--font-card-title);
   font-weight: 500;
   color: #000000;
   margin: 0 0 8px 0;
 }
 
 .contact-subtext {
-  font-size: 16px;
+  font-size: var(--font-body);
   color: #666666;
   margin: 0 0 24px 0;
 }
@@ -218,7 +229,7 @@
 
 .btn-pill {
   padding: 12px 24px;
-  font-size: 15px;
+  font-size: var(--font-button);
   font-weight: 500;
   border-radius: 25px;
   cursor: pointer;
@@ -246,7 +257,9 @@
   background-color: #222222;
 }
 
-/* ─── RESPONSIVE BREAKPOINTS ─────────────────────────────── */
+/* ─── RESPONSIVE BREAKPOINTS ───────────────────────────────
+   Layout only from here down — font sizes are handled by the
+   fluid clamp() variables above and need no overrides.       */
 
 /* TABLET & MOBILE (up to 1280px) — same sidebar/grid structure all the way down */
 @media (max-width: 1280px) {
@@ -264,7 +277,7 @@
     padding: 0;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
     gap: 24px;
   }
@@ -281,7 +294,6 @@
   }
 
   .name-title {
-    font-size: 26px;
     margin-bottom: 6px;
   }
 
@@ -292,10 +304,6 @@
 
   .social-links-container {
     display: none;   /* social icons removed entirely on tablet */
-  }
-
-  .sidebar {
-    justify-content: flex-start;
   }
 
   .main-content {
@@ -309,11 +317,6 @@
     margin-top: 0;
     padding: 0;
   }
-
-  .project-card img,
-  .card-image-wrapper img {
-    height: fit-content;
-  }
 }
 
 /* NARROW TABLET (932px and below, down through mobile): single-column project grid */
@@ -323,24 +326,18 @@
   }
 }
 
-/* MOBILE fine-tuning (up to 640px): tighten spacing/type, same row structure as tablet */
+/* MOBILE fine-tuning (up to 640px): tighten spacing only, type scale stays consistent */
 @media (max-width: 640px) {
-  .name-title {
-    font-size: 22px;
-  }
-
   .bio-text {
-    font-size: 15px;
     margin-bottom: 16px;
   }
 
-  .project-card img,
+   .project-card img,
   .card-image-wrapper img {
-    height: 280px;
+    height: fit-content;
   }
 
   .btn-pill {
     padding: 10px 18px;
-    font-size: 14px;
   }
 }
