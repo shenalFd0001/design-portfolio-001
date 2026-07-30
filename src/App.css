@@ -324,17 +324,21 @@
   .projects-grid {
     grid-template-columns: 1fr;
   }
+
+  /* Feed-style cards: show the WHOLE image at its natural proportions
+     instead of cropping to a fixed box. No height is set — it's derived
+     automatically from the image's own aspect ratio at 100% width. */
+  .project-card img,
+  .card-image-wrapper img {
+    height: auto;
+    object-fit: unset;
+  }
 }
 
 /* MOBILE fine-tuning (up to 640px): tighten spacing only, type scale stays consistent */
 @media (max-width: 640px) {
   .bio-text {
     margin-bottom: 16px;
-  }
-
-   .project-card img,
-  .card-image-wrapper img {
-    height: 360pxg;
   }
 
   .btn-pill {
