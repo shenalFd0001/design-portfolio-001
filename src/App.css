@@ -336,7 +336,7 @@
 
   .project-card img,
   .card-image-wrapper img {
-    height: fit-content;
+    height: 280px;
   }
 
   .btn-pill {
