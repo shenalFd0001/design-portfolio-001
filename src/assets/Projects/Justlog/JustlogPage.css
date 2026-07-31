@@ -1,12 +1,30 @@
+/* ─── LOCAL TYPE SCALE (fluid, scoped to this page) ───────
+   Same clamp() philosophy as the main site — smooth scaling,
+   no breakpoint jumps.                                        */
+
+.justlog-page {
+  --jl-hero: clamp(3rem, 1.5rem + 7vw, 8rem);              /* 48px → 128px */
+  --jl-heading: clamp(1.5rem, 1.25rem + 1.4vw, 2.25rem);   /* 24px → 36px */
+  --jl-body: clamp(1rem, 0.95rem + 0.2vw, 1.0625rem);      /* 16px → 17px */
+  --jl-eyebrow: clamp(0.75rem, 0.73rem + 0.08vw, 0.8125rem);/* 12px → 13px */
+  --jl-stat: clamp(2.25rem, 1.6rem + 3vw, 4rem);           /* 36px → 64px */
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: #0d0d0d;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* ─── CONTAINER ─────────────────────────────────────────── */
+
 .justlog-container {
   width: 100%;
-  max-width: 1600px;       /* Allows header and media to stretch wide like reference */
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 40px 48px 80px; /* 48px side padding matches your App.css layout */
+  padding: 40px 140px;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  color: #111111;
 }
+
 /* ─── BACK BUTTON ───────────────────────────────────────── */
 
 .back-btn {
@@ -19,9 +37,9 @@
   border: 1px solid #e0e0e0;
   background: white;
   cursor: pointer;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
   color: #444;
-  transition: background 0.15s, border-color 0.15s;
+  transition: background 0.15s ease, border-color 0.15s ease;
 }
 
 .back-btn:hover {
@@ -29,27 +47,51 @@
   border-color: #bbb;
 }
 
-/* ─── HEADER SECTION ────────────────────────────────────── */
+/* ─── EYEBROW LABEL ─────────────────────────────────────── */
+
+.eyebrow {
+  display: block;
+  font-size: var(--jl-eyebrow);
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #888888;
+  margin-bottom: 16px;
+}
+
+.eyebrow--light {
+  color: #aaaaaa;
+}
+
+/* ─── HERO HEADER ───────────────────────────────────────── */
 
 .project-header {
-  margin-bottom: 48px;
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 0;
+  max-width: 1100px;
+  padding-bottom: 56px;
 }
 
 .header-title {
-  font-size: 40px;
-  font-weight: 600;
-  letter-spacing: -0.8px;
-  margin: 0 0 20px 0;
+  font-size: var(--jl-hero);
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  line-height: 1.05;
+  margin: 0 0 28px 0;
   color: #0d0d0d;
 }
 
 .header-description {
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: var(--jl-body);
+  line-height: 1.7;
   color: #555555;
-  margin: 0;
-  max-width: 760px; /* Restricts description width so it remains readable */
+  margin: 24px 0 0 0;
+  max-width: 640px;
 }
+
 /* ─── METADATA ROW ──────────────────────────────────────── */
 
 .meta-row {
@@ -57,46 +99,28 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 12px;
-  margin-bottom: 24px;
 }
 
 .meta-group {
   display: flex;
   align-items: center;
   gap: 8px;
+  flex-wrap: wrap;
 }
 
 .meta-label {
-  font-size: 15px;
+  font-size: var(--jl-body);
   color: #222222;
   font-weight: 400;
-}
-
-.meta-text {
-  font-size: 15px;
-  color: #222222;
-  font-weight: 500;
 }
 
 .meta-pill {
-  font-size: 14px;
+  font-size: calc(var(--jl-body) - 2px);
   color: #111111;
   background-color: #f3f3f3;
-  padding: 4px 10px;
-  border-radius: 6px;
-  font-weight: 400;
-}
-
-.yc-badge {
-  background-color: #ff3300;
-  color: #ffffff;
-  font-size: 12px;
-  font-weight: 700;
-  padding: 3px 6px;
-  border-radius: 4px;
-  letter-spacing: 0.5px;
-  display: inline-block;
-  line-height: 1;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 500;
 }
 
 .meta-divider {
@@ -106,23 +130,195 @@
   margin: 0 4px;
 }
 
-/* ─── PLACEHOLDER ───────────────────────────────────────── */
+/* ─── FULL-BLEED HERO VISUAL ────────────────────────────── */
+/* Breaks out of the container to true 100vw width, giving the
+   page one confident, dark visual moment — like a hero photo
+   or product mockup on a dark backdrop.                      */
 
-
-.project-images img {
-  width: 100%;
-  height: auto;
-  border-radius: 0px;
-  display: block;
-  max-width: 100%;
-  margin-bottom: 8px;
+.hero-visual {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  background-color: #0a0a0a;
+  padding: 64px 0;
+  margin-bottom: 80px;
 }
 
-.justlog-container {
+.hero-visual-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 32px 40px 80px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  overflow-x: hidden;  /* add this */
+  padding: 0 48px;
+  box-sizing: border-box;
 }
 
+.hero-visual-inner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+/* ─── CONTENT BLOCKS ────────────────────────────────────── */
+
+.content-block {
+  max-width: 900px;
+  margin-bottom: 64px;
+}
+
+.block-heading {
+  font-size: var(--jl-heading);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #0d0d0d;
+  margin: 0 0 20px 0;
+}
+
+.block-heading--light {
+  color: #ffffff;
+}
+
+.block-text {
+  font-size: var(--jl-body);
+  line-height: 1.75;
+  color: #555555;
+  margin: 0;
+}
+
+/* ─── PAIRED IMAGE GRID ─────────────────────────────────── */
+
+.image-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 80px;
+}
+
+.image-pair-item {
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: #f5f5f5;
+}
+
+.image-pair-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+  display: block;
+}
+
+/* ─── DARK STAT BAND (full-bleed) ───────────────────────── */
+
+.stat-band {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  background-color: #0d0d0d;
+  padding: 88px 0;
+  margin-bottom: 80px;
+  box-sizing: border-box;
+}
+
+.stat-band-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px;
+  box-sizing: border-box;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 48px;
+  margin-top: 48px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stat-number {
+  font-size: var(--jl-stat);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: calc(var(--jl-eyebrow) + 1px);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #999999;
+  font-weight: 500;
+}
+
+/* ─── RESPONSIVE: TABLET & MOBILE (up to 1280px) ────────── */
+
+@media (max-width: 1280px) {
+  .justlog-container {
+    padding: 32px 24px;
+  }
+
+  .project-header {
+    min-height: 60vh;
+    padding-bottom: 40px;
+  }
+
+  .hero-visual-inner,
+  .stat-band-inner {
+    padding: 0 24px;
+  }
+
+  .project-header {
+    margin-bottom: 40px;
+  }
+
+  .image-pair {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 56px;
+  }
+
+  .stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
+  }
+
+  .hero-visual {
+    padding: 40px 0;
+    margin-bottom: 56px;
+  }
+
+  .stat-band {
+    padding: 64px 0;
+    margin-bottom: 56px;
+  }
+
+  .content-block {
+    margin-bottom: 48px;
+  }
+}
+
+/* ─── MOBILE fine-tuning (up to 640px) ──────────────────── */
+
+@media (max-width: 640px) {
+  .justlog-container {
+    padding: 24px 20px;
+  }
+
+  .hero-visual-inner,
+  .stat-band-inner {
+    padding: 0 20px;
+  }
+
+  .meta-row {
+    gap: 8px;
+  }
+
+  .meta-divider {
+    display: none;
+  }
+}

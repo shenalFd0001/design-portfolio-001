@@ -1,0 +1,39 @@
+/* ─── TOP NAV BAR ────────────────────────────────────────── */
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 28px 20px;
+  box-sizing: border-box;
+}
+
+.nav-name {
+  font-size: var(--font-card-title);
+  font-weight: 700;
+  color: #000000;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links a {
+  font-size: var(--font-body);
+  color: #888888;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #000000;
+}
+
+@media (max-width: 640px) {
+  .nav-links {
+    gap: 20px;
+  }
+}

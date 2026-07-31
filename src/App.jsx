@@ -1,12 +1,16 @@
 import React from "react";
 import "./App.css";
 import { useNavigate } from "react-router-dom";
+import Navbar from "./Navbar";
 
 function App() {
   const navigate = useNavigate();
 
   return (
-    <div className="portfolio-container">
+    <>
+      <Navbar />
+
+      <div className="portfolio-container">
       {/* LEFT SIDEBAR - STICKY */}
       <aside className="sidebar">
         {/* Circular Profile Container */}
@@ -232,7 +236,8 @@ function App() {
           </section>
         </div>
       </main>
-    </div>
+      </div>
+    </>
   );
 }
 
