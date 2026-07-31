@@ -1,16 +1,24 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import App from './App';
-import AboutPage from './AboutPage';
-import PackitPage from './assets/Projects/Packit/PackitPage';
-import JustlogPage from './assets/Projects/Justlog/JustlogPage';
-import './index.css'; // keep your global styles
+import App from "./App";
+import AboutPage from "./AboutPage";
+import PackitPage from "./assets/Projects/Packit/PackitPage";
+import JustlogPage from "./assets/Projects/Justlog/JustlogPage";
+import ScrollToTop from "./Scrolltotop";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+import "./index.css";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
+      <ScrollToTop />
+
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/about" element={<AboutPage />} />
