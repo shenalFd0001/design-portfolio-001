@@ -1,33 +1,29 @@
 import { useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { useLenis } from "lenis/react";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
+  const lenis = useLenis();
 
   useLayoutEffect(() => {
-    // Prevent the browser from restoring the previous scroll position
     if ("scrollRestoration" in window.history) {
       window.history.scrollRestoration = "manual";
     }
 
-    const resetScrollPosition = () => {
-      window.scrollTo(0, 0);
-      document.documentElement.scrollTop = 0;
-      document.body.scrollTop = 0;
-    };
+    // Reset Lenis scroll
+    if (lenis) {
+      lenis.scrollTo(0, {
+        immediate: true,
+        force: true,
+      });
+    }
 
-    // Reset immediately
-    resetScrollPosition();
-
-    // Reset once more after the new page has rendered
-    const animationFrame = window.requestAnimationFrame(
-      resetScrollPosition
-    );
-
-    return () => {
-      window.cancelAnimationFrame(animationFrame);
-    };
-  }, [pathname]);
+    // Browser fallback
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }, [pathname, lenis]);
 
   return null;
 }
