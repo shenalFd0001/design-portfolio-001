@@ -26,10 +26,11 @@ body, html {
 }
 
 #root {
-  max-width: 1440px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: none;
+  min-height: 100%;
+  margin: 0;
 }
-
 .portfolio-container {
   display: flex;
   align-items: flex-start;

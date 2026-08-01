@@ -10,13 +10,12 @@ function Navbar() {
         className="nav-name"
         aria-label="Go to homepage"
       >
-        Shenal Fernando
+        Shenal Fernando.
       </Link>
 
       <nav className="nav-links" aria-label="Main navigation">
-        <a href="#">Link One</a>
-        <a href="#">Link Two</a>
-        <a href="#">Link Three</a>
+        <a href="#">About</a>
+        <a href="#">Blog</a>
       </nav>
     </header>
   );

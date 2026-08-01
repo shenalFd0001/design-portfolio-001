@@ -41,17 +41,18 @@ function JustlogPage() {
           {/* Header Section */}
           <Reveal distance={40}>
             <header className="project-header">
-              <span className="eyebrow">Product Design</span>
 
               <h1 className="header-title">
-                Justlog — Igniting
+                Justlog: Igniting
                 <br />
                 Conversations.
               </h1>
 
+              <span className="eyebrow">Product Design</span>
+
               <div className="meta-row">
                 <div className="meta-group">
-                  <span className="meta-label">Industry</span>
+                  <span className="meta-pill">Industry</span>
                   <span className="meta-pill">Blog &amp; Writing</span>
                   <span className="meta-pill">International News</span>
                 </div>
@@ -66,6 +67,8 @@ function JustlogPage() {
 
               <p className="header-description">
                 Designed a product experience for Justlog that clearly
+                communicates its role as a platform for ideas — helping writers
+                publish and readers discover conversations that matter.  Designed a product experience for Justlog that clearly
                 communicates its role as a platform for ideas — helping writers
                 publish and readers discover conversations that matter.
               </p>
