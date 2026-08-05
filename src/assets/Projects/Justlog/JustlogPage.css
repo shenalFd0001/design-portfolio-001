@@ -3,11 +3,12 @@
    no breakpoint jumps.                                        */
 
 .justlog-page {
-  --jl-hero: clamp(3rem, 1.5rem + 7vw, 8rem);              /* 48px → 128px */
+  --jl-hero: clamp(2.5rem, 1.3rem + 5.5vw, 6.5rem);        /* 40px → 104px */
   --jl-heading: clamp(1.5rem, 1.25rem + 1.4vw, 2.25rem);   /* 24px → 36px */
-  --jl-body: clamp(1.3rem, 0.95rem + 0.2vw, 1.0625rem);      /* 16px → 17px */
-  --jl-eyebrow: clamp(1rem, 0.73rem + 0.08vw, 0.8125rem);/* 12px → 13px */
+  --jl-body: clamp(1.3rem, 0.95rem + 0.2vw, 1.0625rem);
+  --jl-eyebrow: clamp(1rem, 0.73rem + 0.08vw, 0.8125rem);
   --jl-stat: clamp(2.25rem, 1.6rem + 3vw, 4rem);           /* 36px → 64px */
+  --jl-logo: clamp(2.5rem, 1.3rem + 5.5vw, 6.5rem);        /* matches --jl-hero so it scales in lockstep with the heading */
 
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   color: #0d0d0d;
@@ -75,12 +76,28 @@
   padding-bottom: 56px;
 }
 
+/* Row holding the logo + heading side by side */
+.header-title-row {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 2vw, 32px);
+  margin: 0 0 60px 0;
+}
+
+.header-logo {
+  height: var(--jl-logo);
+  flex-shrink: 0;
+  border-radius: 22%;
+  object-fit: cover;
+  display: none;
+}
+
 .header-title {
   font-size: var(--jl-hero);
   font-weight: 700;
   letter-spacing: -1.5px;
   line-height: 1.05;
-  margin: 0 0 60px 0;
+  margin: 0;
   color: #0d0d0d;
 }
 
@@ -116,7 +133,7 @@
 }
 
 .meta-pill {
-display: block;
+  display: block;
   font-size: var(--jl-eyebrow);
   font-weight: 700;
   letter-spacing: 1.6px;
@@ -132,21 +149,21 @@ display: block;
 }
 
 .meta-detail {
-    margin: 24px 0 60px 0;
-    font-size: var(--jl-body);
-    color: #5a5a5a;
-    font-weight: 100;
-
+  margin: 24px 0 60px 0;
+  font-size: var(--jl-body);
+  color: #5a5a5a;
+  font-weight: 100;
 }
 
 .meta-detail-heading {
-   display: block;
+  display: block;
   font-size: var(--jl-eyebrow);
   font-weight: 700;
   letter-spacing: 1.6px;
   text-transform: uppercase;
   color: #000000;
 }
+
 /* ─── FULL-BLEED HERO VISUAL ────────────────────────────── */
 /* Breaks out of the container to true 100vw width, giving the
    page one confident, dark visual moment — like a hero photo
@@ -212,15 +229,13 @@ display: block;
 
 .image-pair-item {
   overflow: hidden;
-  border-radius: px;
+  border-radius: 0px;
   background-color: #f5f5f5;
 }
 
 .image-pair-item img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  aspect-ratio: 4 / 3;
+  height: auto;
   display: block;
 }
 
@@ -357,5 +372,9 @@ display: block;
 
   .meta-divider {
     display: none;
+  }
+
+  .header-title-row {
+    gap: 14px;
   }
 }

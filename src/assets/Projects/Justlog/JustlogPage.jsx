@@ -8,8 +8,6 @@ import Reveal from "../../Components/Reveal";
 function JustlogPage() {
   const navigate = useNavigate();
 
- 
-
   return (
     <div className="justlog-page">
       <Navbar />
@@ -41,12 +39,11 @@ function JustlogPage() {
           {/* Header Section */}
           <Reveal distance={40}>
             <header className="project-header">
-
-              <h1 className="header-title">
-                Justlog: Igniting
-                <br />
-                Conversations.
-              </h1>
+              <div className="header-title-row">
+            <h1 className="header-title">
+                  Justlog.
+                </h1>
+              </div>
 
               <span className="eyebrow">Product Design</span>
 
@@ -67,8 +64,6 @@ function JustlogPage() {
 
               <p className="header-description">
                 Designed a product experience for Justlog that clearly
-                communicates its role as a platform for ideas — helping writers
-                publish and readers discover conversations that matter.  Designed a product experience for Justlog that clearly
                 communicates its role as a platform for ideas — helping writers
                 publish and readers discover conversations that matter.
               </p>

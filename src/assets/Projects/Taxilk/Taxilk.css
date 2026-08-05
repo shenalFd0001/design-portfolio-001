@@ -1,1 +1,397 @@
-@import url('../Justlog/JustlogPage.css');
+/* ─── LOCAL TYPE SCALE (fluid, scoped to this page) ───────
+   Identical to JustlogPage.css — keeps every project page
+   feeling like the same design system.                       */
+
+.taxilk-page {
+  --jl-hero: clamp(2.5rem, 1.3rem + 5.5vw, 6.5rem);        /* 40px → 104px */
+  --jl-heading: clamp(1.5rem, 1.25rem + 1.4vw, 2.25rem);   /* 24px → 36px */
+  --jl-body: clamp(1.3rem, 0.95rem + 0.2vw, 1.0625rem);
+  --jl-eyebrow: clamp(1rem, 0.73rem + 0.08vw, 0.8125rem);
+  --jl-stat: clamp(2.25rem, 1.6rem + 3vw, 4rem);           /* 36px → 64px */
+  --jl-logo: clamp(2.5rem, 1.3rem + 5.5vw, 6.5rem);        /* matches --jl-hero so it scales in lockstep with the heading */
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: #0d0d0d;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* ─── CONTAINER ─────────────────────────────────────────── */
+
+.taxilk-container {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 40px 100px;
+  box-sizing: border-box;
+}
+
+/* ─── BACK BUTTON ───────────────────────────────────────── */
+
+.back-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #e0e0e0;
+  background: white;
+  cursor: pointer;
+  margin-bottom: 40px;
+  color: #444;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.back-btn:hover {
+  background: #f5f5f5;
+  border-color: #bbb;
+}
+
+/* ─── EYEBROW LABEL ─────────────────────────────────────── */
+
+.eyebrow {
+  display: block;
+  font-size: var(--jl-eyebrow);
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 60px;
+}
+
+.eyebrow--light {
+  color: #aaaaaa;
+}
+
+/* ─── HERO HEADER ───────────────────────────────────────── */
+
+.project-header {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 0;
+  max-width: 1100px;
+  padding-bottom: 56px;
+}
+
+/* Row holding the logo + heading side by side */
+.header-title-row {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 2vw, 32px);
+  margin: 0 0 60px 0;
+}
+
+.header-logo {
+  width: var(--jl-logo);
+  height: var(--jl-logo);
+  flex-shrink: 0;
+  border-radius: 22%;
+  object-fit: cover;
+  display: block;
+}
+
+.header-title {
+  font-size: var(--jl-hero);
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  line-height: 1.05;
+  margin: 0;
+  color: #0d0d0d;
+}
+
+.header-description {
+  font-size: var(--jl-body);
+  line-height: 1.7;
+  color: #5a5a5a;
+  margin: 0px 0 60px 0;
+  max-width: 800px;
+  font-weight: 100;
+}
+
+/* ─── METADATA ROW ──────────────────────────────────────── */
+
+.meta-row {
+  display: none;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.meta-group {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.meta-label {
+  font-size: var(--jl-eyebrow);
+  color: #222222;
+  font-weight: 400;
+}
+
+.meta-pill {
+  display: block;
+  font-size: var(--jl-eyebrow);
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.meta-divider {
+  width: 1px;
+  height: 18px;
+  background-color: #e0e0e0;
+  margin: 0 4px;
+}
+
+.meta-detail {
+  margin: 24px 0 60px 0;
+  font-size: var(--jl-body);
+  color: #5a5a5a;
+  font-weight: 100;
+}
+
+.meta-detail-heading {
+  display: block;
+  font-size: var(--jl-eyebrow);
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+/* ─── FULL-BLEED HERO VISUAL ────────────────────────────── */
+
+.hero-visual {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  background-color: #0a0a0a;
+  padding: 64px 0;
+  margin-bottom: 80px;
+}
+
+.hero-visual-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px;
+  box-sizing: border-box;
+}
+
+.hero-visual-inner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0px;
+}
+
+/* ─── CONTENT BLOCKS ────────────────────────────────────── */
+
+.content-block {
+  max-width: 900px;
+  margin-bottom: 64px;
+}
+
+.block-heading {
+  font-size: var(--jl-heading);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #0d0d0d;
+  margin: 0 0 20px 0;
+}
+
+.block-heading--light {
+  color: #ffffff;
+}
+
+.block-text {
+  font-size: var(--jl-body);
+  line-height: 1.75;
+  color: #555555;
+  margin: 0;
+}
+
+/* ─── PAIRED IMAGE GRID ─────────────────────────────────── */
+
+.image-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 80px;
+}
+
+.image-pair-item {
+  overflow: hidden;
+  border-radius: 0px;
+  background-color: #f5f5f5;
+}
+
+.image-pair-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ─── SINGLE FULL-WIDTH IMAGE (closing image) ───────────── */
+
+.image-single {
+  overflow: hidden;
+  border-radius: 0px;
+  background-color: #f5f5f5;
+  margin-bottom: 80px;
+}
+
+.image-single img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ─── DARK STAT BAND (full-bleed) ───────────────────────── */
+
+.stat-band {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  background-color: #0d0d0d;
+  padding: 88px 0;
+  margin-bottom: 80px;
+  box-sizing: border-box;
+}
+
+.stat-band-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px;
+  box-sizing: border-box;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 48px;
+  margin-top: 48px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stat-number {
+  font-size: var(--jl-stat);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: calc(var(--jl-eyebrow) + 1px);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #999999;
+  font-weight: 500;
+}
+
+/* Reveal wrappers used inside image grids */
+
+.image-reveal {
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+}
+
+.image-reveal .image-pair-item {
+  width: 100%;
+  height: 100%;
+}
+
+/* Reveal wrappers used inside the statistics grid */
+
+.stat-reveal {
+  width: 100%;
+  min-width: 0;
+}
+
+/* ─── RESPONSIVE: TABLET & MOBILE (up to 1280px) ────────── */
+
+@media (max-width: 1280px) {
+  .taxilk-container {
+    padding: 32px 24px;
+  }
+
+  .project-header {
+    min-height: 60vh;
+    padding-bottom: 40px;
+  }
+
+  .hero-visual-inner,
+  .stat-band-inner {
+    padding: 0 24px;
+  }
+
+  .project-header {
+    margin-bottom: 40px;
+  }
+
+  .image-pair {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 56px;
+  }
+
+  .stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
+  }
+
+  .hero-visual {
+    padding: 40px 0;
+    margin-bottom: 56px;
+  }
+
+  .stat-band {
+    padding: 64px 0;
+    margin-bottom: 56px;
+  }
+
+  .content-block {
+    margin-bottom: 48px;
+  }
+
+  .image-single {
+    margin-bottom: 56px;
+  }
+}
+
+/* ─── MOBILE fine-tuning (up to 640px) ──────────────────── */
+
+@media (max-width: 640px) {
+  .taxilk-container {
+    padding: 24px 20px;
+  }
+
+  .hero-visual-inner,
+  .stat-band-inner {
+    padding: 0 20px;
+  }
+
+  .meta-row {
+    gap: 8px;
+  }
+
+  .meta-divider {
+    display: none;
+  }
+
+  .header-title-row {
+    gap: 14px;
+  }
+}
