@@ -199,12 +199,19 @@ function App() {
               </div>
             </section>
 
-            <section className="project-card">
+            <section
+              className="project-card"
+              onClick={() => navigate("/fitmaldives")}
+              role="button"
+              tabIndex={0}
+            >
               <div className="card-image-wrapper">
-                <img src="/FitmaldivesThumbnail.png" alt="Fitmaldives" />
+                <img src="/FitmaldivesThumbnail.png" alt="Fit Maldives" />
               </div>
+
               <div className="project-info">
                 <h3>Fit Maldives</h3>
+
                 <div className="project-tags">
                   <span className="tag">Brand</span>
                 </div>

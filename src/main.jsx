@@ -12,6 +12,8 @@ import AboutPage from "./AboutPage";
 import PackitPage from "./assets/Projects/Packit/PackitPage";
 import JustlogPage from "./assets/Projects/Justlog/JustlogPage";
 import TaxilkPage from "./assets/Projects/Taxilk/Taxilk";
+import GreenifyPage from "./assets/Projects/Greenify/Greenify";
+import FitmaldivesPage from "./assets/Projects/Fitmaldives/Fitmaldives";
 import ScrollToTop from "./Scrolltotop";
 
 import "lenis/dist/lenis.css";
@@ -39,6 +41,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/packit" element={<PackitPage />} />
         <Route path="/justlog" element={<JustlogPage />} />
         <Route path="/taxilk" element={<TaxilkPage />} />
+        <Route path="/greenify" element={<GreenifyPage />} />
+        <Route path="/fitmaldives" element={<FitmaldivesPage />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
