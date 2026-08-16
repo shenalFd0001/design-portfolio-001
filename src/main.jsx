@@ -15,6 +15,7 @@ import TaxilkPage from "./assets/Projects/Taxilk/Taxilk";
 import GreenifyPage from "./assets/Projects/Greenify/Greenify";
 import FitmaldivesPage from "./assets/Projects/Fitmaldives/Fitmaldives";
 import RoamridePage from "./assets/Projects/Roamride/Roamride";
+import SaveupPage from "./assets/Projects/Saveup/saveup";
 import ScrollToTop from "./Scrolltotop";
 
 import "lenis/dist/lenis.css";
@@ -45,6 +46,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/greenify" element={<GreenifyPage />} />
         <Route path="/fitmaldives" element={<FitmaldivesPage />} />
         <Route path="/roamride" element={<RoamridePage />} />
+        <Route path="/saveup" element={<SaveupPage />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

@@ -1,0 +1,643 @@
+/* ─────────────────────────────────────────────────────────
+   SAVEUP PROJECT PAGE
+───────────────────────────────────────────────────────── */
+
+.saveup-page {
+  --saveup-hero: clamp(2.5rem, 1.3rem + 5.5vw, 6.5rem);
+  --saveup-heading: clamp(1.5rem, 1.25rem + 1.4vw, 2.25rem);
+  --saveup-body: clamp(1rem, 0.95rem + 0.2vw, 1.0625rem);
+  --saveup-eyebrow: clamp(0.75rem, 0.73rem + 0.08vw, 0.8125rem);
+
+  --saveup-blue: #123f74;
+  --saveup-blue-light: #eaf4ff;
+  --saveup-orange: #f3a45d;
+  --saveup-navy: #001c4b;
+  --saveup-black: #171717;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  color: #0d0d0d;
+  background-color: #ffffff;
+
+  overflow-x: hidden;
+}
+
+
+/* ─────────────────────────────────────────────────────────
+   MAIN HEADER CONTAINER
+───────────────────────────────────────────────────────── */
+
+.saveup-container {
+  width: 100%;
+  max-width: 1600px;
+
+  margin: 0 auto;
+
+  padding: 40px 100px;
+
+  box-sizing: border-box;
+}
+
+
+/* ─────────────────────────────────────────────────────────
+   BACK BUTTON
+───────────────────────────────────────────────────────── */
+
+.saveup-back-btn {
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+  border: 1px solid #e0e0e0;
+
+  background: #ffffff;
+  color: #444444;
+
+  cursor: pointer;
+
+  margin-bottom: 40px;
+
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.saveup-back-btn:hover {
+  background: #f5f5f5;
+  border-color: #bbbbbb;
+}
+
+
+/* ─────────────────────────────────────────────────────────
+   PROJECT HEADER
+───────────────────────────────────────────────────────── */
+
+.saveup-project-header {
+  min-height: 85vh;
+
+  max-width: 1100px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding-bottom: 56px;
+}
+
+.saveup-header-title-row {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 60px;
+}
+
+.saveup-header-title {
+  font-size: var(--saveup-hero);
+
+  font-weight: 700;
+
+  letter-spacing: -1.5px;
+  line-height: 1.05;
+
+  margin: 0;
+
+  color: #0d0d0d;
+}
+
+
+/* ─────────────────────────────────────────────────────────
+   EYEBROW
+───────────────────────────────────────────────────────── */
+
+.saveup-eyebrow {
+  display: block;
+
+  font-size: var(--saveup-eyebrow);
+
+  font-weight: 700;
+
+  letter-spacing: 1.6px;
+
+  text-transform: uppercase;
+
+  color: #000000;
+
+  margin-bottom: 60px;
+}
+
+
+/* ─────────────────────────────────────────────────────────
+   HEADER DESCRIPTION
+───────────────────────────────────────────────────────── */
+
+.saveup-header-description {
+  max-width: 800px;
+
+  font-size: var(--saveup-body);
+
+  line-height: 1.7;
+
+  color: #5a5a5a;
+
+  margin: 0 0 60px 0;
+
+  font-weight: 400;
+}
+
+
+/* ─────────────────────────────────────────────────────────
+   HEADER META
+───────────────────────────────────────────────────────── */
+
+.saveup-header-meta-details {
+  display: flex;
+
+  gap: 80px;
+
+  flex-wrap: wrap;
+}
+
+.saveup-meta-detail {
+  margin: 24px 0 60px 0;
+}
+
+.saveup-meta-detail-heading {
+  font-size: var(--saveup-eyebrow);
+
+  font-weight: 700;
+
+  letter-spacing: 1.6px;
+
+  text-transform: uppercase;
+
+  color: #000000;
+
+  margin: 0 0 8px 0;
+}
+
+.saveup-meta-detail-value {
+  font-size: var(--saveup-body);
+
+  line-height: 1.6;
+
+  color: #5a5a5a;
+
+  margin: 0;
+}
+
+
+/* ─────────────────────────────────────────────────────────
+   HERO AREA
+───────────────────────────────────────────────────────── */
+
+.saveup-hero {
+  width: 100%;
+
+  background-color: var(--saveup-blue-light);
+
+  padding: 0;
+
+  margin: 0;
+}
+
+.saveup-hero-inner {
+  width: 100%;
+
+  max-width: 1600px;
+
+  margin: 0 auto;
+
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+
+/* ─────────────────────────────────────────────────────────
+   CASE STUDY CONTAINER
+───────────────────────────────────────────────────────── */
+
+.saveup-case-container {
+  width: 100%;
+
+  max-width: 1600px;
+
+  margin: 0 auto;
+
+  padding: 80px 100px;
+
+  background-color: var(--saveup-blue-light);
+
+  box-sizing: border-box;
+}
+
+
+/* ─────────────────────────────────────────────────────────
+   PLACEHOLDERS
+───────────────────────────────────────────────────────── */
+
+.saveup-image-placeholder {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  border: 1px dashed rgba(18, 63, 116, 0.3);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(18, 63, 116, 0.04),
+      rgba(18, 63, 116, 0.08)
+    );
+
+  color: rgba(18, 63, 116, 0.65);
+
+  font-size: 0.75rem;
+
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+
+  text-transform: uppercase;
+
+  box-sizing: border-box;
+}
+
+.saveup-placeholder-hero {
+  min-height: 720px;
+}
+
+.saveup-placeholder-colours {
+  min-height: 220px;
+}
+
+.saveup-placeholder-landscape {
+  min-height: 520px;
+}
+
+.saveup-placeholder-mockups {
+  min-height: 1500px;
+}
+
+
+/* ─────────────────────────────────────────────────────────
+   BRAND INTRO
+───────────────────────────────────────────────────────── */
+
+.saveup-brand-intro {
+  margin-bottom: 100px;
+}
+
+.saveup-brand-lockup {
+  max-width: 650px;
+}
+
+.saveup-brand-name {
+  font-size: clamp(2.5rem, 5vw, 5rem);
+
+  line-height: 1;
+
+  letter-spacing: -2px;
+
+  color: var(--saveup-blue);
+
+  margin: 0 0 10px 0;
+}
+
+.saveup-brand-name span {
+  color: var(--saveup-orange);
+}
+
+.saveup-brand-tagline {
+  font-size: var(--saveup-body);
+
+  color: var(--saveup-blue);
+
+  margin: 0;
+}
+
+
+/* ─────────────────────────────────────────────────────────
+   CONTENT SECTIONS
+───────────────────────────────────────────────────────── */
+
+.saveup-section {
+  margin-bottom: 100px;
+}
+
+.saveup-section-title {
+  font-size: var(--saveup-heading);
+
+  line-height: 1.2;
+
+  font-weight: 700;
+
+  letter-spacing: -0.5px;
+
+  color: var(--saveup-blue);
+
+  margin: 0 0 32px 0;
+}
+
+.saveup-section-description {
+  max-width: 500px;
+
+  font-size: var(--saveup-body);
+
+  line-height: 1.7;
+
+  color: #3f5874;
+
+  margin: 0;
+}
+
+
+/* ─────────────────────────────────────────────────────────
+   HIGH FIDELITY MOCKUPS
+───────────────────────────────────────────────────────── */
+
+.saveup-mockup-section {
+  margin-bottom: 0;
+}
+
+.saveup-mockup-heading-row {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 60px;
+
+  margin-bottom: 40px;
+}
+
+.saveup-mockup-heading {
+  max-width: 700px;
+}
+
+
+/* ─────────────────────────────────────────────────────────
+   REAL IMAGES
+   Use these once placeholders are replaced
+───────────────────────────────────────────────────────── */
+
+.saveup-hero img,
+.saveup-section img,
+.saveup-mockup-section img {
+  width: 100%;
+
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+
+/* ─────────────────────────────────────────────────────────
+   THANK YOU SECTION
+───────────────────────────────────────────────────────── */
+
+.saveup-thank-you {
+  width: 100%;
+
+  min-height: 420px;
+
+  display: flex;
+
+  align-items: center;
+
+  background-color: var(--saveup-navy);
+
+  padding: 80px 100px;
+
+  box-sizing: border-box;
+}
+
+.saveup-thank-you-inner {
+  width: 100%;
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 40px;
+}
+
+.saveup-thank-you-symbol {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  color: var(--saveup-navy);
+
+  font-size: 1.5rem;
+
+  font-weight: 800;
+}
+
+.saveup-thank-you-copy span {
+  display: block;
+
+  font-size: 0.75rem;
+
+  letter-spacing: 1.4px;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  margin-bottom: 8px;
+}
+
+.saveup-thank-you-copy h2 {
+  font-size: clamp(2.5rem, 5vw, 5rem);
+
+  line-height: 0.95;
+
+  letter-spacing: -2px;
+
+  color: #ffffff;
+
+  margin: 0;
+}
+
+.saveup-thank-you-copy p {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+
+  color: #ffffff;
+
+  margin: 8px 0 0 0;
+}
+
+
+/* ─────────────────────────────────────────────────────────
+   TABLET
+───────────────────────────────────────────────────────── */
+
+@media (max-width: 1280px) {
+  .saveup-container {
+    padding: 32px 24px;
+  }
+
+  .saveup-project-header {
+    min-height: 60vh;
+
+    padding-bottom: 40px;
+  }
+
+  .saveup-case-container {
+    padding: 64px 24px;
+  }
+
+  .saveup-placeholder-hero {
+    min-height: 560px;
+  }
+
+  .saveup-placeholder-colours {
+    min-height: 200px;
+  }
+
+  .saveup-placeholder-landscape {
+    min-height: 420px;
+  }
+
+  .saveup-placeholder-mockups {
+    min-height: 1100px;
+  }
+
+  .saveup-brand-intro,
+  .saveup-section {
+    margin-bottom: 72px;
+  }
+
+  .saveup-thank-you {
+    min-height: 360px;
+
+    padding: 64px 24px;
+  }
+}
+
+
+/* ─────────────────────────────────────────────────────────
+   MOBILE
+───────────────────────────────────────────────────────── */
+
+@media (max-width: 640px) {
+  .saveup-container {
+    padding: 24px 20px;
+  }
+
+  .saveup-project-header {
+    min-height: 70vh;
+
+    padding-bottom: 32px;
+  }
+
+  .saveup-header-title-row {
+    margin-bottom: 40px;
+  }
+
+  .saveup-eyebrow {
+    margin-bottom: 40px;
+  }
+
+  .saveup-header-description {
+    margin-bottom: 40px;
+  }
+
+  .saveup-header-meta-details {
+    gap: 30px;
+  }
+
+  .saveup-meta-detail {
+    margin-bottom: 40px;
+  }
+
+  .saveup-case-container {
+    padding: 48px 20px;
+  }
+
+  .saveup-placeholder-hero {
+    min-height: 420px;
+  }
+
+  .saveup-placeholder-colours {
+    min-height: 160px;
+  }
+
+  .saveup-placeholder-landscape {
+    min-height: 300px;
+  }
+
+  .saveup-placeholder-mockups {
+    min-height: 800px;
+  }
+
+  .saveup-brand-intro {
+    margin-bottom: 64px;
+  }
+
+  .saveup-section {
+    margin-bottom: 64px;
+  }
+
+  .saveup-section-title {
+    margin-bottom: 24px;
+  }
+
+  .saveup-mockup-heading-row {
+    display: block;
+
+    margin-bottom: 32px;
+  }
+
+  .saveup-thank-you {
+    min-height: 300px;
+
+    padding: 48px 20px;
+  }
+
+  .saveup-thank-you-inner {
+    justify-content: flex-start;
+
+    gap: 24px;
+  }
+
+  .saveup-thank-you-symbol {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+  }
+}

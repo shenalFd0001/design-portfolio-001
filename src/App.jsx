@@ -162,12 +162,24 @@ function App() {
               </div>
             </section>
 
-            <section className="project-card">
+            <section
+              className="project-card"
+              onClick={() => navigate("/saveup")}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  navigate("/saveup");
+                }
+              }}
+            >
               <div className="card-image-wrapper">
                 <img src="/SaveupThumbnail.png" alt="Saveup" />
               </div>
+
               <div className="project-info">
                 <h3>Saveup - Personal Finance Tracker</h3>
+
                 <div className="project-tags">
                   <span className="tag">Brand</span>
                 </div>
