@@ -174,12 +174,24 @@ function App() {
               </div>
             </section>
 
-            <section className="project-card">
+            <section
+              className="project-card"
+              onClick={() => navigate("/roamride")}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  navigate("/roamride");
+                }
+              }}
+            >
               <div className="card-image-wrapper">
-                <img src="/SigiriyaThumbnail.png" alt="roam ride" />
+                <img src="/SigiriyaThumbnail.png" alt="Roamride" />
               </div>
+
               <div className="project-info">
                 <h3>Roamride - Book and Go</h3>
+
                 <div className="project-tags">
                   <span className="tag">App</span>
                 </div>
