@@ -19,25 +19,30 @@
     sans-serif;
 
   color: #0d0d0d;
-  background: #ffffff;
+  background-color: #ffffff;
   overflow-x: hidden;
 }
 
 
-/* CONTAINER */
+/* ─────────────────────────────────────────────────────────
+   CONTAINER
+───────────────────────────────────────────────────────── */
 
 .roamride-container {
   width: 100%;
   max-width: 1600px;
 
   margin: 0 auto;
+
   padding: 40px 100px;
 
   box-sizing: border-box;
 }
 
 
-/* BACK BUTTON */
+/* ─────────────────────────────────────────────────────────
+   BACK BUTTON
+───────────────────────────────────────────────────────── */
 
 .roamride-back-btn {
   display: none;
@@ -52,15 +57,26 @@
   border: 1px solid #e0e0e0;
 
   background: #ffffff;
-  color: #444;
+  color: #444444;
 
   cursor: pointer;
 
   margin-bottom: 40px;
+
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.roamride-back-btn:hover {
+  background: #f5f5f5;
+  border-color: #bbbbbb;
 }
 
 
-/* HEADER */
+/* ─────────────────────────────────────────────────────────
+   PROJECT HEADER
+───────────────────────────────────────────────────────── */
 
 .roamride-project-header {
   min-height: 85vh;
@@ -78,7 +94,9 @@
   display: flex;
   align-items: center;
 
-  margin-bottom: 60px;
+  gap: clamp(16px, 2vw, 32px);
+
+  margin: 0 0 60px 0;
 }
 
 .roamride-header-title {
@@ -87,15 +105,18 @@
   font-weight: 700;
 
   letter-spacing: -1.5px;
+
   line-height: 1.05;
 
-  color: #0d0d0d;
-
   margin: 0;
+
+  color: #0d0d0d;
 }
 
 
-/* EYEBROW */
+/* ─────────────────────────────────────────────────────────
+   EYEBROW
+───────────────────────────────────────────────────────── */
 
 .roamride-eyebrow {
   display: block;
@@ -108,32 +129,38 @@
 
   text-transform: uppercase;
 
-  color: #000;
+  color: #000000;
 
   margin-bottom: 60px;
 }
 
 .roamride-eyebrow--light {
-  color: #aaa;
+  color: #aaaaaa;
 }
 
 
-/* DESCRIPTION */
+/* ─────────────────────────────────────────────────────────
+   HEADER DESCRIPTION
+───────────────────────────────────────────────────────── */
 
 .roamride-header-description {
-  max-width: 800px;
-
   font-size: var(--roam-body);
 
   line-height: 1.7;
 
   color: #5a5a5a;
 
-  margin: 0 0 60px;
+  max-width: 800px;
+
+  margin: 0 0 60px 0;
+
+  font-weight: 400;
 }
 
 
-/* META */
+/* ─────────────────────────────────────────────────────────
+   HEADER META
+───────────────────────────────────────────────────────── */
 
 .roamride-header-meta-details {
   display: flex;
@@ -144,12 +171,18 @@
 }
 
 .roamride-meta-detail {
-  margin: 24px 0 60px;
+  margin: 24px 0 60px 0;
+
+  font-size: var(--roam-body);
 
   color: #5a5a5a;
 }
 
 .roamride-meta-detail-heading {
+  display: block;
+
+  margin: 0 0 8px 0;
+
   font-size: var(--roam-eyebrow);
 
   font-weight: 700;
@@ -158,53 +191,59 @@
 
   text-transform: uppercase;
 
-  color: #000;
-
-  margin: 0 0 8px;
+  color: #000000;
 }
 
 .roamride-meta-detail-value {
-  font-size: var(--roam-body);
-
   margin: 0;
+
+  line-height: 1.6;
+
+  color: #5a5a5a;
 }
 
 
-/* HERO */
+/* ─────────────────────────────────────────────────────────
+   HERO IMAGE
+───────────────────────────────────────────────────────── */
 
 .roamride-hero-visual {
   width: 100vw;
-  height: 720px;
 
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
 
+  padding: 0;
+
   margin-bottom: 80px;
 
   overflow: hidden;
-
-  background: #0a0a0a;
 }
 
 .roamride-hero-visual-inner {
   width: 100%;
-  height: 100%;
 
-  overflow: hidden;
+  margin: 0;
+
+  padding: 0;
+
+  display: block;
 }
 
 .roamride-hero-visual-inner img {
   width: 100%;
-  height: 100%;
+
+  height: auto;
 
   display: block;
 
-  object-fit: cover;
-  object-position: center;
+  object-fit: contain;
 }
 
 
-/* CONTENT */
+/* ─────────────────────────────────────────────────────────
+   CONTENT BLOCKS
+───────────────────────────────────────────────────────── */
 
 .roamride-content-block {
   max-width: 900px;
@@ -219,11 +258,13 @@
 
   letter-spacing: -0.5px;
 
-  margin: 0 0 20px;
+  color: #0d0d0d;
+
+  margin: 0 0 20px 0;
 }
 
 .roamride-block-heading--light {
-  color: #fff;
+  color: #ffffff;
 }
 
 .roamride-block-text {
@@ -231,101 +272,111 @@
 
   line-height: 1.75;
 
-  color: #555;
+  color: #555555;
 
   margin: 0;
 }
 
 
-/* MOBILE APP MOCKUPS */
+/* ─────────────────────────────────────────────────────────
+   IMAGE PAIRS
+   NO FIXED HEIGHT
+   NO PADDING
+   NO BACKGROUND
+   NO CROPPING
+───────────────────────────────────────────────────────── */
 
 .roamride-image-pair {
   display: grid;
 
   grid-template-columns: 1fr 1fr;
 
-  gap: 48px;
+  gap: 24px;
 
   margin-bottom: 80px;
 
-  align-items: stretch;
+  align-items: start;
 }
 
 .roamride-image-pair-item {
-  min-height: 560px;
+  width: 100%;
 
-  padding: 40px;
+  display: block;
 
-  display: flex;
+  padding: 0;
 
-  align-items: center;
-  justify-content: center;
+  margin: 0;
 
-  overflow: hidden;
+  background: transparent;
 
-  background: #f5f5f5;
+  overflow: visible;
 
   box-sizing: border-box;
 }
 
 .roamride-image-pair-item img {
-  width: auto;
+  width: 100%;
+
   height: auto;
 
-  max-width: 320px;
-  max-height: 520px;
-
-  object-fit: contain;
+  max-width: none;
+  max-height: none;
 
   display: block;
+
+  object-fit: contain;
 }
+
+
+/* ─────────────────────────────────────────────────────────
+   REVEAL WRAPPERS
+───────────────────────────────────────────────────────── */
 
 .roamride-image-reveal {
   width: 100%;
-  height: 100%;
 
   min-width: 0;
 }
 
 .roamride-image-reveal .roamride-image-pair-item {
   width: 100%;
-  height: 100%;
 }
 
 
-/* SINGLE MOCKUP */
+/* ─────────────────────────────────────────────────────────
+   SINGLE IMAGE
+   ORIGINAL ASPECT RATIO
+───────────────────────────────────────────────────────── */
 
 .roamride-image-single {
-  min-height: 650px;
+  width: 100%;
 
-  padding: 60px;
+  padding: 0;
 
-  display: flex;
+  margin: 0 0 80px 0;
 
-  align-items: center;
-  justify-content: center;
+  background: transparent;
 
-  background: #f5f5f5;
-
-  margin-bottom: 80px;
-
-  box-sizing: border-box;
+  overflow: visible;
 }
 
 .roamride-image-single img {
-  width: auto;
+  width: 100%;
+
   height: auto;
 
-  max-width: 360px;
-  max-height: 600px;
-
-  object-fit: contain;
+  max-width: none;
+  max-height: none;
 
   display: block;
+
+  object-fit: contain;
 }
 
 
-/* STATS */
+/* ─────────────────────────────────────────────────────────
+   STATISTICS BAND
+───────────────────────────────────────────────────────── */
 
 .roamride-stat-band {
   width: 100vw;
@@ -333,11 +384,13 @@
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
 
+  background-color: #0d0d0d;
+
   padding: 88px 0;
 
   margin-bottom: 80px;
 
-  background: #0d0d0d;
+  box-sizing: border-box;
 }
 
 .roamride-stat-band-inner {
@@ -362,6 +415,7 @@
 
 .roamride-stat-item {
   display: flex;
+
   flex-direction: column;
 
   gap: 8px;
@@ -372,45 +426,61 @@
 
   font-weight: 700;
 
-  line-height: 1;
+  color: #ffffff;
 
-  color: #fff;
+  letter-spacing: -1px;
+
+  line-height: 1;
 }
 
 .roamride-stat-label {
   font-size: calc(var(--roam-eyebrow) + 1px);
 
-  font-weight: 500;
+  text-transform: uppercase;
 
   letter-spacing: 1px;
 
-  text-transform: uppercase;
+  color: #999999;
 
-  color: #999;
+  font-weight: 500;
 }
 
 .roamride-stat-reveal {
   width: 100%;
+
   min-width: 0;
 }
 
 
-/* TABLET */
+/* ─────────────────────────────────────────────────────────
+   TABLET
+───────────────────────────────────────────────────────── */
 
 @media (max-width: 1280px) {
+
   .roamride-container {
     padding: 32px 24px;
   }
 
+
   .roamride-project-header {
     min-height: 60vh;
+
     padding-bottom: 40px;
   }
 
+
   .roamride-hero-visual {
-    height: 560px;
     margin-bottom: 56px;
   }
+
+
+  .roamride-hero-visual-inner img {
+    width: 100%;
+
+    height: auto;
+  }
+
 
   .roamride-image-pair {
     grid-template-columns: 1fr;
@@ -420,86 +490,130 @@
     margin-bottom: 56px;
   }
 
-  .roamride-image-pair-item {
-    min-height: 520px;
 
-    padding: 36px;
+  .roamride-image-pair-item {
+    width: 100%;
+
+    padding: 0;
+
+    min-height: 0;
+
+    background: transparent;
   }
+
 
   .roamride-image-pair-item img {
-    max-width: 300px;
-    max-height: 480px;
+    width: 100%;
+
+    height: auto;
+
+    max-width: none;
+    max-height: none;
+
+    object-fit: contain;
   }
 
-  .roamride-stat-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 36px;
-  }
 
   .roamride-stat-band-inner {
     padding: 0 24px;
   }
 
+
+  .roamride-stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 36px;
+  }
+
+
   .roamride-stat-band {
     padding: 64px 0;
+
     margin-bottom: 56px;
   }
+
 
   .roamride-content-block {
     margin-bottom: 48px;
   }
 
-  .roamride-image-single {
-    min-height: 580px;
 
-    padding: 48px;
+  .roamride-image-single {
+    width: 100%;
+
+    padding: 0;
 
     margin-bottom: 56px;
   }
 
+
   .roamride-image-single img {
-    max-width: 320px;
-    max-height: 540px;
+    width: 100%;
+
+    height: auto;
+
+    max-width: none;
+    max-height: none;
   }
 }
 
 
-/* MOBILE */
+/* ─────────────────────────────────────────────────────────
+   MOBILE
+───────────────────────────────────────────────────────── */
 
 @media (max-width: 640px) {
+
   .roamride-container {
     padding: 24px 20px;
   }
 
+
   .roamride-project-header {
     min-height: 70vh;
+
     padding-bottom: 32px;
   }
 
+
   .roamride-header-title-row {
+    gap: 14px;
+
     margin-bottom: 40px;
   }
+
 
   .roamride-header-description {
     margin-bottom: 40px;
   }
 
-  .roamride-eyebrow {
-    margin-bottom: 40px;
-  }
 
   .roamride-header-meta-details {
     gap: 30px;
   }
 
+
   .roamride-meta-detail {
     margin-bottom: 40px;
   }
 
+
+  .roamride-eyebrow {
+    margin-bottom: 40px;
+  }
+
+
   .roamride-hero-visual {
-    height: 420px;
     margin-bottom: 48px;
   }
+
+
+  .roamride-hero-visual-inner img {
+    width: 100%;
+
+    height: auto;
+  }
+
 
   .roamride-image-pair {
     grid-template-columns: 1fr;
@@ -509,29 +623,46 @@
     margin-bottom: 48px;
   }
 
-  .roamride-image-pair-item {
-    min-height: 460px;
 
-    padding: 24px;
+  .roamride-image-pair-item {
+    width: 100%;
+
+    min-height: 0;
+
+    padding: 0;
+
+    background: transparent;
   }
+
 
   .roamride-image-pair-item img {
-    max-width: 260px;
-    max-height: 430px;
+    width: 100%;
+
+    height: auto;
+
+    max-width: none;
+    max-height: none;
+
+    object-fit: contain;
   }
+
 
   .roamride-content-block {
     margin-bottom: 40px;
   }
 
+
   .roamride-stat-band {
     padding: 56px 0;
+
     margin-bottom: 48px;
   }
+
 
   .roamride-stat-band-inner {
     padding: 0 20px;
   }
+
 
   .roamride-stat-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -539,16 +670,24 @@
     gap: 32px 20px;
   }
 
-  .roamride-image-single {
-    min-height: 520px;
 
-    padding: 32px 20px;
+  .roamride-image-single {
+    width: 100%;
+
+    padding: 0;
 
     margin-bottom: 48px;
   }
 
+
   .roamride-image-single img {
-    max-width: 280px;
-    max-height: 480px;
+    width: 100%;
+
+    height: auto;
+
+    max-width: none;
+    max-height: none;
+
+    object-fit: contain;
   }
 }

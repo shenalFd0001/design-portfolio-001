@@ -88,7 +88,7 @@ function RoamridePage() {
           <Reveal distance={48}>
             <div className="roamride-hero-visual-inner">
               <img
-                src="/roamride1.png"
+                src="/Roamride1.png"
                 alt="Roamride product overview"
                 fetchPriority="high"
               />
@@ -121,7 +121,7 @@ function RoamridePage() {
             <Reveal className="roamride-image-reveal">
               <div className="roamride-image-pair-item">
                 <img
-                  src="/roamride2.png"
+                  src="/Roamride2.png"
                   alt="Roamride interface design"
                   loading="lazy"
                 />
@@ -131,7 +131,7 @@ function RoamridePage() {
             <Reveal className="roamride-image-reveal" delay={0.12}>
               <div className="roamride-image-pair-item">
                 <img
-                  src="/roamride3.png"
+                  src="/Roamride3.png"
                   alt="Roamride interface design"
                   loading="lazy"
                 />
@@ -191,7 +191,7 @@ function RoamridePage() {
             <Reveal className="roamride-image-reveal">
               <div className="roamride-image-pair-item">
                 <img
-                  src="/roamride4.png"
+                  src="/Roamride4.png"
                   alt="Roamride interface design"
                   loading="lazy"
                 />
@@ -201,7 +201,7 @@ function RoamridePage() {
             <Reveal className="roamride-image-reveal" delay={0.12}>
               <div className="roamride-image-pair-item">
                 <img
-                  src="/roamride5.png"
+                  src="/Roamride5.png"
                   alt="Roamride interface design"
                   loading="lazy"
                 />
@@ -233,7 +233,7 @@ function RoamridePage() {
             <Reveal className="roamride-image-reveal">
               <div className="roamride-image-pair-item">
                 <img
-                  src="/roamride6.png"
+                  src="/Roamride6.png"
                   alt="Roamride interface design"
                   loading="lazy"
                 />
@@ -243,7 +243,7 @@ function RoamridePage() {
             <Reveal className="roamride-image-reveal" delay={0.12}>
               <div className="roamride-image-pair-item">
                 <img
-                  src="/roamride7.png"
+                  src="/Roamride7.png"
                   alt="Roamride interface design"
                   loading="lazy"
                 />
@@ -255,7 +255,7 @@ function RoamridePage() {
           <Reveal>
             <div className="roamride-image-single">
               <img
-                src="/roamride8.png"
+                src="/Roamride8.png"
                 alt="Roamride final product presentation"
                 loading="lazy"
               />
