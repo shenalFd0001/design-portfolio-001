@@ -64,13 +64,23 @@ function SaveupPage() {
 
               <div className="saveup-header-meta-details">
                 <div className="saveup-meta-detail">
-                  <h2 className="saveup-meta-detail-heading">Industry</h2>
-                  <p className="saveup-meta-detail-value">Fintech</p>
+                  <h2 className="saveup-meta-detail-heading">
+                    Industry
+                  </h2>
+
+                  <p className="saveup-meta-detail-value">
+                    Fintech
+                  </p>
                 </div>
 
                 <div className="saveup-meta-detail">
-                  <h2 className="saveup-meta-detail-heading">Project</h2>
-                  <p className="saveup-meta-detail-value">Product Design</p>
+                  <h2 className="saveup-meta-detail-heading">
+                    Project
+                  </h2>
+
+                  <p className="saveup-meta-detail-value">
+                    Product Design
+                  </p>
                 </div>
               </div>
             </header>
@@ -78,15 +88,17 @@ function SaveupPage() {
         </div>
 
         {/* =========================
-            HERO
+            HERO IMAGE
         ========================== */}
 
         <Reveal distance={48}>
           <section className="saveup-hero">
             <div className="saveup-hero-inner">
-              <ImagePlaceholder
-                label="HERO IMAGE — saveup1.png"
-                className="saveup-placeholder-hero"
+              <img
+                src="/saveup1.png"
+                alt="Saveup mobile app overview"
+                className="saveup-hero-image"
+                fetchPriority="high"
               />
             </div>
           </section>
@@ -97,21 +109,11 @@ function SaveupPage() {
         ========================== */}
 
         <div className="saveup-case-container">
-          {/* BRAND INTRO */}
+          {/* =========================
+              BRAND INTRO
+          ========================== */}
 
-          <Reveal>
-            <section className="saveup-brand-intro">
-              <div className="saveup-brand-lockup">
-                <h2 className="saveup-brand-name">
-                  Saveup<span>.</span>
-                </h2>
-
-                <p className="saveup-brand-tagline">
-                  Your personal finance companion.
-                </p>
-              </div>
-            </section>
-          </Reveal>
+         
 
           {/* =========================
               COLOUR PALETTE
@@ -119,17 +121,81 @@ function SaveupPage() {
 
           <Reveal>
             <section className="saveup-section">
-              <h2 className="saveup-section-title">Colour Palette</h2>
+              <h2 className="saveup-section-title">
+                Colour Palette
+              </h2>
 
-              <ImagePlaceholder
-                label="COLOUR PALETTE — saveup2.png"
-                className="saveup-placeholder-colours"
-              />
+              <div className="saveup-color-palette">
+                {/* PRIMARY GRADIENT */}
+
+                <div className="saveup-color-group saveup-color-group--gradient">
+                  <p className="saveup-color-heading">
+                    Primary Gradient
+                  </p>
+
+                  <div className="saveup-color-card saveup-gradient-card">
+                    <div className="saveup-gradient-left">
+                      <span>HEX</span>
+                      <strong>#0B2848</strong>
+                    </div>
+
+                    <div className="saveup-gradient-right">
+                      <span>HEX</span>
+                      <strong>#1A508B</strong>
+                    </div>
+                  </div>
+                </div>
+
+                {/* PRIMARY */}
+
+                <div className="saveup-color-group">
+                  <p className="saveup-color-heading">
+                    Primary
+                  </p>
+
+                  <div className="saveup-color-card saveup-primary-card">
+                    <div className="saveup-color-code saveup-color-code--light">
+                      <span>HEX</span>
+                      <strong>#1A508B</strong>
+                    </div>
+                  </div>
+                </div>
+
+                {/* SECONDARY */}
+
+                <div className="saveup-color-group">
+                  <p className="saveup-color-heading">
+                    Secondary
+                  </p>
+
+                  <div className="saveup-color-card saveup-secondary-card">
+                    <div className="saveup-color-code saveup-color-code--dark">
+                      <span>HEX</span>
+                      <strong>#FFC285</strong>
+                    </div>
+                  </div>
+                </div>
+
+                {/* BASE */}
+
+                <div className="saveup-color-group">
+                  <p className="saveup-color-heading">
+                    BASE
+                  </p>
+
+                  <div className="saveup-color-card saveup-base-card">
+                    <div className="saveup-color-code saveup-color-code--light">
+                      <span>HEX</span>
+                      <strong>#1B1B1B</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </section>
           </Reveal>
 
           {/* =========================
-              COMPONENTS / VARIABLES
+              COMPONENTS
           ========================== */}
 
           <Reveal>
@@ -197,14 +263,22 @@ function SaveupPage() {
         <section className="saveup-thank-you">
           <Reveal>
             <div className="saveup-thank-you-inner">
-              <div className="saveup-thank-you-symbol">F</div>
+              <div className="saveup-thank-you-symbol">
+                F
+              </div>
 
               <div className="saveup-thank-you-copy">
-                <span>Thanks for checking out</span>
+                <span>
+                  Thanks for checking out
+                </span>
 
-                <h2>Thank you</h2>
+                <h2>
+                  Thank you
+                </h2>
 
-                <p>for watching</p>
+                <p>
+                  for watching
+                </p>
               </div>
             </div>
           </Reveal>
