@@ -77,6 +77,7 @@
 
 .saveup-back-btn:hover {
   background: #f5f5f5;
+
   border-color: #bbbbbb;
 }
 
@@ -99,6 +100,7 @@
 
 .saveup-header-title-row {
   display: flex;
+
   align-items: center;
 
   margin-bottom: 60px;
@@ -110,6 +112,7 @@
   font-weight: 700;
 
   letter-spacing: -1.5px;
+
   line-height: 1.05;
 
   color: #0d0d0d;
@@ -140,7 +143,7 @@
 
 
 /* ─────────────────────────────────────────────────────────
-   DESCRIPTION
+   HEADER DESCRIPTION
 ───────────────────────────────────────────────────────── */
 
 .saveup-header-description {
@@ -159,7 +162,7 @@
 
 
 /* ─────────────────────────────────────────────────────────
-   META
+   HEADER META
 ───────────────────────────────────────────────────────── */
 
 .saveup-header-meta-details {
@@ -295,7 +298,7 @@
 
 
 /* ─────────────────────────────────────────────────────────
-   GENERAL SECTIONS
+   GENERAL CONTENT SECTIONS
 ───────────────────────────────────────────────────────── */
 
 .saveup-section {
@@ -363,14 +366,10 @@
   margin: 0 0 14px 6px;
 }
 
-
-/* COLOUR BLOCK */
-
 .saveup-color-card {
   position: relative;
 
   width: 100%;
-
   height: 220px;
 
   overflow: hidden;
@@ -460,7 +459,7 @@
 }
 
 
-/* HEX POSITION INSIDE SOLID BLOCKS */
+/* HEX TEXT POSITION */
 
 .saveup-color-code {
   position: absolute;
@@ -482,6 +481,42 @@
 
 .saveup-color-code--dark {
   color: #0b2848;
+}
+
+
+/* ─────────────────────────────────────────────────────────
+   COMPONENTS / VARIANTS / VARIABLES
+   DESKTOP = ONE ROW
+   TABLET + MOBILE = STACKED
+───────────────────────────────────────────────────────── */
+
+.saveup-components-images {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 24px;
+
+  align-items: start;
+}
+
+.saveup-components-image-item {
+  width: 100%;
+
+  min-width: 0;
+
+  overflow: hidden;
+}
+
+.saveup-components-image-item img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
 }
 
 
@@ -561,13 +596,9 @@
 
 .saveup-section img,
 .saveup-mockup-section img {
-  width: 100%;
+  max-width: 100%;
 
   height: auto;
-
-  display: block;
-
-  object-fit: contain;
 }
 
 
@@ -661,18 +692,24 @@
 
 /* ─────────────────────────────────────────────────────────
    TABLET
+   TWO COMPONENT IMAGES BECOME TWO ROWS
 ───────────────────────────────────────────────────────── */
 
 @media (max-width: 1280px) {
+
   .saveup-container {
     padding: 32px 24px;
   }
+
 
   .saveup-project-header {
     min-height: 60vh;
 
     padding-bottom: 40px;
   }
+
+
+  /* HERO */
 
   .saveup-hero {
     margin-bottom: 56px;
@@ -686,6 +723,9 @@
     height: 560px;
   }
 
+
+  /* CASE STUDY */
+
   .saveup-case-container {
     padding: 64px 24px;
   }
@@ -694,6 +734,9 @@
   .saveup-section {
     margin-bottom: 72px;
   }
+
+
+  /* COLOUR PALETTE */
 
   .saveup-color-palette {
     grid-template-columns: 1fr 1fr;
@@ -707,6 +750,18 @@
     height: 200px;
   }
 
+
+  /* COMPONENT IMAGES */
+
+  .saveup-components-images {
+    grid-template-columns: 1fr;
+
+    gap: 24px;
+  }
+
+
+  /* PLACEHOLDERS */
+
   .saveup-placeholder-landscape {
     min-height: 420px;
   }
@@ -714,6 +769,9 @@
   .saveup-placeholder-mockups {
     min-height: 1100px;
   }
+
+
+  /* THANK YOU */
 
   .saveup-thank-you {
     min-height: 360px;
@@ -728,9 +786,11 @@
 ───────────────────────────────────────────────────────── */
 
 @media (max-width: 640px) {
+
   .saveup-container {
     padding: 24px 20px;
   }
+
 
   .saveup-project-header {
     min-height: 70vh;
@@ -738,25 +798,33 @@
     padding-bottom: 32px;
   }
 
+
   .saveup-header-title-row {
     margin-bottom: 40px;
   }
+
 
   .saveup-eyebrow {
     margin-bottom: 40px;
   }
 
+
   .saveup-header-description {
     margin-bottom: 40px;
   }
+
 
   .saveup-header-meta-details {
     gap: 30px;
   }
 
+
   .saveup-meta-detail {
     margin-bottom: 40px;
   }
+
+
+  /* HERO */
 
   .saveup-hero {
     margin-bottom: 48px;
@@ -767,6 +835,9 @@
 
     height: 420px;
   }
+
+
+  /* CASE STUDY */
 
   .saveup-case-container {
     padding: 48px 20px;
@@ -783,6 +854,7 @@
   .saveup-section-title {
     margin-bottom: 24px;
   }
+
 
   /* COLOUR PALETTE */
 
@@ -814,6 +886,16 @@
     left: 18px;
   }
 
+
+  /* COMPONENT IMAGES */
+
+  .saveup-components-images {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+
   /* PLACEHOLDERS */
 
   .saveup-placeholder-landscape {
@@ -824,11 +906,15 @@
     min-height: 800px;
   }
 
+
+  /* MOCKUP HEADER */
+
   .saveup-mockup-heading-row {
     display: block;
 
     margin-bottom: 32px;
   }
+
 
   /* THANK YOU */
 

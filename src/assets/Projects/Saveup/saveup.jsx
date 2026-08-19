@@ -113,7 +113,19 @@ function SaveupPage() {
               BRAND INTRO
           ========================== */}
 
-         
+          <Reveal>
+            <section className="saveup-brand-intro">
+              <div className="saveup-brand-lockup">
+                <h2 className="saveup-brand-name">
+                  Saveup<span>.</span>
+                </h2>
+
+                <p className="saveup-brand-tagline">
+                  Your personal finance companion.
+                </p>
+              </div>
+            </section>
+          </Reveal>
 
           {/* =========================
               COLOUR PALETTE
@@ -195,7 +207,7 @@ function SaveupPage() {
           </Reveal>
 
           {/* =========================
-              COMPONENTS
+              COMPONENTS / VARIANTS / VARIABLES
           ========================== */}
 
           <Reveal>
@@ -204,10 +216,23 @@ function SaveupPage() {
                 Leveraging Components, Variants, and Variables
               </h2>
 
-              <ImagePlaceholder
-                label="COMPONENTS, VARIANTS & VARIABLES — saveup3.png"
-                className="saveup-placeholder-landscape"
-              />
+              <div className="saveup-components-images">
+                <div className="saveup-components-image-item">
+                  <img
+                    src="/saveup2.png"
+                    alt="Saveup components and variants"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div className="saveup-components-image-item">
+                  <img
+                    src="/saveup3.png"
+                    alt="Saveup variables and component system"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
             </section>
           </Reveal>
 
