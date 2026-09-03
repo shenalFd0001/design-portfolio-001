@@ -26,10 +26,10 @@ function Reveal({
       viewport={{
         once: true,
         amount: 0.15,
-        margin: "0px 0px -60px 0px",
+        margin: "0px 0px -20px 0px",
       }}
       transition={{
-        duration: 0.65,
+        duration: 0.45,
         delay,
         ease: [0.22, 1, 0.36, 1],
       }}

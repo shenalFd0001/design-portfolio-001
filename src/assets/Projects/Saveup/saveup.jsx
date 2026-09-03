@@ -246,10 +246,13 @@ function SaveupPage() {
                 Element Naming and Variable Structure for Screen Definitions
               </h2>
 
-              <ImagePlaceholder
-                label="ELEMENT NAMING / SCREEN STRUCTURE — saveup4.png"
-                className="saveup-placeholder-landscape"
-              />
+              <div className="saveup-components-image-item">
+                <img
+                  src="/saveup4.png"
+                  alt="Saveup element naming and screen structure"
+                  loading="lazy"
+                />
+              </div>
             </section>
           </Reveal>
 
