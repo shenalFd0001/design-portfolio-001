@@ -486,6 +486,7 @@
 
 /* ─────────────────────────────────────────────────────────
    COMPONENTS / VARIANTS / VARIABLES
+   DASHED CARD BEHIND EACH IMAGE
    DESKTOP = ONE ROW
    TABLET + MOBILE = STACKED
 ───────────────────────────────────────────────────────── */
@@ -504,14 +505,84 @@
 
 .saveup-components-image-item {
   width: 100%;
-
   min-width: 0;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #E0EBF9;
+
+  padding: 80px;
+
+  border-radius: 0px;
+  border: 1px dashed rgba(18, 63, 116, 0.3);
+
   overflow: hidden;
+
+  box-sizing: border-box;
 }
 
 .saveup-components-image-item img {
   width: 100%;
+
+  max-width: 620px;
+
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+/* WIDER VARIANT — FULL WIDTH SINGLE IMAGE */
+
+.saveup-components-image-item--wide img {
+  max-width: 900px;
+}
+
+
+/* ─────────────────────────────────────────────────────────
+   HIGH FIDELITY MOCKUPS — 4 PHONE SCREENS IN A ROW
+───────────────────────────────────────────────────────── */
+
+.saveup-mockup-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 24px;
+
+  align-items: stretch;
+}
+
+.saveup-mockup-item {
+  width: 100%;
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #E0EBF9;
+
+  padding: 24px;
+
+  border-radius: 0px;
+  border: 1px dashed rgba(18, 63, 116, 0.3);
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+.saveup-mockup-item img {
+  width: 100%;
+
+  max-width: 260px;
+
   height: auto;
 
   display: block;
@@ -521,52 +592,7 @@
 
 
 /* ─────────────────────────────────────────────────────────
-   PLACEHOLDERS
-───────────────────────────────────────────────────────── */
-
-.saveup-image-placeholder {
-  width: 100%;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  text-align: center;
-
-  border: 1px dashed rgba(18, 63, 116, 0.3);
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(18, 63, 116, 0.04),
-      rgba(18, 63, 116, 0.08)
-    );
-
-  color: rgba(18, 63, 116, 0.65);
-
-  font-size: 0.75rem;
-
-  font-weight: 700;
-
-  letter-spacing: 1.2px;
-
-  text-transform: uppercase;
-
-  box-sizing: border-box;
-}
-
-.saveup-placeholder-landscape {
-  min-height: 520px;
-}
-
-.saveup-placeholder-mockups {
-  min-height: 1500px;
-}
-
-
-/* ─────────────────────────────────────────────────────────
-   HIGH FIDELITY MOCKUPS
+   HIGH FIDELITY MOCKUPS — SECTION LAYOUT
 ───────────────────────────────────────────────────────── */
 
 .saveup-mockup-section {
@@ -692,7 +718,7 @@
 
 /* ─────────────────────────────────────────────────────────
    TABLET
-   TWO COMPONENT IMAGES BECOME TWO ROWS
+   COMPONENT + MOCKUP GRIDS ADAPT
 ───────────────────────────────────────────────────────── */
 
 @media (max-width: 1280px) {
@@ -759,15 +785,15 @@
     gap: 24px;
   }
 
-
-  /* PLACEHOLDERS */
-
-  .saveup-placeholder-landscape {
-    min-height: 420px;
+  .saveup-components-image-item {
+    padding: 32px;
   }
 
-  .saveup-placeholder-mockups {
-    min-height: 1100px;
+
+  /* MOCKUP GRID — 2 PER ROW */
+
+  .saveup-mockup-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
 
@@ -895,15 +921,34 @@
     gap: 20px;
   }
 
+  .saveup-components-image-item {
+    padding: 20px;
 
-  /* PLACEHOLDERS */
-
-  .saveup-placeholder-landscape {
-    min-height: 300px;
+    border-radius: 10px;
   }
 
-  .saveup-placeholder-mockups {
-    min-height: 800px;
+  .saveup-components-image-item img,
+  .saveup-components-image-item--wide img {
+    max-width: 100%;
+  }
+
+
+  /* MOCKUP GRID — 1 PER ROW */
+
+  .saveup-mockup-grid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .saveup-mockup-item {
+    padding: 20px;
+
+    border-radius: 10px;
+  }
+
+  .saveup-mockup-item img {
+    max-width: 220px;
   }
 
 

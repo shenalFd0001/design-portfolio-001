@@ -5,14 +5,6 @@ import Navbar from "../../../Navbar";
 import Footer from "../../../Footer";
 import Reveal from "../../Components/Reveal";
 
-function ImagePlaceholder({ label, className = "" }) {
-  return (
-    <div className={`saveup-image-placeholder ${className}`}>
-      <span>{label}</span>
-    </div>
-  );
-}
-
 function SaveupPage() {
   const navigate = useNavigate();
 
@@ -95,7 +87,7 @@ function SaveupPage() {
           <section className="saveup-hero">
             <div className="saveup-hero-inner">
               <img
-                src="/saveup1.png"
+                src="/Saveup1.webp"
                 alt="Saveup mobile app overview"
                 className="saveup-hero-image"
                 fetchPriority="high"
@@ -246,7 +238,7 @@ function SaveupPage() {
                 Element Naming and Variable Structure for Screen Definitions
               </h2>
 
-              <div className="saveup-components-image-item">
+              <div className="saveup-components-image-item saveup-components-image-item--wide">
                 <img
                   src="/saveup4.png"
                   alt="Saveup element naming and screen structure"
@@ -276,10 +268,127 @@ function SaveupPage() {
                 </div>
               </div>
 
-              <ImagePlaceholder
-                label="HIGH FIDELITY MOCKUPS — saveup5.png"
-                className="saveup-placeholder-mockups"
-              />
+              <div className="saveup-mockup-grid">
+  <div className="saveup-mockup-item">
+    <img
+      src="/saveup5.webp"
+      alt="Saveup onboarding screen"
+      loading="lazy"
+    />
+  </div>
+
+  <div className="saveup-mockup-item">
+    <img
+      src="/saveup6.webp"
+      alt="Saveup savings goals screen"
+      loading="lazy"
+    />
+  </div>
+
+  <div className="saveup-mockup-item">
+    <img
+      src="/saveup7.webp"
+      alt="Saveup spending insights screen"
+      loading="lazy"
+    />
+  </div>
+
+  <div className="saveup-mockup-item">
+    <img
+      src="/saveup8.webp"
+      alt="Saveup account management screen"
+      loading="lazy"
+    />
+  </div>
+
+  <div className="saveup-mockup-item">
+    <img
+      src="/saveup9.webp"
+      alt="Saveup account management screen"
+      loading="lazy"
+    />
+  </div>
+
+  <div className="saveup-mockup-item">
+    <img
+      src="/saveup10.webp"
+      alt="Saveup account management screen"
+      loading="lazy"
+    />
+  </div>
+
+  <div className="saveup-mockup-item">
+    <img
+      src="/saveup11.webp"
+      alt="Saveup account management screen"
+      loading="lazy"
+    />
+  </div>
+
+  <div className="saveup-mockup-item">
+    <img
+      src="/saveup12.webp"
+      alt="Saveup account management screen"
+      loading="lazy"
+    />
+  </div>
+
+  <div className="saveup-mockup-item">
+    <img
+      src="/saveup13.webp"
+      alt="Saveup account management screen"
+      loading="lazy"
+    />
+  </div>
+
+  <div className="saveup-mockup-item">
+    <img
+      src="/saveup14.webp"
+      alt="Saveup account management screen"
+      loading="lazy"
+    />
+  </div>
+
+  <div className="saveup-mockup-item">
+    <img
+      src="/saveup15.webp"
+      alt="Saveup account management screen"
+      loading="lazy"
+    />
+  </div>
+
+  <div className="saveup-mockup-item">
+    <img
+      src="/saveup16.webp"
+      alt="Saveup account management screen"
+      loading="lazy"
+    />
+  </div>
+
+  <div className="saveup-mockup-item">
+    <img
+      src="/saveup17.webp"
+      alt="Saveup account management screen"
+      loading="lazy"
+    />
+  </div>
+
+  <div className="saveup-mockup-item">
+    <img
+      src="/saveup18.webp"
+      alt="Saveup account management screen"
+      loading="lazy"
+    />
+  </div>
+
+  <div className="saveup-mockup-item">
+    <img
+      src="/saveup19.webp"
+      alt="Saveup account management screen"
+      loading="lazy"
+    />
+  </div>
+</div>
             </section>
           </Reveal>
         </div>
