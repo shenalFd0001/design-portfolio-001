@@ -148,10 +148,17 @@ function App() {
 
             <section
               className="project-card"
-              onClick={() => navigate("/packit")}
+              onClick={() => navigate("/livelottery")}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  navigate("/livelottery");
+                }
+              }}
             >
               <div className="card-image-wrapper">
-                <img src="/LivelotteryThumbnail.png" alt="Packit" />
+                <img src="/LivelotteryThumbnail.png" alt="Live Lottery" />
               </div>
               <div className="project-info">
                 <h3>Live Lottery - Gamble Win & Win</h3>

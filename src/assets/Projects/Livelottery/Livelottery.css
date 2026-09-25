@@ -2,18 +2,18 @@
    SAVEUP PROJECT PAGE
 ───────────────────────────────────────────────────────── */
 
-.saveup-page {
-  --saveup-hero: clamp(2.5rem, 1.3rem + 5.5vw, 6.5rem);
-  --saveup-heading: clamp(1.5rem, 1.25rem + 1.4vw, 2.25rem);
-  --saveup-body: clamp(1rem, 0.95rem + 0.2vw, 1.0625rem);
-  --saveup-eyebrow: clamp(0.75rem, 0.73rem + 0.08vw, 0.8125rem);
+.livelottery-page {
+  --livelottery-hero: clamp(2.5rem, 1.3rem + 5.5vw, 6.5rem);
+  --livelottery-heading: clamp(1.5rem, 1.25rem + 1.4vw, 2.25rem);
+  --livelottery-body: clamp(1rem, 0.95rem + 0.2vw, 1.0625rem);
+  --livelottery-eyebrow: clamp(0.75rem, 0.73rem + 0.08vw, 0.8125rem);
 
-  --saveup-blue: #1a508b;
-  --saveup-dark-blue: #0b2848;
-  --saveup-blue-light: #eaf4ff;
-  --saveup-orange: #ffc285;
-  --saveup-base: #1b1b1b;
-  --saveup-navy: #001c4b;
+  --livelottery-blue: #1a508b;
+  --livelottery-dark-blue: #0b2848;
+  --livelottery-blue-light: #eaf4ff;
+  --livelottery-orange: #ffc285;
+  --livelottery-base: #1b1b1b;
+  --livelottery-navy: #001c4b;
 
   font-family:
     -apple-system,
@@ -35,7 +35,7 @@
    HEADER CONTAINER
 ───────────────────────────────────────────────────────── */
 
-.saveup-container {
+.livelottery-container {
   width: 100%;
   max-width: 1600px;
 
@@ -51,7 +51,7 @@
    BACK BUTTON
 ───────────────────────────────────────────────────────── */
 
-.saveup-back-btn {
+.livelottery-back-btn {
   display: none;
 
   align-items: center;
@@ -75,7 +75,7 @@
     border-color 0.15s ease;
 }
 
-.saveup-back-btn:hover {
+.livelottery-back-btn:hover {
   background: #f5f5f5;
 
   border-color: #bbbbbb;
@@ -86,7 +86,7 @@
    PROJECT HEADER
 ───────────────────────────────────────────────────────── */
 
-.saveup-project-header {
+.livelottery-project-header {
   min-height: 85vh;
 
   max-width: 1100px;
@@ -98,7 +98,7 @@
   padding-bottom: 56px;
 }
 
-.saveup-header-title-row {
+.livelottery-header-title-row {
   display: flex;
 
   align-items: center;
@@ -106,8 +106,8 @@
   margin-bottom: 60px;
 }
 
-.saveup-header-title {
-  font-size: var(--saveup-hero);
+.livelottery-header-title {
+  font-size: var(--livelottery-hero);
 
   font-weight: 700;
 
@@ -125,10 +125,10 @@
    EYEBROW
 ───────────────────────────────────────────────────────── */
 
-.saveup-eyebrow {
+.livelottery-eyebrow {
   display: block;
 
-  font-size: var(--saveup-eyebrow);
+  font-size: var(--livelottery-eyebrow);
 
   font-weight: 700;
 
@@ -146,10 +146,10 @@
    HEADER DESCRIPTION
 ───────────────────────────────────────────────────────── */
 
-.saveup-header-description {
+.livelottery-header-description {
   max-width: 800px;
 
-  font-size: var(--saveup-body);
+  font-size: var(--livelottery-body);
 
   line-height: 1.7;
 
@@ -165,7 +165,7 @@
    HEADER META
 ───────────────────────────────────────────────────────── */
 
-.saveup-header-meta-details {
+.livelottery-header-meta-details {
   display: flex;
 
   gap: 80px;
@@ -173,12 +173,12 @@
   flex-wrap: wrap;
 }
 
-.saveup-meta-detail {
+.livelottery-meta-detail {
   margin: 24px 0 60px 0;
 }
 
-.saveup-meta-detail-heading {
-  font-size: var(--saveup-eyebrow);
+.livelottery-meta-detail-heading {
+  font-size: var(--livelottery-eyebrow);
 
   font-weight: 700;
 
@@ -191,8 +191,8 @@
   margin: 0 0 8px 0;
 }
 
-.saveup-meta-detail-value {
-  font-size: var(--saveup-body);
+.livelottery-meta-detail-value {
+  font-size: var(--livelottery-body);
 
   line-height: 1.6;
 
@@ -206,7 +206,7 @@
    HERO
 ───────────────────────────────────────────────────────── */
 
-.saveup-hero {
+.livelottery-hero {
   width: 100%;
 
   margin: 0 0 80px 0;
@@ -216,7 +216,7 @@
   background-color: #ffffff;
 }
 
-.saveup-hero-inner {
+.livelottery-hero-inner {
   width: calc(100% - 200px);
 
   max-width: 1600px;
@@ -230,7 +230,7 @@
   overflow: hidden;
 }
 
-.saveup-hero-image {
+.livelottery-hero-image {
   width: 100%;
   height: 100%;
 
@@ -245,10 +245,10 @@
    THE PROBLEM — FULL-BLEED DARK BAND
 ───────────────────────────────────────────────────────── */
 
-.saveup-problem {
+.livelottery-problem {
   width: 100%;
 
-  background-color: var(--saveup-navy);
+  background-color: var(--livelottery-navy);
 
   padding: 100px 100px;
 
@@ -257,17 +257,17 @@
   margin-bottom: 0;
 }
 
-.saveup-problem-inner {
+.livelottery-problem-inner {
   width: 100%;
   max-width: 1200px;
 
   margin: 0 auto;
 }
 
-.saveup-problem-eyebrow {
+.livelottery-problem-eyebrow {
   display: block;
 
-  font-size: var(--saveup-eyebrow);
+  font-size: var(--livelottery-eyebrow);
 
   font-weight: 700;
 
@@ -275,12 +275,12 @@
 
   text-transform: uppercase;
 
-  color: var(--saveup-orange);
+  color: var(--livelottery-orange);
 
   margin-bottom: 24px;
 }
 
-.saveup-problem-statement {
+.livelottery-problem-statement {
   font-size: clamp(1.75rem, 1.3rem + 2vw, 3rem);
 
   line-height: 1.3;
@@ -296,7 +296,7 @@
   margin: 0 0 72px 0;
 }
 
-.saveup-problem-stats {
+.livelottery-problem-stats {
   display: grid;
 
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -304,28 +304,28 @@
   gap: 40px;
 }
 
-.saveup-problem-stat {
+.livelottery-problem-stat {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
 
   padding-top: 24px;
 }
 
-.saveup-problem-stat strong {
+.livelottery-problem-stat strong {
   display: block;
 
   font-size: clamp(2rem, 1.6rem + 1.5vw, 3rem);
 
   font-weight: 800;
 
-  color: var(--saveup-orange);
+  color: var(--livelottery-orange);
 
   letter-spacing: -1px;
 
   margin-bottom: 12px;
 }
 
-.saveup-problem-stat p {
-  font-size: var(--saveup-body);
+.livelottery-problem-stat p {
+  font-size: var(--livelottery-body);
 
   line-height: 1.6;
 
@@ -339,7 +339,7 @@
    CASE STUDY CONTAINER
 ───────────────────────────────────────────────────────── */
 
-.saveup-case-container {
+.livelottery-case-container {
   width: 100%;
 
   max-width: 1600px;
@@ -348,7 +348,7 @@
 
   padding: 80px 100px;
 
-  background-color: var(--saveup-blue-light);
+  background-color: var(--livelottery-blue-light);
 
   box-sizing: border-box;
 }
@@ -358,13 +358,13 @@
    THE APPROACH — HORIZONTAL NUMBERED STEPS
 ───────────────────────────────────────────────────────── */
 
-.saveup-approach-intro {
+.livelottery-approach-intro {
   max-width: 650px;
 
   margin-bottom: 56px !important;
 }
 
-.saveup-approach-steps {
+.livelottery-approach-steps {
   position: relative;
 
   display: grid;
@@ -374,7 +374,7 @@
   gap: 32px;
 }
 
-.saveup-approach-steps::before {
+.livelottery-approach-steps::before {
   content: "";
 
   position: absolute;
@@ -390,17 +390,17 @@
   z-index: 0;
 }
 
-.saveup-approach-step {
+.livelottery-approach-step {
   position: relative;
 
   z-index: 1;
 
-  background-color: var(--saveup-blue-light);
+  background-color: var(--livelottery-blue-light);
 
   padding-right: 8px;
 }
 
-.saveup-approach-number {
+.livelottery-approach-number {
   display: inline-flex;
 
   align-items: center;
@@ -411,7 +411,7 @@
 
   border-radius: 50%;
 
-  background-color: var(--saveup-blue);
+  background-color: var(--livelottery-blue);
 
   color: #ffffff;
 
@@ -422,17 +422,17 @@
   margin-bottom: 20px;
 }
 
-.saveup-approach-step h3 {
+.livelottery-approach-step h3 {
   font-size: 1.125rem;
 
   font-weight: 700;
 
-  color: var(--saveup-dark-blue);
+  color: var(--livelottery-dark-blue);
 
   margin: 0 0 10px 0;
 }
 
-.saveup-approach-step p {
+.livelottery-approach-step p {
   font-size: 0.9375rem;
 
   line-height: 1.6;
@@ -447,34 +447,34 @@
    BRAND INTRO
 ───────────────────────────────────────────────────────── */
 
-.saveup-brand-intro {
+.livelottery-brand-intro {
   margin-bottom: 100px;
 }
 
-.saveup-brand-lockup {
+.livelottery-brand-lockup {
   max-width: 650px;
 }
 
-.saveup-brand-name {
+.livelottery-brand-name {
   font-size: clamp(2.5rem, 5vw, 5rem);
 
   line-height: 1;
 
   letter-spacing: -2px;
 
-  color: var(--saveup-blue);
+  color: var(--livelottery-blue);
 
   margin: 0 0 10px 0;
 }
 
-.saveup-brand-name span {
-  color: var(--saveup-orange);
+.livelottery-brand-name span {
+  color: var(--livelottery-orange);
 }
 
-.saveup-brand-tagline {
-  font-size: var(--saveup-body);
+.livelottery-brand-tagline {
+  font-size: var(--livelottery-body);
 
-  color: var(--saveup-blue);
+  color: var(--livelottery-blue);
 
   margin: 0;
 }
@@ -484,12 +484,12 @@
    GENERAL CONTENT SECTIONS
 ───────────────────────────────────────────────────────── */
 
-.saveup-section {
+.livelottery-section {
   margin-bottom: 100px;
 }
 
-.saveup-section-title {
-  font-size: var(--saveup-heading);
+.livelottery-section-title {
+  font-size: var(--livelottery-heading);
 
   line-height: 1.2;
 
@@ -497,15 +497,15 @@
 
   letter-spacing: -0.5px;
 
-  color: var(--saveup-dark-blue);
+  color: var(--livelottery-dark-blue);
 
   margin: 0 0 32px 0;
 }
 
-.saveup-section-description {
+.livelottery-section-description {
   max-width: 500px;
 
-  font-size: var(--saveup-body);
+  font-size: var(--livelottery-body);
 
   line-height: 1.7;
 
@@ -519,7 +519,7 @@
    COLOUR PALETTE
 ───────────────────────────────────────────────────────── */
 
-.saveup-color-palette {
+.livelottery-color-palette {
   width: 100%;
 
   display: grid;
@@ -535,21 +535,21 @@
   align-items: end;
 }
 
-.saveup-color-group {
+.livelottery-color-group {
   min-width: 0;
 }
 
-.saveup-color-heading {
+.livelottery-color-heading {
   font-size: 0.875rem;
 
   font-weight: 700;
 
-  color: var(--saveup-dark-blue);
+  color: var(--livelottery-dark-blue);
 
   margin: 0 0 14px 6px;
 }
 
-.saveup-color-card {
+.livelottery-color-card {
   position: relative;
 
   width: 100%;
@@ -561,7 +561,7 @@
 
 /* PRIMARY GRADIENT */
 
-.saveup-gradient-card {
+.livelottery-gradient-card {
   background:
     linear-gradient(
       135deg,
@@ -571,7 +571,7 @@
     );
 }
 
-.saveup-gradient-left {
+.livelottery-gradient-left {
   position: absolute;
 
   top: 22px;
@@ -585,7 +585,7 @@
   line-height: 1.2;
 }
 
-.saveup-gradient-right {
+.livelottery-gradient-right {
   position: absolute;
 
   right: 24px;
@@ -604,17 +604,17 @@
 
 /* SHARED HEX TEXT */
 
-.saveup-gradient-left span,
-.saveup-gradient-right span,
-.saveup-color-code span {
+.livelottery-gradient-left span,
+.livelottery-gradient-right span,
+.livelottery-color-code span {
   font-size: 0.78rem;
 
   font-weight: 700;
 }
 
-.saveup-gradient-left strong,
-.saveup-gradient-right strong,
-.saveup-color-code strong {
+.livelottery-gradient-left strong,
+.livelottery-gradient-right strong,
+.livelottery-color-code strong {
   font-size: 0.88rem;
 
   font-weight: 700;
@@ -623,28 +623,28 @@
 
 /* PRIMARY */
 
-.saveup-primary-card {
+.livelottery-primary-card {
   background-color: #1a508b;
 }
 
 
 /* SECONDARY */
 
-.saveup-secondary-card {
+.livelottery-secondary-card {
   background-color: #ffc285;
 }
 
 
 /* BASE */
 
-.saveup-base-card {
+.livelottery-base-card {
   background-color: #1b1b1b;
 }
 
 
 /* HEX TEXT POSITION */
 
-.saveup-color-code {
+.livelottery-color-code {
   position: absolute;
 
   left: 24px;
@@ -658,11 +658,11 @@
   line-height: 1.2;
 }
 
-.saveup-color-code--light {
+.livelottery-color-code--light {
   color: #ffffff;
 }
 
-.saveup-color-code--dark {
+.livelottery-color-code--dark {
   color: #0b2848;
 }
 
@@ -674,7 +674,7 @@
    TABLET + MOBILE = STACKED
 ───────────────────────────────────────────────────────── */
 
-.saveup-components-images {
+.livelottery-components-images {
   width: 100%;
 
   display: grid;
@@ -686,7 +686,7 @@
   align-items: start;
 }
 
-.saveup-components-image-item {
+.livelottery-components-image-item {
   width: 100%;
   min-width: 0;
 
@@ -706,7 +706,7 @@
   box-sizing: border-box;
 }
 
-.saveup-components-image-item img {
+.livelottery-components-image-item img {
   width: 100%;
 
   max-width: 620px;
@@ -720,7 +720,7 @@
 
 /* WIDER VARIANT — FULL WIDTH SINGLE IMAGE */
 
-.saveup-components-image-item--wide img {
+.livelottery-components-image-item--wide img {
   max-width: 900px;
 }
 
@@ -729,7 +729,7 @@
    HIGH FIDELITY MOCKUPS — 4 PHONE SCREENS IN A ROW
 ───────────────────────────────────────────────────────── */
 
-.saveup-mockup-grid {
+.livelottery-mockup-grid {
   width: 100%;
 
   display: grid;
@@ -741,7 +741,7 @@
   align-items: stretch;
 }
 
-.saveup-mockup-item {
+.livelottery-mockup-item {
   width: 100%;
   min-width: 0;
 
@@ -761,7 +761,7 @@
   box-sizing: border-box;
 }
 
-.saveup-mockup-item img {
+.livelottery-mockup-item img {
   width: 100%;
 
   max-width: 260px;
@@ -778,11 +778,11 @@
    HIGH FIDELITY MOCKUPS — SECTION LAYOUT
 ───────────────────────────────────────────────────────── */
 
-.saveup-mockup-section {
+.livelottery-mockup-section {
   margin-bottom: 0;
 }
 
-.saveup-mockup-heading-row {
+.livelottery-mockup-heading-row {
   display: flex;
 
   align-items: flex-start;
@@ -794,7 +794,7 @@
   margin-bottom: 40px;
 }
 
-.saveup-mockup-heading {
+.livelottery-mockup-heading {
   max-width: 700px;
 }
 
@@ -803,8 +803,8 @@
    REAL IMAGES
 ───────────────────────────────────────────────────────── */
 
-.saveup-section img,
-.saveup-mockup-section img {
+.livelottery-section img,
+.livelottery-mockup-section img {
   max-width: 100%;
 
   height: auto;
@@ -815,7 +815,7 @@
    THANK YOU SECTION
 ───────────────────────────────────────────────────────── */
 
-.saveup-thank-you {
+.livelottery-thank-you {
   width: 100%;
 
   min-height: 420px;
@@ -824,14 +824,14 @@
 
   align-items: center;
 
-  background-color: var(--saveup-navy);
+  background-color: var(--livelottery-navy);
 
   padding: 80px 100px;
 
   box-sizing: border-box;
 }
 
-.saveup-thank-you-inner {
+.livelottery-thank-you-inner {
   width: 100%;
 
   max-width: 1200px;
@@ -846,7 +846,7 @@
   gap: 40px;
 }
 
-.saveup-thank-you-symbol {
+.livelottery-thank-you-symbol {
   width: 52px;
   height: 52px;
 
@@ -859,14 +859,14 @@
 
   background-color: #ffffff;
 
-  color: var(--saveup-navy);
+  color: var(--livelottery-navy);
 
   font-size: 1.5rem;
 
   font-weight: 800;
 }
 
-.saveup-thank-you-copy span {
+.livelottery-thank-you-copy span {
   display: block;
 
   font-size: 0.75rem;
@@ -878,7 +878,7 @@
   margin-bottom: 8px;
 }
 
-.saveup-thank-you-copy h2 {
+.livelottery-thank-you-copy h2 {
   font-size: clamp(2.5rem, 5vw, 5rem);
 
   line-height: 0.95;
@@ -890,7 +890,7 @@
   margin: 0;
 }
 
-.saveup-thank-you-copy p {
+.livelottery-thank-you-copy p {
   font-size: clamp(1rem, 2vw, 1.5rem);
 
   color: #ffffff;
@@ -906,12 +906,12 @@
 
 @media (max-width: 1280px) {
 
-  .saveup-container {
+  .livelottery-container {
     padding: 32px 24px;
   }
 
 
-  .saveup-project-header {
+  .livelottery-project-header {
     min-height: 60vh;
 
     padding-bottom: 40px;
@@ -920,11 +920,11 @@
 
   /* HERO */
 
-  .saveup-hero {
+  .livelottery-hero {
     margin-bottom: 56px;
   }
 
-  .saveup-hero-inner {
+  .livelottery-hero-inner {
     width: calc(100% - 48px);
 
     max-width: none;
@@ -935,15 +935,15 @@
 
   /* PROBLEM */
 
-  .saveup-problem {
+  .livelottery-problem {
     padding: 72px 24px;
   }
 
-  .saveup-problem-statement {
+  .livelottery-problem-statement {
     margin-bottom: 56px;
   }
 
-  .saveup-problem-stats {
+  .livelottery-problem-stats {
     grid-template-columns: 1fr 1fr;
 
     gap: 32px;
@@ -952,67 +952,67 @@
 
   /* CASE STUDY */
 
-  .saveup-case-container {
+  .livelottery-case-container {
     padding: 64px 24px;
   }
 
-  .saveup-brand-intro,
-  .saveup-section {
+  .livelottery-brand-intro,
+  .livelottery-section {
     margin-bottom: 72px;
   }
 
 
   /* APPROACH */
 
-  .saveup-approach-steps {
+  .livelottery-approach-steps {
     grid-template-columns: 1fr 1fr;
 
     gap: 40px;
   }
 
-  .saveup-approach-steps::before {
+  .livelottery-approach-steps::before {
     display: none;
   }
 
 
   /* COLOUR PALETTE */
 
-  .saveup-color-palette {
+  .livelottery-color-palette {
     grid-template-columns: 1fr 1fr;
   }
 
-  .saveup-color-group--gradient {
+  .livelottery-color-group--gradient {
     grid-column: 1 / -1;
   }
 
-  .saveup-color-card {
+  .livelottery-color-card {
     height: 200px;
   }
 
 
   /* COMPONENT IMAGES */
 
-  .saveup-components-images {
+  .livelottery-components-images {
     grid-template-columns: 1fr;
 
     gap: 24px;
   }
 
-  .saveup-components-image-item {
+  .livelottery-components-image-item {
     padding: 32px;
   }
 
 
   /* MOCKUP GRID — 2 PER ROW */
 
-  .saveup-mockup-grid {
+  .livelottery-mockup-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
 
   /* THANK YOU */
 
-  .saveup-thank-you {
+  .livelottery-thank-you {
     min-height: 360px;
 
     padding: 64px 24px;
@@ -1026,50 +1026,50 @@
 
 @media (max-width: 640px) {
 
-  .saveup-container {
+  .livelottery-container {
     padding: 24px 20px;
   }
 
 
-  .saveup-project-header {
+  .livelottery-project-header {
     min-height: 70vh;
 
     padding-bottom: 32px;
   }
 
 
-  .saveup-header-title-row {
+  .livelottery-header-title-row {
     margin-bottom: 40px;
   }
 
 
-  .saveup-eyebrow {
+  .livelottery-eyebrow {
     margin-bottom: 40px;
   }
 
 
-  .saveup-header-description {
+  .livelottery-header-description {
     margin-bottom: 40px;
   }
 
 
-  .saveup-header-meta-details {
+  .livelottery-header-meta-details {
     gap: 30px;
   }
 
 
-  .saveup-meta-detail {
+  .livelottery-meta-detail {
     margin-bottom: 40px;
   }
 
 
   /* HERO */
 
-  .saveup-hero {
+  .livelottery-hero {
     margin-bottom: 48px;
   }
 
-  .saveup-hero-inner {
+  .livelottery-hero-inner {
     width: calc(100% - 40px);
 
     height: 420px;
@@ -1078,15 +1078,15 @@
 
   /* PROBLEM */
 
-  .saveup-problem {
+  .livelottery-problem {
     padding: 56px 20px;
   }
 
-  .saveup-problem-statement {
+  .livelottery-problem-statement {
     margin-bottom: 48px;
   }
 
-  .saveup-problem-stats {
+  .livelottery-problem-stats {
     grid-template-columns: 1fr;
 
     gap: 28px;
@@ -1095,26 +1095,26 @@
 
   /* CASE STUDY */
 
-  .saveup-case-container {
+  .livelottery-case-container {
     padding: 48px 20px;
   }
 
-  .saveup-brand-intro {
+  .livelottery-brand-intro {
     margin-bottom: 64px;
   }
 
-  .saveup-section {
+  .livelottery-section {
     margin-bottom: 64px;
   }
 
-  .saveup-section-title {
+  .livelottery-section-title {
     margin-bottom: 24px;
   }
 
 
   /* APPROACH */
 
-  .saveup-approach-steps {
+  .livelottery-approach-steps {
     grid-template-columns: 1fr;
 
     gap: 32px;
@@ -1123,77 +1123,77 @@
 
   /* COLOUR PALETTE */
 
-  .saveup-color-palette {
+  .livelottery-color-palette {
     grid-template-columns: 1fr;
 
     gap: 28px;
   }
 
-  .saveup-color-group--gradient {
+  .livelottery-color-group--gradient {
     grid-column: auto;
   }
 
-  .saveup-color-card {
+  .livelottery-color-card {
     height: 180px;
   }
 
-  .saveup-gradient-left {
+  .livelottery-gradient-left {
     top: 18px;
     left: 18px;
   }
 
-  .saveup-gradient-right {
+  .livelottery-gradient-right {
     right: 18px;
     bottom: 18px;
   }
 
-  .saveup-color-code {
+  .livelottery-color-code {
     left: 18px;
   }
 
 
   /* COMPONENT IMAGES */
 
-  .saveup-components-images {
+  .livelottery-components-images {
     grid-template-columns: 1fr;
 
     gap: 20px;
   }
 
-  .saveup-components-image-item {
+  .livelottery-components-image-item {
     padding: 20px;
 
     border-radius: 10px;
   }
 
-  .saveup-components-image-item img,
-  .saveup-components-image-item--wide img {
+  .livelottery-components-image-item img,
+  .livelottery-components-image-item--wide img {
     max-width: 100%;
   }
 
 
   /* MOCKUP GRID — 1 PER ROW */
 
-  .saveup-mockup-grid {
+  .livelottery-mockup-grid {
     grid-template-columns: 1fr;
 
     gap: 20px;
   }
 
-  .saveup-mockup-item {
+  .livelottery-mockup-item {
     padding: 20px;
 
     border-radius: 10px;
   }
 
-  .saveup-mockup-item img {
+  .livelottery-mockup-item img {
     max-width: 220px;
   }
 
 
   /* MOCKUP HEADER */
 
-  .saveup-mockup-heading-row {
+  .livelottery-mockup-heading-row {
     display: block;
 
     margin-bottom: 32px;
@@ -1202,19 +1202,19 @@
 
   /* THANK YOU */
 
-  .saveup-thank-you {
+  .livelottery-thank-you {
     min-height: 300px;
 
     padding: 48px 20px;
   }
 
-  .saveup-thank-you-inner {
+  .livelottery-thank-you-inner {
     justify-content: flex-start;
 
     gap: 24px;
   }
 
-  .saveup-thank-you-symbol {
+  .livelottery-thank-you-symbol {
     width: 42px;
     height: 42px;
 
