@@ -86,45 +86,11 @@ function LivelotteryPage() {
           <section className="livelottery-hero">
             <div className="livelottery-hero-inner">
               <img
-                src="/Livelottery1.webp"
-                alt="Livelottery mobile app overview"
+                src="/Livelotterymain.webp"
+                alt="Livelottery mobile app preview"
                 className="livelottery-hero-image"
                 fetchPriority="high"
               />
-            </div>
-          </section>
-        </Reveal>
-
-        {/* =========================
-            THE PROBLEM
-        ========================== */}
-
-        <Reveal>
-          <section className="livelottery-problem">
-            <div className="livelottery-problem-inner">
-              <span className="livelottery-problem-eyebrow">The Problem</span>
-
-              <h2 className="livelottery-problem-statement">
-                Most people don't lack the will to save money —
-                they lack visibility into where it's actually going.
-              </h2>
-
-              <div className="livelottery-problem-stats">
-                <div className="livelottery-problem-stat">
-                  <strong>73%</strong>
-                  <p>of users couldn't explain their last week of spending</p>
-                </div>
-
-                <div className="livelottery-problem-stat">
-                  <strong>4+</strong>
-                  <p>apps juggled just to track money in one place</p>
-                </div>
-
-                <div className="livelottery-problem-stat">
-                  <strong>0</strong>
-                  <p>clear savings goal set by most first-time users</p>
-                </div>
-              </div>
             </div>
           </section>
         </Reveal>
@@ -145,55 +111,39 @@ function LivelotteryPage() {
               </h2>
 
               <p className="livelottery-section-description livelottery-approach-intro">
-                From an unclear entry experience to a live draw flow users
-                could actually trust — here's the process behind Livelottery.
+                From a cluttered gaming lobby to a wallet-first home screen
+                players could actually trust — here's the process behind
+                Livelottery.
               </p>
 
               <div className="livelottery-approach-steps">
                 <div className="livelottery-approach-step">
                   <span className="livelottery-approach-number">01</span>
                   <h3>Research</h3>
-                  <p>Interviewed users to understand where existing lottery apps broke down.</p>
+                  <p>Audited existing lottery and casino apps to see where players lost trust — buried balances, unclear odds, and compliance screens players skipped without reading.</p>
                 </div>
 
                 <div className="livelottery-approach-step">
                   <span className="livelottery-approach-number">02</span>
                   <h3>Define</h3>
-                  <p>Mapped the core problem to three jobs: enter, track, and win.</p>
+                  <p>Framed the experience around three jobs: onboard players fast, keep their wallet and winnings always visible, and surface live wins to build trust.</p>
                 </div>
 
                 <div className="livelottery-approach-step">
                   <span className="livelottery-approach-number">03</span>
                   <h3>Design</h3>
-                  <p>Built a component system and high-fidelity screens around clarity over density.</p>
+                  <p>Designed a home dashboard anchoring balance and quick actions above the fold, with a dedicated feed for real-time winning activity and top earners.</p>
                 </div>
 
                 <div className="livelottery-approach-step">
                   <span className="livelottery-approach-number">04</span>
                   <h3>Refine</h3>
-                  <p>Tested flows with users and simplified onboarding down to three steps.</p>
+                  <p>Simplified the Terms of Service and onboarding into a single clear agreement step, and tightened the game catalog into scannable, high-contrast cards.</p>
                 </div>
               </div>
             </section>
           </Reveal>
 
-          {/* =========================
-              BRAND INTRO
-          ========================== */}
-
-          <Reveal>
-            <section className="livelottery-brand-intro">
-              <div className="livelottery-brand-lockup">
-                <h2 className="livelottery-brand-name">
-                  Livelottery<span>.</span>
-                </h2>
-
-                <p className="livelottery-brand-tagline">
-                  Gamble win & win.
-                </p>
-              </div>
-            </section>
-          </Reveal>
 
           {/* =========================
               COLOUR PALETTE
@@ -216,12 +166,12 @@ function LivelotteryPage() {
                   <div className="livelottery-color-card livelottery-gradient-card">
                     <div className="livelottery-gradient-left">
                       <span>HEX</span>
-                      <strong>#0B2848</strong>
+                      <strong>#2C0448</strong>
                     </div>
 
                     <div className="livelottery-gradient-right">
                       <span>HEX</span>
-                      <strong>#1A508B</strong>
+                      <strong>#1B032C</strong>
                     </div>
                   </div>
                 </div>
@@ -236,7 +186,7 @@ function LivelotteryPage() {
                   <div className="livelottery-color-card livelottery-primary-card">
                     <div className="livelottery-color-code livelottery-color-code--light">
                       <span>HEX</span>
-                      <strong>#1A508B</strong>
+                      <strong>#762D10</strong>
                     </div>
                   </div>
                 </div>
@@ -251,7 +201,22 @@ function LivelotteryPage() {
                   <div className="livelottery-color-card livelottery-secondary-card">
                     <div className="livelottery-color-code livelottery-color-code--dark">
                       <span>HEX</span>
-                      <strong>#FFC285</strong>
+                      <strong>#E2E1FD</strong>
+                    </div>
+                  </div>
+                </div>
+
+                {/* ACCENT */}
+
+                <div className="livelottery-color-group">
+                  <p className="livelottery-color-heading">
+                    Accent
+                  </p>
+
+                  <div className="livelottery-color-card livelottery-accent-card">
+                    <div className="livelottery-color-code livelottery-color-code--light">
+                      <span>HEX</span>
+                      <strong>#2B003F</strong>
                     </div>
                   </div>
                 </div>
@@ -260,13 +225,28 @@ function LivelotteryPage() {
 
                 <div className="livelottery-color-group">
                   <p className="livelottery-color-heading">
-                    BASE
+                    Base
                   </p>
 
                   <div className="livelottery-color-card livelottery-base-card">
                     <div className="livelottery-color-code livelottery-color-code--light">
                       <span>HEX</span>
-                      <strong>#1B1B1B</strong>
+                      <strong>#606060</strong>
+                    </div>
+                  </div>
+                </div>
+
+                {/* OVERLAY */}
+
+                <div className="livelottery-color-group">
+                  <p className="livelottery-color-heading">
+                    Overlay
+                  </p>
+
+                  <div className="livelottery-color-card livelottery-overlay-card">
+                    <div className="livelottery-color-code livelottery-color-code--light">
+                      <span>HEX</span>
+                      <strong>#000000 · 25%</strong>
                     </div>
                   </div>
                 </div>

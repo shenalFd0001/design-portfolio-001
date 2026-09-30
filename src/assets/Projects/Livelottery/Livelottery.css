@@ -358,15 +358,13 @@
    THE APPROACH — HORIZONTAL NUMBERED STEPS
 ───────────────────────────────────────────────────────── */
 
-.livelottery-approach-intro {
-  max-width: 650px;
+.livelottery-section-description.livelottery-approach-intro {
+  max-width: 900px;
 
   margin-bottom: 56px !important;
 }
 
 .livelottery-approach-steps {
-  position: relative;
-
   display: grid;
 
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -374,30 +372,8 @@
   gap: 32px;
 }
 
-.livelottery-approach-steps::before {
-  content: "";
-
-  position: absolute;
-
-  top: 22px;
-  left: 0;
-  right: 0;
-
-  height: 1px;
-
-  background-color: rgba(18, 63, 116, 0.2);
-
-  z-index: 0;
-}
-
 .livelottery-approach-step {
   position: relative;
-
-  z-index: 1;
-
-  background-color: var(--livelottery-blue-light);
-
-  padding-right: 8px;
 }
 
 .livelottery-approach-number {
@@ -411,7 +387,7 @@
 
   border-radius: 50%;
 
-  background-color: var(--livelottery-blue);
+  background-color: #2b003f;
 
   color: #ffffff;
 
@@ -524,11 +500,7 @@
 
   display: grid;
 
-  grid-template-columns:
-    minmax(0, 2.65fr)
-    minmax(0, 1fr)
-    minmax(0, 1fr)
-    minmax(0, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 
   gap: 24px;
 
@@ -537,6 +509,10 @@
 
 .livelottery-color-group {
   min-width: 0;
+}
+
+.livelottery-color-group--gradient {
+  grid-column: 1 / -1;
 }
 
 .livelottery-color-heading {
@@ -565,9 +541,9 @@
   background:
     linear-gradient(
       135deg,
-      #0b2848 0%,
-      #123d70 48%,
-      #1a508b 100%
+      #2c0448 0%,
+      #23073b 50%,
+      #1b032c 100%
     );
 }
 
@@ -580,7 +556,7 @@
   display: flex;
   flex-direction: column;
 
-  color: #ffc285;
+  color: #e2e1fd;
 
   line-height: 1.2;
 }
@@ -596,7 +572,7 @@
 
   align-items: flex-end;
 
-  color: #ffc285;
+  color: #e2e1fd;
 
   line-height: 1.2;
 }
@@ -624,21 +600,42 @@
 /* PRIMARY */
 
 .livelottery-primary-card {
-  background-color: #1a508b;
+  background-color: #762d10;
 }
 
 
 /* SECONDARY */
 
 .livelottery-secondary-card {
-  background-color: #ffc285;
+  background-color: #e2e1fd;
+}
+
+
+/* ACCENT */
+
+.livelottery-accent-card {
+  background-color: #2b003f;
 }
 
 
 /* BASE */
 
 .livelottery-base-card {
-  background-color: #1b1b1b;
+  background-color: #606060;
+}
+
+
+/* OVERLAY */
+
+.livelottery-overlay-card {
+  background-color: rgba(0, 0, 0, 0.25);
+
+  background-image:
+    linear-gradient(
+      135deg,
+      #000000 0%,
+      #000000 100%
+    );
 }
 
 
@@ -663,7 +660,7 @@
 }
 
 .livelottery-color-code--dark {
-  color: #0b2848;
+  color: #2c0448;
 }
 
 
@@ -970,19 +967,11 @@
     gap: 40px;
   }
 
-  .livelottery-approach-steps::before {
-    display: none;
-  }
-
 
   /* COLOUR PALETTE */
 
   .livelottery-color-palette {
     grid-template-columns: 1fr 1fr;
-  }
-
-  .livelottery-color-group--gradient {
-    grid-column: 1 / -1;
   }
 
   .livelottery-color-card {
