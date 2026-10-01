@@ -107,7 +107,7 @@ function LivelotteryPage() {
           <Reveal>
             <section className="livelottery-section livelottery-approach">
               <h2 className="livelottery-section-title">
-                How I Got There
+                How I Got There.
               </h2>
 
               <p className="livelottery-section-description livelottery-approach-intro">
