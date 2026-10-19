@@ -1,6 +1,6 @@
-/* ─────────────────────────────────────────────────────────
-   SAVEUP PROJECT PAGE
-───────────────────────────────────────────────────────── */
+/* ─────────────────────────────────────────────
+   LIVELOTTERY PROJECT PAGE
+───────────────────────────────────────────── */
 
 .livelottery-page {
   --livelottery-hero: clamp(2.5rem, 1.3rem + 5.5vw, 6.5rem);
@@ -8,457 +8,141 @@
   --livelottery-body: clamp(1rem, 0.95rem + 0.2vw, 1.0625rem);
   --livelottery-eyebrow: clamp(0.75rem, 0.73rem + 0.08vw, 0.8125rem);
 
-  --livelottery-blue: #1a508b;
   --livelottery-dark-blue: #0b2848;
   --livelottery-blue-light: #eaf4ff;
-  --livelottery-orange: #ffc285;
-  --livelottery-base: #1b1b1b;
   --livelottery-navy: #001c4b;
+  --livelottery-text-muted: #3f5874;
+  --livelottery-border: rgba(18, 63, 116, 0.3);
 
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Helvetica,
-    Arial,
-    sans-serif;
-
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   color: #0d0d0d;
   background-color: #ffffff;
-
   overflow-x: hidden;
 }
 
-
-/* ─────────────────────────────────────────────────────────
-   HEADER CONTAINER
-───────────────────────────────────────────────────────── */
+/* ─────────────────────────────────────────────
+   HEADER
+───────────────────────────────────────────── */
 
 .livelottery-container {
   width: 100%;
   max-width: 1600px;
-
   margin: 0 auto;
-
   padding: 40px 100px;
-
   box-sizing: border-box;
 }
 
-
-/* ─────────────────────────────────────────────────────────
-   BACK BUTTON
-───────────────────────────────────────────────────────── */
-
-.livelottery-back-btn {
-  display: none;
-
-  align-items: center;
-  justify-content: center;
-
-  width: 40px;
-  height: 40px;
-
-  border-radius: 50%;
-  border: 1px solid #e0e0e0;
-
-  background: #ffffff;
-  color: #444444;
-
-  cursor: pointer;
-
-  margin-bottom: 40px;
-
-  transition:
-    background 0.15s ease,
-    border-color 0.15s ease;
-}
-
-.livelottery-back-btn:hover {
-  background: #f5f5f5;
-
-  border-color: #bbbbbb;
-}
-
-
-/* ─────────────────────────────────────────────────────────
-   PROJECT HEADER
-───────────────────────────────────────────────────────── */
-
 .livelottery-project-header {
   min-height: 85vh;
-
   max-width: 1100px;
-
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-
   padding-bottom: 56px;
 }
 
-.livelottery-header-title-row {
-  display: flex;
-
-  align-items: center;
-
+.livelottery-eyebrow {
+  display: block;
+  font-size: var(--livelottery-eyebrow);
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: #000000;
   margin-bottom: 60px;
 }
 
 .livelottery-header-title {
   font-size: var(--livelottery-hero);
-
   font-weight: 700;
-
   letter-spacing: -1.5px;
-
   line-height: 1.05;
-
   color: #0d0d0d;
-
-  margin: 0;
+  margin: 0 0 60px 0;
 }
-
-
-/* ─────────────────────────────────────────────────────────
-   EYEBROW
-───────────────────────────────────────────────────────── */
-
-.livelottery-eyebrow {
-  display: block;
-
-  font-size: var(--livelottery-eyebrow);
-
-  font-weight: 700;
-
-  letter-spacing: 1.6px;
-
-  text-transform: uppercase;
-
-  color: #000000;
-
-  margin-bottom: 60px;
-}
-
-
-/* ─────────────────────────────────────────────────────────
-   HEADER DESCRIPTION
-───────────────────────────────────────────────────────── */
 
 .livelottery-header-description {
   max-width: 800px;
-
   font-size: var(--livelottery-body);
-
   line-height: 1.7;
-
   color: #5a5a5a;
-
   margin: 0 0 60px 0;
-
-  font-weight: 400;
 }
 
+/* Summary card */
 
-/* ─────────────────────────────────────────────────────────
-   HEADER META
-───────────────────────────────────────────────────────── */
-
-.livelottery-header-meta-details {
+.livelottery-summary-card {
   display: flex;
-
-  gap: 80px;
-
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
-.livelottery-meta-detail {
-  margin: 24px 0 60px 0;
+.livelottery-summary-item {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+  gap: 32px;
+  padding: 28px 0;
 }
 
-.livelottery-meta-detail-heading {
-  font-size: var(--livelottery-eyebrow);
-
+.livelottery-summary-item h3 {
+  font-size: 1.1rem;
   font-weight: 700;
-
-  letter-spacing: 1.6px;
-
-  text-transform: uppercase;
-
-  color: #000000;
-
-  margin: 0 0 8px 0;
-}
-
-.livelottery-meta-detail-value {
-  font-size: var(--livelottery-body);
-
-  line-height: 1.6;
-
-  color: #5a5a5a;
-
+  color: var(--livelottery-dark-blue);
   margin: 0;
 }
 
+.livelottery-summary-item p {
+  max-width: 700px;
+  font-size: var(--livelottery-body);
+  line-height: 1.7;
+  color: #5a5a5a;
+  margin: 0;
+}
 
-/* ─────────────────────────────────────────────────────────
+@media (max-width: 640px) {
+  .livelottery-summary-item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 20px 0;
+  }
+}
+
+/* ─────────────────────────────────────────────
    HERO
-───────────────────────────────────────────────────────── */
+───────────────────────────────────────────── */
 
 .livelottery-hero {
   width: 100%;
-
   margin: 0 0 80px 0;
-
-  padding: 0;
-
   background-color: #ffffff;
 }
 
 .livelottery-hero-inner {
   width: calc(100% - 200px);
-
   max-width: 1600px;
-
   height: 720px;
-
   margin: 0 auto;
-
-  padding: 0;
-
   overflow: hidden;
 }
 
 .livelottery-hero-image {
   width: 100%;
   height: 100%;
-
   display: block;
-
   object-fit: cover;
   object-position: center;
 }
 
-
-/* ─────────────────────────────────────────────────────────
-   THE PROBLEM — FULL-BLEED DARK BAND
-───────────────────────────────────────────────────────── */
-
-.livelottery-problem {
-  width: 100%;
-
-  background-color: var(--livelottery-navy);
-
-  padding: 100px 100px;
-
-  box-sizing: border-box;
-
-  margin-bottom: 0;
-}
-
-.livelottery-problem-inner {
-  width: 100%;
-  max-width: 1200px;
-
-  margin: 0 auto;
-}
-
-.livelottery-problem-eyebrow {
-  display: block;
-
-  font-size: var(--livelottery-eyebrow);
-
-  font-weight: 700;
-
-  letter-spacing: 1.6px;
-
-  text-transform: uppercase;
-
-  color: var(--livelottery-orange);
-
-  margin-bottom: 24px;
-}
-
-.livelottery-problem-statement {
-  font-size: clamp(1.75rem, 1.3rem + 2vw, 3rem);
-
-  line-height: 1.3;
-
-  font-weight: 700;
-
-  letter-spacing: -0.5px;
-
-  color: #ffffff;
-
-  max-width: 900px;
-
-  margin: 0 0 72px 0;
-}
-
-.livelottery-problem-stats {
-  display: grid;
-
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-
-  gap: 40px;
-}
-
-.livelottery-problem-stat {
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-
-  padding-top: 24px;
-}
-
-.livelottery-problem-stat strong {
-  display: block;
-
-  font-size: clamp(2rem, 1.6rem + 1.5vw, 3rem);
-
-  font-weight: 800;
-
-  color: var(--livelottery-orange);
-
-  letter-spacing: -1px;
-
-  margin-bottom: 12px;
-}
-
-.livelottery-problem-stat p {
-  font-size: var(--livelottery-body);
-
-  line-height: 1.6;
-
-  color: rgba(255, 255, 255, 0.75);
-
-  margin: 0;
-}
-
-
-/* ─────────────────────────────────────────────────────────
-   CASE STUDY CONTAINER
-───────────────────────────────────────────────────────── */
+/* ─────────────────────────────────────────────
+   CASE STUDY CONTAINER + GENERIC SECTIONS
+───────────────────────────────────────────── */
 
 .livelottery-case-container {
   width: 100%;
-
   max-width: 1600px;
-
   margin: 0 auto;
-
   padding: 80px 100px;
-
   background-color: var(--livelottery-blue-light);
-
   box-sizing: border-box;
 }
-
-
-/* ─────────────────────────────────────────────────────────
-   THE APPROACH — HORIZONTAL NUMBERED STEPS
-───────────────────────────────────────────────────────── */
-
-.livelottery-section-description.livelottery-approach-intro {
-  max-width: 900px;
-
-  margin-bottom: 56px !important;
-}
-
-.livelottery-approach-steps {
-  display: grid;
-
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-
-  gap: 32px;
-}
-
-.livelottery-approach-step {
-  position: relative;
-}
-
-.livelottery-approach-number {
-  display: inline-flex;
-
-  align-items: center;
-  justify-content: center;
-
-  width: 44px;
-  height: 44px;
-
-  border-radius: 50%;
-
-  background-color: #2b003f;
-
-  color: #ffffff;
-
-  font-size: 0.875rem;
-
-  font-weight: 700;
-
-  margin-bottom: 20px;
-}
-
-.livelottery-approach-step h3 {
-  font-size: 1.125rem;
-
-  font-weight: 700;
-
-  color: var(--livelottery-dark-blue);
-
-  margin: 0 0 10px 0;
-}
-
-.livelottery-approach-step p {
-  font-size: 0.9375rem;
-
-  line-height: 1.6;
-
-  color: #3f5874;
-
-  margin: 0;
-}
-
-
-/* ─────────────────────────────────────────────────────────
-   BRAND INTRO
-───────────────────────────────────────────────────────── */
-
-.livelottery-brand-intro {
-  margin-bottom: 100px;
-}
-
-.livelottery-brand-lockup {
-  max-width: 650px;
-}
-
-.livelottery-brand-name {
-  font-size: clamp(2.5rem, 5vw, 5rem);
-
-  line-height: 1;
-
-  letter-spacing: -2px;
-
-  color: var(--livelottery-blue);
-
-  margin: 0 0 10px 0;
-}
-
-.livelottery-brand-name span {
-  color: var(--livelottery-orange);
-}
-
-.livelottery-brand-tagline {
-  font-size: var(--livelottery-body);
-
-  color: var(--livelottery-blue);
-
-  margin: 0;
-}
-
-
-/* ─────────────────────────────────────────────────────────
-   GENERAL CONTENT SECTIONS
-───────────────────────────────────────────────────────── */
 
 .livelottery-section {
   margin-bottom: 100px;
@@ -466,44 +150,121 @@
 
 .livelottery-section-title {
   font-size: var(--livelottery-heading);
-
   line-height: 1.2;
-
   font-weight: 700;
-
   letter-spacing: -0.5px;
-
   color: var(--livelottery-dark-blue);
-
   margin: 0 0 32px 0;
 }
 
 .livelottery-section-description {
   max-width: 500px;
-
   font-size: var(--livelottery-body);
-
   line-height: 1.7;
+  color: var(--livelottery-text-muted);
+  margin: 0 0 48px 0;
+}
 
-  color: #3f5874;
+.livelottery-section img {
+  max-width: 100%;
+  height: auto;
+}
 
+.livelottery-sub-block {
+  margin-bottom: 64px;
+}
+
+.livelottery-sub-block:last-child {
+  margin-bottom: 0;
+}
+
+.livelottery-sub-block h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--livelottery-dark-blue);
+  margin: 0 0 24px 0;
+}
+
+/* ─────────────────────────────────────────────
+   APPROACH
+───────────────────────────────────────────── */
+
+.livelottery-approach-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.livelottery-approach-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #2b003f;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.livelottery-approach-step h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--livelottery-dark-blue);
+  margin: 0 0 10px 0;
+}
+
+.livelottery-approach-step p {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--livelottery-text-muted);
   margin: 0;
 }
 
+/* ─────────────────────────────────────────────
+   APP SCREENS
+───────────────────────────────────────────── */
 
-/* ─────────────────────────────────────────────────────────
+.livelottery-screens {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.livelottery-screens img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Swipeable row on smaller screens so phones stay readable */
+@media (max-width: 900px) {
+  .livelottery-screens {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .livelottery-screens img {
+    width: 45%;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+  }
+}
+
+/* ─────────────────────────────────────────────
    COLOUR PALETTE
-───────────────────────────────────────────────────────── */
+───────────────────────────────────────────── */
 
 .livelottery-color-palette {
   width: 100%;
-
   display: grid;
-
   grid-template-columns: repeat(3, minmax(0, 1fr));
-
   gap: 24px;
-
   align-items: end;
 }
 
@@ -517,74 +278,65 @@
 
 .livelottery-color-heading {
   font-size: 0.875rem;
-
   font-weight: 700;
-
   color: var(--livelottery-dark-blue);
-
   margin: 0 0 14px 6px;
 }
 
 .livelottery-color-card {
   position: relative;
-
   width: 100%;
   height: 220px;
-
   overflow: hidden;
 }
 
-
-/* PRIMARY GRADIENT */
-
 .livelottery-gradient-card {
-  background:
-    linear-gradient(
-      135deg,
-      #2c0448 0%,
-      #23073b 50%,
-      #1b032c 100%
-    );
+  background: linear-gradient(135deg, #2c0448 0%, #23073b 50%, #1b032c 100%);
+}
+
+.livelottery-primary-card   { background-color: #762d10; }
+.livelottery-secondary-card { background-color: #e2e1fd; }
+.livelottery-accent-card    { background-color: #2b003f; }
+.livelottery-base-card      { background-color: #606060; }
+.livelottery-overlay-card   { background-color: rgba(0, 0, 0, 0.25); }
+
+/* Hex labels */
+
+.livelottery-gradient-left,
+.livelottery-gradient-right,
+.livelottery-color-code {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
 }
 
 .livelottery-gradient-left {
-  position: absolute;
-
   top: 22px;
   left: 24px;
-
-  display: flex;
-  flex-direction: column;
-
   color: #e2e1fd;
-
-  line-height: 1.2;
 }
 
 .livelottery-gradient-right {
-  position: absolute;
-
   right: 24px;
   bottom: 20px;
-
-  display: flex;
-  flex-direction: column;
-
   align-items: flex-end;
-
   color: #e2e1fd;
-
-  line-height: 1.2;
 }
 
+.livelottery-color-code {
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
-/* SHARED HEX TEXT */
+.livelottery-color-code--light { color: #ffffff; }
+.livelottery-color-code--dark  { color: #2c0448; }
 
 .livelottery-gradient-left span,
 .livelottery-gradient-right span,
 .livelottery-color-code span {
   font-size: 0.78rem;
-
   font-weight: 700;
 }
 
@@ -592,621 +344,166 @@
 .livelottery-gradient-right strong,
 .livelottery-color-code strong {
   font-size: 0.88rem;
-
   font-weight: 700;
 }
 
-
-/* PRIMARY */
-
-.livelottery-primary-card {
-  background-color: #762d10;
-}
-
-
-/* SECONDARY */
-
-.livelottery-secondary-card {
-  background-color: #e2e1fd;
-}
-
-
-/* ACCENT */
-
-.livelottery-accent-card {
-  background-color: #2b003f;
-}
-
-
-/* BASE */
-
-.livelottery-base-card {
-  background-color: #606060;
-}
-
-
-/* OVERLAY */
-
-.livelottery-overlay-card {
-  background-color: rgba(0, 0, 0, 0.25);
-
-  background-image:
-    linear-gradient(
-      135deg,
-      #000000 0%,
-      #000000 100%
-    );
-}
-
-
-/* HEX TEXT POSITION */
-
-.livelottery-color-code {
-  position: absolute;
-
-  left: 24px;
-  top: 50%;
-
-  transform: translateY(-50%);
-
-  display: flex;
-  flex-direction: column;
-
-  line-height: 1.2;
-}
-
-.livelottery-color-code--light {
-  color: #ffffff;
-}
-
-.livelottery-color-code--dark {
-  color: #2c0448;
-}
-
-
-/* ─────────────────────────────────────────────────────────
-   COMPONENTS / VARIANTS / VARIABLES
-   DASHED CARD BEHIND EACH IMAGE
-   DESKTOP = ONE ROW
-   TABLET + MOBILE = STACKED
-───────────────────────────────────────────────────────── */
-
-.livelottery-components-images {
-  width: 100%;
-
-  display: grid;
-
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-
-  gap: 24px;
-
-  align-items: start;
-}
-
-.livelottery-components-image-item {
-  width: 100%;
-  min-width: 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background-color: #E0EBF9;
-
-  padding: 80px;
-
-  border-radius: 0px;
-  border: 1px dashed rgba(18, 63, 116, 0.3);
-
-  overflow: hidden;
-
-  box-sizing: border-box;
-}
-
-.livelottery-components-image-item img {
-  width: 100%;
-
-  max-width: 620px;
-
-  height: auto;
-
-  display: block;
-
-  object-fit: contain;
-}
-
-/* WIDER VARIANT — FULL WIDTH SINGLE IMAGE */
-
-.livelottery-components-image-item--wide img {
-  max-width: 900px;
-}
-
-
-/* ─────────────────────────────────────────────────────────
-   HIGH FIDELITY MOCKUPS — 4 PHONE SCREENS IN A ROW
-───────────────────────────────────────────────────────── */
-
-.livelottery-mockup-grid {
-  width: 100%;
-
-  display: grid;
-
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-
-  gap: 24px;
-
-  align-items: stretch;
-}
-
-.livelottery-mockup-item {
-  width: 100%;
-  min-width: 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background-color: #E0EBF9;
-
-  padding: 24px;
-
-  border-radius: 0px;
-  border: 1px dashed rgba(18, 63, 116, 0.3);
-
-  overflow: hidden;
-
-  box-sizing: border-box;
-}
-
-.livelottery-mockup-item img {
-  width: 100%;
-
-  max-width: 260px;
-
-  height: auto;
-
-  display: block;
-
-  object-fit: contain;
-}
-
-
-/* ─────────────────────────────────────────────────────────
-   HIGH FIDELITY MOCKUPS — SECTION LAYOUT
-───────────────────────────────────────────────────────── */
-
-.livelottery-mockup-section {
-  margin-bottom: 0;
-}
-
-.livelottery-mockup-heading-row {
-  display: flex;
-
-  align-items: flex-start;
-
-  justify-content: space-between;
-
-  gap: 60px;
-
-  margin-bottom: 40px;
-}
-
-.livelottery-mockup-heading {
-  max-width: 700px;
-}
-
-
-/* ─────────────────────────────────────────────────────────
-   REAL IMAGES
-───────────────────────────────────────────────────────── */
-
-.livelottery-section img,
-.livelottery-mockup-section img {
-  max-width: 100%;
-
-  height: auto;
-}
-
-
-/* ─────────────────────────────────────────────────────────
-   THANK YOU SECTION
-───────────────────────────────────────────────────────── */
+/* ─────────────────────────────────────────────
+   THANK YOU
+───────────────────────────────────────────── */
 
 .livelottery-thank-you {
   width: 100%;
-
   min-height: 420px;
-
   display: flex;
-
   align-items: center;
-
   background-color: var(--livelottery-navy);
-
   padding: 80px 100px;
-
   box-sizing: border-box;
 }
 
 .livelottery-thank-you-inner {
   width: 100%;
-
   max-width: 1200px;
-
   margin: 0 auto;
-
   display: flex;
-
   align-items: center;
   justify-content: center;
-
   gap: 40px;
 }
 
 .livelottery-thank-you-symbol {
   width: 52px;
   height: 52px;
-
   display: flex;
-
   align-items: center;
   justify-content: center;
-
   border-radius: 12px;
-
   background-color: #ffffff;
-
   color: var(--livelottery-navy);
-
   font-size: 1.5rem;
-
   font-weight: 800;
 }
 
 .livelottery-thank-you-copy span {
   display: block;
-
   font-size: 0.75rem;
-
   letter-spacing: 1.4px;
-
   color: rgba(255, 255, 255, 0.65);
-
   margin-bottom: 8px;
 }
 
 .livelottery-thank-you-copy h2 {
   font-size: clamp(2.5rem, 5vw, 5rem);
-
   line-height: 0.95;
-
   letter-spacing: -2px;
-
   color: #ffffff;
-
   margin: 0;
 }
 
 .livelottery-thank-you-copy p {
   font-size: clamp(1rem, 2vw, 1.5rem);
-
   color: #ffffff;
-
   margin: 8px 0 0 0;
 }
 
-
-/* ─────────────────────────────────────────────────────────
+/* ─────────────────────────────────────────────
    TABLET
-   PROBLEM + APPROACH + COMPONENT + MOCKUP GRIDS ADAPT
-───────────────────────────────────────────────────────── */
+───────────────────────────────────────────── */
 
 @media (max-width: 1280px) {
-
-  .livelottery-container {
-    padding: 32px 24px;
-  }
-
+  .livelottery-container { padding: 32px 24px; }
 
   .livelottery-project-header {
     min-height: 60vh;
-
     padding-bottom: 40px;
   }
 
-
-  /* HERO */
-
-  .livelottery-hero {
-    margin-bottom: 56px;
-  }
+  .livelottery-hero { margin-bottom: 56px; }
 
   .livelottery-hero-inner {
     width: calc(100% - 48px);
-
     max-width: none;
-
     height: 560px;
   }
 
-
-  /* PROBLEM */
-
-  .livelottery-problem {
-    padding: 72px 24px;
-  }
-
-  .livelottery-problem-statement {
-    margin-bottom: 56px;
-  }
-
-  .livelottery-problem-stats {
-    grid-template-columns: 1fr 1fr;
-
-    gap: 32px;
-  }
-
-
-  /* CASE STUDY */
-
-  .livelottery-case-container {
-    padding: 64px 24px;
-  }
-
-  .livelottery-brand-intro,
-  .livelottery-section {
-    margin-bottom: 72px;
-  }
-
-
-  /* APPROACH */
+  .livelottery-case-container { padding: 64px 24px; }
+  .livelottery-section { margin-bottom: 72px; }
 
   .livelottery-approach-steps {
     grid-template-columns: 1fr 1fr;
-
     gap: 40px;
   }
 
-
-  /* COLOUR PALETTE */
-
-  .livelottery-color-palette {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .livelottery-color-card {
-    height: 200px;
-  }
-
-
-  /* COMPONENT IMAGES */
-
-  .livelottery-components-images {
-    grid-template-columns: 1fr;
-
-    gap: 24px;
-  }
-
-  .livelottery-components-image-item {
-    padding: 32px;
-  }
-
-
-  /* MOCKUP GRID — 2 PER ROW */
-
-  .livelottery-mockup-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-
-  /* THANK YOU */
+  .livelottery-color-palette { grid-template-columns: 1fr 1fr; }
+  .livelottery-color-card { height: 200px; }
 
   .livelottery-thank-you {
     min-height: 360px;
-
     padding: 64px 24px;
   }
 }
 
-
-/* ─────────────────────────────────────────────────────────
+/* ─────────────────────────────────────────────
    MOBILE
-───────────────────────────────────────────────────────── */
+───────────────────────────────────────────── */
 
 @media (max-width: 640px) {
-
-  .livelottery-container {
-    padding: 24px 20px;
-  }
-
+  .livelottery-container { padding: 24px 20px; }
 
   .livelottery-project-header {
     min-height: 70vh;
-
     padding-bottom: 32px;
   }
 
-
-  .livelottery-header-title-row {
-    margin-bottom: 40px;
-  }
-
-
-  .livelottery-eyebrow {
-    margin-bottom: 40px;
-  }
-
-
+  .livelottery-eyebrow,
+  .livelottery-header-title,
   .livelottery-header-description {
     margin-bottom: 40px;
   }
 
-
-  .livelottery-header-meta-details {
-    gap: 30px;
-  }
-
-
-  .livelottery-meta-detail {
-    margin-bottom: 40px;
-  }
-
-
-  /* HERO */
-
-  .livelottery-hero {
-    margin-bottom: 48px;
-  }
+  .livelottery-hero { margin-bottom: 48px; }
 
   .livelottery-hero-inner {
     width: calc(100% - 40px);
-
     height: 420px;
   }
 
-
-  /* PROBLEM */
-
-  .livelottery-problem {
-    padding: 56px 20px;
-  }
-
-  .livelottery-problem-statement {
-    margin-bottom: 48px;
-  }
-
-  .livelottery-problem-stats {
-    grid-template-columns: 1fr;
-
-    gap: 28px;
-  }
-
-
-  /* CASE STUDY */
-
-  .livelottery-case-container {
-    padding: 48px 20px;
-  }
-
-  .livelottery-brand-intro {
-    margin-bottom: 64px;
-  }
-
-  .livelottery-section {
-    margin-bottom: 64px;
-  }
-
-  .livelottery-section-title {
-    margin-bottom: 24px;
-  }
-
-
-  /* APPROACH */
+  .livelottery-case-container { padding: 48px 20px; }
+  .livelottery-section { margin-bottom: 64px; }
+  .livelottery-section-title { margin-bottom: 24px; }
 
   .livelottery-approach-steps {
     grid-template-columns: 1fr;
-
     gap: 32px;
   }
 
-
-  /* COLOUR PALETTE */
-
   .livelottery-color-palette {
     grid-template-columns: 1fr;
-
     gap: 28px;
   }
 
-  .livelottery-color-group--gradient {
-    grid-column: auto;
-  }
+  .livelottery-color-group--gradient { grid-column: auto; }
+  .livelottery-color-card { height: 180px; }
 
-  .livelottery-color-card {
-    height: 180px;
-  }
+  .livelottery-gradient-left { top: 18px; left: 18px; }
+  .livelottery-gradient-right { right: 18px; bottom: 18px; }
+  .livelottery-color-code { left: 18px; }
 
-  .livelottery-gradient-left {
-    top: 18px;
-    left: 18px;
-  }
-
-  .livelottery-gradient-right {
-    right: 18px;
-    bottom: 18px;
-  }
-
-  .livelottery-color-code {
-    left: 18px;
-  }
-
-
-  /* COMPONENT IMAGES */
-
-  .livelottery-components-images {
-    grid-template-columns: 1fr;
-
-    gap: 20px;
-  }
-
-  .livelottery-components-image-item {
-    padding: 20px;
-
-    border-radius: 10px;
-  }
-
-  .livelottery-components-image-item img,
-  .livelottery-components-image-item--wide img {
-    max-width: 100%;
-  }
-
-
-  /* MOCKUP GRID — 1 PER ROW */
-
-  .livelottery-mockup-grid {
-    grid-template-columns: 1fr;
-
-    gap: 20px;
-  }
-
-  .livelottery-mockup-item {
-    padding: 20px;
-
-    border-radius: 10px;
-  }
-
-  .livelottery-mockup-item img {
-    max-width: 220px;
-  }
-
-
-  /* MOCKUP HEADER */
-
-  .livelottery-mockup-heading-row {
-    display: block;
-
-    margin-bottom: 32px;
-  }
-
-
-  /* THANK YOU */
+  .livelottery-screens img { width: 70%; }
 
   .livelottery-thank-you {
     min-height: 300px;
-
     padding: 48px 20px;
   }
 
   .livelottery-thank-you-inner {
     justify-content: flex-start;
-
     gap: 24px;
   }
 
   .livelottery-thank-you-symbol {
     width: 42px;
     height: 42px;
-
     flex-shrink: 0;
   }
 }
