@@ -134,17 +134,27 @@ function App() {
               </div>
             </section>
 
-            <section className="project-card">
-              <div className="card-image-wrapper">
-                <img src="/SheperdThumbnail.png" alt="Saveup" />
-              </div>
-              <div className="project-info">
-                <h3>Saveup - Personal Finance Tracker</h3>
-                <div className="project-tags">
-                  <span className="tag">Brand</span>
-                </div>
-              </div>
-            </section>
+            <section
+  className="project-card"
+  onClick={() => navigate("/sheperd")}
+  role="button"
+  tabIndex={0}
+  onKeyDown={(e) => {
+    if (e.key === "Enter") {
+      navigate("/sheperd");
+    }
+  }}
+>
+  <div className="card-image-wrapper">
+    <img src="/SheperdThumbnail.png" alt="Sheperd" />
+  </div>
+  <div className="project-info">
+    <h3>Sheperd - The Ultimate Space to Create</h3>
+    <div className="project-tags">
+      <span className="tag">Brand</span>
+    </div>
+  </div>
+</section>
 
             <section
               className="project-card"

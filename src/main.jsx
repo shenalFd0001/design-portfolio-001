@@ -17,6 +17,7 @@ import FitmaldivesPage from "./assets/Projects/Fitmaldives/Fitmaldives";
 import RoamridePage from "./assets/Projects/Roamride/Roamride";
 import SaveupPage from "./assets/Projects/Saveup/saveup";
 import LivelotteryPage from "./assets/Projects/Livelottery/Livelottery";
+import SheperdPage from "./assets/Projects/Sheperd/sheperd";
 import ScrollToTop from "./Scrolltotop";
 
 import "lenis/dist/lenis.css";
@@ -49,6 +50,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/roamride" element={<RoamridePage />} />
         <Route path="/saveup" element={<SaveupPage />} />
         <Route path="/livelottery" element={<LivelotteryPage />} />
+        <Route path="/sheperd" element={<SheperdPage />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

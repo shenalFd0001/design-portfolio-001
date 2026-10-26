@@ -1,5 +1,7 @@
 import { motion, useReducedMotion } from "motion/react";
 
+const DISABLE_REVEAL = true; // set to false to bring the animation back
+
 function Reveal({
   children,
   className = "",
@@ -7,6 +9,10 @@ function Reveal({
   distance = 32,
 }) {
   const shouldReduceMotion = useReducedMotion();
+
+  if (DISABLE_REVEAL) {
+    return <div className={className}>{children}</div>;
+  }
 
   return (
     <motion.div
