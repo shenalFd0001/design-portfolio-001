@@ -31,10 +31,24 @@ const SECTIONS = [
   {
     id: "overview",
     label: "Overview",
-    title: "Understanding the brand",
+    title: "A website for Colombo’s premier creative studio",
     paragraphs: [
-      "Describe the starting point of the project: who the client or audience was and what the brief asked for.",
-      "Explain the goals, the constraints, and how you decided where to focus first.",
+      "Sheperd Space is a creative studio in Colombo that provides high-end production space, elite gear and on-site support for photographers, models and brands. I designed its website to show what the studio offers and make booking effortless.",
+    ],
+    details: [
+      { label: "Role", value: "UI/UX Designer" },
+      { label: "Tools", value: "Figma" },
+      { label: "Timeline", value: "[e.g. 2 weeks]" },
+      { label: "Type", value: "[Concept project / Client project]" },
+      { label: "Deliverables", value: "Main, About Us and Careers pages" },
+    ],
+    brief:
+      "The studio needed a website that looks as polished as its work and turns visitors into bookings.",
+    goals: [
+      "Communicate the studio’s premium feel",
+      "Make services and equipment easy to scan",
+      "Guide visitors toward booking",
+      "Attract creative talent through the Careers page",
     ],
   },
   {
@@ -42,8 +56,29 @@ const SECTIONS = [
     label: "Research",
     title: "Exploring the problem space",
     paragraphs: [
-      "Summarise the research you did: competitors, users, references, or interviews.",
-      "Call out the one or two insights that shaped the direction of the design.",
+      "Summarise the research you did and the one or two insights that shaped the direction of the design.",
+    ],
+    subsections: [
+      {
+        title: "Project scoping",
+        paragraphs: [
+          "Describe how you defined the scope: what was included, what was left out, and why.",
+        ],
+        image: "/sheperd02.webp", // file lives in the /public folder
+        imageAlt: "FigJam board for the Sheperd project scoping",
+      },
+      {
+        title: "Research with other sites",
+        paragraphs: [
+          "Summarise the websites you studied, what worked well on them, and what you took from them.",
+        ],
+      },
+      {
+        title: "User journeys",
+        paragraphs: [
+          "Explain the key journeys you mapped, such as a visitor booking the studio or applying through Careers.",
+        ],
+      },
     ],
   },
   {
@@ -157,9 +192,14 @@ function SheperdPage() {
           </Reveal>
         </div>
 
-        {/* FULL-WIDTH IMAGE (placeholder colour — swap for an <img> later) */}
+        {/* FULL-WIDTH HERO IMAGE */}
         <Reveal distance={40}>
-          <div className="sheperd-hero" role="img" aria-label="Sheperd hero image" />
+          <img
+            className="sheperd-hero"
+            src="/sheperd01.webp"
+            alt="Sheperd Space website hero preview"
+            fetchPriority="high"
+          />
         </Reveal>
 
         {/* TWO-COLUMN STORY: fixed left nav, scrolling right content */}
@@ -182,24 +222,117 @@ function SheperdPage() {
           </nav>
 
           <div className="sheperd-story-content">
-            {SECTIONS.map(({ id, label, title, paragraphs }, i) => (
-              <article
-                key={id}
-                id={`sheperd-${id}`}
-                data-id={id}
-                className="sheperd-story-section"
-              >
-                <span className="sheperd-story-eyebrow">
-                  {pad(i)} — {label}
-                </span>
-                <h2 className="sheperd-story-title">{title}</h2>
-                {paragraphs.map((text) => (
-                  <p className="sheperd-story-text" key={text}>
-                    {text}
-                  </p>
-                ))}
-              </article>
-            ))}
+            {SECTIONS.map(
+              (
+                {
+                  id,
+                  label,
+                  title,
+                  paragraphs,
+                  image,
+                  imageColor,
+                  imageAlt,
+                  details,
+                  brief,
+                  goals,
+                  subsections,
+                },
+                i
+              ) => (
+                <article
+                  key={id}
+                  id={`sheperd-${id}`}
+                  data-id={id}
+                  className="sheperd-story-section"
+                >
+                  <span className="sheperd-story-eyebrow">
+                    {pad(i)} — {label}
+                  </span>
+                  <h2 className="sheperd-story-title">{title}</h2>
+
+                  {/* Image (or coloured placeholder box) */}
+                  {image ? (
+                    <img
+                      className="sheperd-story-image"
+                      src={image}
+                      alt={imageAlt}
+                      loading="lazy"
+                    />
+                  ) : (
+                    imageColor && (
+                      <div
+                        className="sheperd-story-image sheperd-story-image--box"
+                        style={{ backgroundColor: imageColor }}
+                        role="img"
+                        aria-label={imageAlt}
+                      />
+                    )
+                  )}
+
+                  {paragraphs.map((text) => (
+                    <p className="sheperd-story-text" key={text}>
+                      {text}
+                    </p>
+                  ))}
+
+                  {details && (
+                    <dl className="sheperd-story-details">
+                      {details.map(({ label: dLabel, value }) => (
+                        <div className="sheperd-story-detail" key={dLabel}>
+                          <dt>{dLabel}</dt>
+                          <dd>{value}</dd>
+                        </div>
+                      ))}
+                    </dl>
+                  )}
+
+                  {brief && (
+                    <>
+                      <h3 className="sheperd-story-subtitle">The brief</h3>
+                      <p className="sheperd-story-text">{brief}</p>
+                    </>
+                  )}
+
+                  {goals && (
+                    <>
+                      <h3 className="sheperd-story-subtitle">The goal</h3>
+                      <ul className="sheperd-story-goals">
+                        {goals.map((goal) => (
+                          <li key={goal}>{goal}</li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
+
+                  {subsections &&
+                    subsections.map(
+                      ({
+                        title: subTitle,
+                        paragraphs: subParagraphs,
+                        image: subImage,
+                        imageAlt: subImageAlt,
+                      }) => (
+                        <div className="sheperd-story-subsection" key={subTitle}>
+                          <h3 className="sheperd-story-subsection-title">{subTitle}</h3>
+                          {subParagraphs.map((text) => (
+                            <p className="sheperd-story-text" key={text}>
+                              {text}
+                            </p>
+                          ))}
+                          {subImage && (
+                            <img
+                              className="sheperd-story-image"
+                              src={subImage}
+                              alt={subImageAlt}
+                              loading="lazy"
+                            />
+                          )}
+                        </div>
+                      )
+                    )}
+                </article>
+              )
+            )}
           </div>
         </section>
       </main>
