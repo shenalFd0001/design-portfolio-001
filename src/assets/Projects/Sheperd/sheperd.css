@@ -25,7 +25,7 @@
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
-  padding: 40px 100px 100px;
+  padding: 40px 64px 100px;
   box-sizing: border-box;
 }
 
@@ -258,7 +258,7 @@
 }
 
 .sheperd-story-section {
-  max-width: 720px;
+  max-width: 820px;
   min-height: 80vh;
   padding: 24px 0 96px;
   scroll-margin-top: 80px;
@@ -283,11 +283,11 @@
 }
 
 .sheperd-story-text {
-  font-size: clamp(1.125rem, 1.05rem + 0.4vw, 1.375rem);
+  font-size: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
   line-height: 1.7;
   font-weight: 300;
   color: var(--sheperd-body);
-  margin: 0 0 28px 0;
+  margin: 0 0 24px 0;
 }
 
 /* TABLET / MOBILE: nav becomes a sticky horizontal bar */
@@ -370,7 +370,7 @@
 }
 
 .sheperd-story-detail dd {
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 300;
   line-height: 1.5;
   color: var(--sheperd-body);
@@ -395,10 +395,10 @@
 .sheperd-story-goals li {
   position: relative;
   padding-left: 28px;
-  margin-bottom: 14px;
-  font-size: clamp(1.125rem, 1.05rem + 0.4vw, 1.375rem);
+  margin-bottom: 12px;
+  font-size: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
   font-weight: 300;
-  line-height: 1.6;
+  line-height: 1.65;
   color: var(--sheperd-body);
 }
 
@@ -406,9 +406,9 @@
   content: "";
   position: absolute;
   left: 0;
-  top: 0.7em;
-  width: 8px;
-  height: 8px;
+  top: 0.65em;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background: var(--sheperd-accent);
 }
@@ -443,7 +443,89 @@
   .sheperd-story-subsection { margin-top: 44px; }
 }
 
-/* Image inside a subsection sits below the text */
+/* Image (or coloured box) inside a subsection sits below the text/table */
 .sheperd-story-subsection .sheperd-story-image {
   margin: 36px 0 0 0;
+}
+
+/* ─── COMPARISON TABLE (inside a subsection) ─── */
+
+/* The wrapper draws the outer border + rounded corners, and scrolls
+   sideways on small screens so the page itself never overflows */
+.sheperd-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  margin: 40px 0 0 0;
+  border: 1px solid rgba(0, 0, 0, 0.22);
+  border-radius: 12px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.sheperd-table {
+  width: 100%;
+  min-width: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  text-align: left;
+}
+
+/* Every cell gets a right + bottom border, so the grid is fully boxed */
+.sheperd-table th,
+.sheperd-table td {
+  padding: 14px 16px;
+  vertical-align: top;
+  border-right: 1px solid var(--sheperd-line);
+  border-bottom: 1px solid var(--sheperd-line);
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  font-weight: 300;
+  color: var(--sheperd-body);
+  background: var(--sheperd-bg);
+}
+
+/* No double border against the wrapper's outer border */
+.sheperd-table th:last-child,
+.sheperd-table td:last-child {
+  border-right: none;
+}
+
+.sheperd-table tbody tr:last-child th,
+.sheperd-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Header row */
+.sheperd-table thead th {
+  background: #f1f1ee;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--sheperd-text);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.28);
+  white-space: nowrap;
+}
+
+/* First column (site names) */
+.sheperd-table tbody th {
+  width: 22%;
+  background: #f8f8f6;
+  font-weight: 600;
+  color: var(--sheperd-text);
+}
+
+/* Alternating rows */
+.sheperd-table tbody tr:nth-child(even) td {
+  background: #fbfbfa;
+}
+
+/* Below 900px the table scrolls sideways instead of getting cramped */
+@media (max-width: 900px) {
+  .sheperd-table { min-width: 640px; }
+}
+
+@media (max-width: 640px) {
+  .sheperd-table-wrap { margin-top: 28px; border-radius: 10px; }
+  .sheperd-table th,
+  .sheperd-table td { padding: 12px 14px; }
 }

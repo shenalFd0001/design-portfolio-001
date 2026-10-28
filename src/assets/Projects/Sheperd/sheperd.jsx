@@ -72,12 +72,52 @@ const SECTIONS = [
         paragraphs: [
           "Summarise the websites you studied, what worked well on them, and what you took from them.",
         ],
+        table: {
+          headers: [
+            "Site",
+            "Type",
+            "What it does well",
+            "Gap for Sheperd to fill",
+          ],
+          rows: [
+            [
+              "MillionSpaces (Colombo)",
+              "Booking marketplace",
+              "Easy discovery and booking of photoshoot and video locations",
+              "Many venues, so no premium feel for any one space",
+            ],
+            [
+              "Pictorial Studios (Colombo)",
+              "Photography service studio",
+              "Credibility from a strong list of client brands",
+              "Sells services, not space rental",
+            ],
+            [
+              "COCO Creative Space (Singapore)",
+              "Creative agency with studio rental",
+              "Studio packages with gear rental when you book",
+              "Rental is a side service, so it’s hard to find",
+            ],
+            [
+              "Cineview Studios (London)",
+              "Premium studio rental",
+              "Clear technical features such as an infinity cove, green screen and lighting",
+              "International, with no local relevance or Careers angle",
+            ],
+          ],
+        },
+        // Coloured placeholder box. When your image is ready, replace this
+        // line with:  image: "/your-file.webp",
+        imageColor: "#d9d1c0",
+        imageAlt: "Research findings from competitor websites",
       },
-      {
+            {
         title: "User journeys",
         paragraphs: [
           "Explain the key journeys you mapped, such as a visitor booking the studio or applying through Careers.",
         ],
+        image: "/sheperduserjourney01.webp", // file lives in the /public folder
+        imageAlt: "User journey map for booking the studio and applying through Careers",
       },
     ],
   },
@@ -310,7 +350,9 @@ function SheperdPage() {
                         title: subTitle,
                         paragraphs: subParagraphs,
                         image: subImage,
+                        imageColor: subImageColor,
                         imageAlt: subImageAlt,
+                        table,
                       }) => (
                         <div className="sheperd-story-subsection" key={subTitle}>
                           <h3 className="sheperd-story-subsection-title">{subTitle}</h3>
@@ -319,13 +361,56 @@ function SheperdPage() {
                               {text}
                             </p>
                           ))}
-                          {subImage && (
+
+                          {/* Comparison table */}
+                          {table && (
+                            <div className="sheperd-table-wrap">
+                              <table className="sheperd-table">
+                                <thead>
+                                  <tr>
+                                    {table.headers.map((h) => (
+                                      <th key={h} scope="col">
+                                        {h}
+                                      </th>
+                                    ))}
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  {table.rows.map((row) => (
+                                    <tr key={row[0]}>
+                                      {row.map((cell, cellIndex) =>
+                                        cellIndex === 0 ? (
+                                          <th key={cell} scope="row">
+                                            {cell}
+                                          </th>
+                                        ) : (
+                                          <td key={cell}>{cell}</td>
+                                        )
+                                      )}
+                                    </tr>
+                                  ))}
+                                </tbody>
+                              </table>
+                            </div>
+                          )}
+
+                          {/* Subsection image (or coloured placeholder box) */}
+                          {subImage ? (
                             <img
                               className="sheperd-story-image"
                               src={subImage}
                               alt={subImageAlt}
                               loading="lazy"
                             />
+                          ) : (
+                            subImageColor && (
+                              <div
+                                className="sheperd-story-image sheperd-story-image--box"
+                                style={{ backgroundColor: subImageColor }}
+                                role="img"
+                                aria-label={subImageAlt}
+                              />
+                            )
                           )}
                         </div>
                       )
